@@ -47,9 +47,10 @@ define(["dom", "layoutManager", "inputManager", "connectionManager", "events", "
                 headerSearchButton.classList.remove("hide");
             }
 
+            /* remove cast button
             if (!layoutManager.tv) {
                 headerCastButton.classList.remove("hide");
-            }
+            } */
         } else {
             headerHomeButton.classList.add("hide");
             headerCastButton.classList.add("hide");
@@ -104,9 +105,9 @@ define(["dom", "layoutManager", "inputManager", "connectionManager", "events", "
         headerUserButton.addEventListener("click", onHeaderUserButtonClick);
         headerHomeButton.addEventListener("click", onHeaderHomeButtonClick);
 
-        if (!layoutManager.tv) {
+        /*if (!layoutManager.tv) {
             headerCastButton.addEventListener("click", onCastButtonClicked);
-        }
+        } */
 
         initHeadRoom(skinHeader);
     }
@@ -544,21 +545,21 @@ define(["dom", "layoutManager", "inputManager", "connectionManager", "events", "
         Dashboard.logout();
     }
 
-    function updateCastIcon() {
+   /* function updateCastIcon() {
         var context = document;
         var info = playbackManager.getPlayerInfo();
-        var icon = headerCastButton.querySelector("i");
+        // var icon = headerCastButton.querySelector("i"); 
 
         if (info && !info.isLocalPlayer) {
             icon.innerHTML = "cast_connected";
-            headerCastButton.classList.add("castButton-active");
+           // headerCastButton.classList.add("castButton-active");
             context.querySelector(".headerSelectedPlayer").innerHTML = info.deviceName || info.name;
         } else {
             icon.innerHTML = "cast";
-            headerCastButton.classList.remove("castButton-active");
+           // headerCastButton.classList.remove("castButton-active");
             context.querySelector(".headerSelectedPlayer").innerHTML = "";
         }
-    }
+    }*/
 
     function updateLibraryNavLinks(page) {
         var i;
@@ -727,7 +728,7 @@ define(["dom", "layoutManager", "inputManager", "connectionManager", "events", "
     var headerBackButton;
     var headerUserButton;
     var currentUser;
-    var headerCastButton;
+    // var headerCastButton;
     var headerSearchButton;
     var enableLibraryNavDrawer = !layoutManager.tv;
     var skinHeader = document.querySelector(".skinHeader");
@@ -849,7 +850,7 @@ define(["dom", "layoutManager", "inputManager", "connectionManager", "events", "
         html += "</div>";
         html += '<div class="headerRight">';
         html += '<span class="headerSelectedPlayer"></span>';
-        html += '<button is="paper-icon-button-light" class="headerCastButton castButton headerButton headerButtonRight hide"><i class="md-icon">cast</i></button>';
+        // html += '<button is="paper-icon-button-light" class="headerCastButton castButton headerButton headerButtonRight hide"><i class="md-icon">cast</i></button>';
         html += '<button type="button" is="paper-icon-button-light" class="headerButton headerButtonRight headerSearchButton hide"><i class="md-icon">search</i></button>';
         html += '<button is="paper-icon-button-light" class="headerButton headerButtonRight headerUserButton hide"><i class="md-icon">person</i></button>';
         html += "</div>";
@@ -863,7 +864,7 @@ define(["dom", "layoutManager", "inputManager", "connectionManager", "events", "
 
         headerHomeButton = skinHeader.querySelector(".headerHomeButton");
         headerUserButton = skinHeader.querySelector(".headerUserButton");
-        headerCastButton = skinHeader.querySelector(".headerCastButton");
+        //headerCastButton = skinHeader.querySelector(".headerCastButton");
         headerSearchButton = skinHeader.querySelector(".headerSearchButton");
 
         lazyLoadViewMenuBarImages();
