@@ -1,10 +1,10 @@
 <h1 align="center">OTG Web</h1>
-<h3 align="center">Part of the <a href="https://gmaroko.me">OTG Media Server Project</a></h3>
+<h3 align="center">Part of OTG Media Server </h3>
 
 ---
 ## Hack Process
 1. Clone repo
-   ```sh
+   ```sh/blob/master/src/strings/en-us.json
    git clone https://github.com/gmaroko/otg-web.git
    cd otg-web
    ```
