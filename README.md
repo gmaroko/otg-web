@@ -2,26 +2,17 @@
 <h3 align="center">Part of the <a href="https://gmaroko.me">OTG Media Server Project</a></h3>
 
 ---
-
-## Build Process
-
-### Dependencies
-
-- Yarn
-
-### Getting Started
-
-1. Clone or download this repository.
+## Hack Process
+1. Clone repo
    ```sh
    git clone https://github.com/gmaroko/otg-web.git
    cd otg-web
    ```
-2. Install build dependencies in the project directory.
+2. Install dependencies - using yarn (required)
    ```sh
    yarn install
    ```
-
-3. Run the web client with webpack for local development.
+3. Deploy to web client with webpack.
    ```sh
    yarn serve
    ```
