@@ -1,4 +1,4 @@
-define(["jQuery", "loading", "events", "globalize", "serverNotifications", "humanedate", "listViewStyle", "emby-button"], function($, loading, events, globalize, serverNotifications) {
+define(["jQuery", "loading", "events", "globalize", "serverNotifications", "humanedate", "listViewStyle", "otg-button"], function($, loading, events, globalize, serverNotifications) {
     "use strict";
 
     function reloadList(page) {
@@ -33,17 +33,17 @@ define(["jQuery", "loading", "events", "globalize", "serverNotifications", "huma
                 html += currentCategory;
                 html += "</h2>";
                 if (i === 0) {
-                    html += '<a is="emby-linkbutton" class="raised button-alt headerHelpButton" target="_blank" href="https://otg.com/docs">' + globalize.translate("Help") + "</a>";
+                    html += '<a is="otg-linkbutton" class="raised button-alt headerHelpButton" target="_blank" href="https://otg.com/docs">' + globalize.translate("Help") + "</a>";
                 }
                 html += "</div>";
                 html += '<div class="paperList">';
             }
             html += '<div class="listItem listItem-border scheduledTaskPaperIconItem" data-status="' + task.State + '">';
-            html += "<a is='emby-linkbutton' style='margin:0;padding:0;' class='clearLink listItemIconContainer' href='scheduledtask.html?id=" + task.Id + "'>";
+            html += "<a is='otg-linkbutton' style='margin:0;padding:0;' class='clearLink listItemIconContainer' href='scheduledtask.html?id=" + task.Id + "'>";
             html += '<i class="md-icon listItemIcon">schedule</i>';
             html += "</a>";
             html += '<div class="listItemBody two-line">';
-            html += "<a class='clearLink' style='margin:0;padding:0;display:block;text-align:left;' is='emby-linkbutton' href='scheduledtask.html?id=" + task.Id + "'>";
+            html += "<a class='clearLink' style='margin:0;padding:0;display:block;text-align:left;' is='otg-linkbutton' href='scheduledtask.html?id=" + task.Id + "'>";
             html += "<h3 class='listItemBodyText'>" + task.Name + "</h3>";
             html += "<div class='secondary listItemBodyText' id='taskProgress" + task.Id + "'>" + getTaskProgressHtml(task) + "</div>";
             html += "</a>";

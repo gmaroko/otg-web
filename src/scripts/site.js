@@ -580,7 +580,7 @@ var AppInfo = {};
 
             window.Emby.Page = appRouter;
 
-            require(['emby-button', 'scripts/themeloader', 'libraryMenu', 'scripts/routes'], function () {
+            require(['otg-button', 'scripts/themeloader', 'libraryMenu', 'scripts/routes'], function () {
                 Emby.Page.start({
                     click: false,
                     hashbang: true
@@ -766,17 +766,17 @@ var AppInfo = {};
         });
 
         var elementsPath = "elements"
-        define("emby-button", [elementsPath + "/emby-button/emby-button"], returnFirstDependency);
-        define("paper-icon-button-light", [elementsPath + "/emby-button/paper-icon-button-light"], returnFirstDependency);
-        define("emby-checkbox", [elementsPath + "/emby-checkbox/emby-checkbox"], returnFirstDependency);
-        define("emby-collapse", [elementsPath + "/emby-collapse/emby-collapse"], returnFirstDependency);
-        define("emby-input", [elementsPath + "/emby-input/emby-input"], returnFirstDependency);
-        define("emby-progressring", [elementsPath + "/emby-progressring/emby-progressring"], returnFirstDependency);
-        define("emby-radio", [elementsPath + "/emby-radio/emby-radio"], returnFirstDependency);
-        define("emby-select", [elementsPath + "/emby-select/emby-select"], returnFirstDependency);
-        define("emby-slider", [elementsPath + "/emby-slider/emby-slider"], returnFirstDependency);
-        define("emby-textarea", [elementsPath + "/emby-textarea/emby-textarea"], returnFirstDependency);
-        define("emby-toggle", [elementsPath + "/emby-toggle/emby-toggle"], returnFirstDependency);
+        define("otg-button", [elementsPath + "/otg-button/otg-button"], returnFirstDependency);
+        define("paper-icon-button-light", [elementsPath + "/otg-button/paper-icon-button-light"], returnFirstDependency);
+        define("otg-checkbox", [elementsPath + "/otg-checkbox/otg-checkbox"], returnFirstDependency);
+        define("otg-collapse", [elementsPath + "/otg-collapse/otg-collapse"], returnFirstDependency);
+        define("otg-input", [elementsPath + "/otg-input/otg-input"], returnFirstDependency);
+        define("otg-progressring", [elementsPath + "/otg-progressring/otg-progressring"], returnFirstDependency);
+        define("otg-radio", [elementsPath + "/otg-radio/otg-radio"], returnFirstDependency);
+        define("otg-select", [elementsPath + "/otg-select/otg-select"], returnFirstDependency);
+        define("otg-slider", [elementsPath + "/otg-slider/otg-slider"], returnFirstDependency);
+        define("otg-textarea", [elementsPath + "/otg-textarea/otg-textarea"], returnFirstDependency);
+        define("otg-toggle", [elementsPath + "/otg-toggle/otg-toggle"], returnFirstDependency);
 
         define("chromecastHelper", [componentsPath + "/chromecast/chromecasthelpers"], returnFirstDependency);
         define("mediaSession", [componentsPath + "/playback/mediasession"], returnFirstDependency);
@@ -791,12 +791,12 @@ var AppInfo = {};
         define("playerSettingsMenu", [componentsPath + "/playback/playersettingsmenu"], returnFirstDependency);
         define("playMethodHelper", [componentsPath + "/playback/playmethodhelper"], returnFirstDependency);
         define("brightnessOsd", [componentsPath + "/playback/brightnessosd"], returnFirstDependency);
-        define("emby-itemscontainer", [componentsPath + "/emby-itemscontainer/emby-itemscontainer"], returnFirstDependency);
+        define("otg-itemscontainer", [componentsPath + "/otg-itemscontainer/otg-itemscontainer"], returnFirstDependency);
         define("alphaNumericShortcuts", [componentsPath + "/alphanumericshortcuts/alphanumericshortcuts"], returnFirstDependency);
-        define("emby-scroller", [componentsPath + "/emby-scroller/emby-scroller"], returnFirstDependency);
-        define("emby-tabs", [componentsPath + "/emby-tabs/emby-tabs"], returnFirstDependency);
-        define("emby-scrollbuttons", [componentsPath + "/emby-scrollbuttons/emby-scrollbuttons"], returnFirstDependency);
-        define("emby-itemrefreshindicator", [componentsPath + "/emby-itemrefreshindicator/emby-itemrefreshindicator"], returnFirstDependency);
+        define("otg-scroller", [componentsPath + "/otg-scroller/otg-scroller"], returnFirstDependency);
+        define("otg-tabs", [componentsPath + "/otg-tabs/otg-tabs"], returnFirstDependency);
+        define("otg-scrollbuttons", [componentsPath + "/otg-scrollbuttons/otg-scrollbuttons"], returnFirstDependency);
+        define("otg-itemrefreshindicator", [componentsPath + "/otg-itemrefreshindicator/otg-itemrefreshindicator"], returnFirstDependency);
         define("multiSelect", [componentsPath + "/multiselect/multiselect"], returnFirstDependency);
         define("alphaPicker", [componentsPath + "/alphapicker/alphapicker"], returnFirstDependency);
         define("tabbedView", [componentsPath + "/tabbedview/tabbedview"], returnFirstDependency);
@@ -853,8 +853,8 @@ var AppInfo = {};
         define("objectassign", [componentsPath + "/polyfills/objectassign"], returnFirstDependency);
         define("focusPreventScroll", [componentsPath + "/polyfills/focusPreventScroll"], returnFirstDependency);
         define("userdataButtons", [componentsPath + "/userdatabuttons/userdatabuttons"], returnFirstDependency);
-        define("emby-playstatebutton", [componentsPath + "/userdatabuttons/emby-playstatebutton"], returnFirstDependency);
-        define("emby-ratingbutton", [componentsPath + "/userdatabuttons/emby-ratingbutton"], returnFirstDependency);
+        define("otg-playstatebutton", [componentsPath + "/userdatabuttons/otg-playstatebutton"], returnFirstDependency);
+        define("otg-ratingbutton", [componentsPath + "/userdatabuttons/otg-ratingbutton"], returnFirstDependency);
         define("listView", [componentsPath + "/listview/listview"], returnFirstDependency);
         define("indicators", [componentsPath + "/indicators/indicators"], returnFirstDependency);
         define("viewSettings", [componentsPath + "/viewsettings/viewsettings"], returnFirstDependency);

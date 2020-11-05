@@ -1,4 +1,4 @@
-define(["jQuery", "loading", "emby-button", "emby-select"], function ($, loading) {
+define(["jQuery", "loading", "otg-button", "otg-select"], function ($, loading) {
     "use strict";
 
     function loadPage(page, config, languageOptions) {

@@ -1,4 +1,4 @@
-define(["appRouter", "cardBuilder", "dom", "globalize", "connectionManager", "apphost", "layoutManager", "focusManager", "emby-itemscontainer", "emby-scroller"], function (appRouter, cardBuilder, dom, globalize, connectionManager, appHost, layoutManager, focusManager) {
+define(["appRouter", "cardBuilder", "dom", "globalize", "connectionManager", "apphost", "layoutManager", "focusManager", "otg-itemscontainer", "otg-scroller"], function (appRouter, cardBuilder, dom, globalize, connectionManager, appHost, layoutManager, focusManager) {
     "use strict";
 
     function enableScrollX() {
@@ -244,7 +244,7 @@ define(["appRouter", "cardBuilder", "dom", "globalize", "connectionManager", "ap
             if (layoutManager.tv) {
                 html += '<h2 class="sectionTitle sectionTitle-cards">' + globalize.translate(section.name) + "</h2>";
             } else {
-                html += '<a is="emby-linkbutton" href="' + getRouteUrl(section, apiClient.serverId()) + '" class="more button-flat button-flat-mini sectionTitleTextButton">';
+                html += '<a is="otg-linkbutton" href="' + getRouteUrl(section, apiClient.serverId()) + '" class="more button-flat button-flat-mini sectionTitleTextButton">';
                 html += '<h2 class="sectionTitle sectionTitle-cards">';
                 html += globalize.translate(section.name);
                 html += "</h2>";
@@ -253,7 +253,7 @@ define(["appRouter", "cardBuilder", "dom", "globalize", "connectionManager", "ap
             }
 
             html += "</div>";
-            html += '<div is="emby-scroller" class="padded-top-focusscale padded-bottom-focusscale" data-mousewheel="false" data-centerfocus="true"><div is="emby-itemscontainer" class="itemsContainer scrollSlider focuscontainer-x" data-monitor="markfavorite"></div></div>';
+            html += '<div is="otg-scroller" class="padded-top-focusscale padded-bottom-focusscale" data-mousewheel="false" data-centerfocus="true"><div is="otg-itemscontainer" class="itemsContainer scrollSlider focuscontainer-x" data-monitor="markfavorite"></div></div>';
             html += "</div>";
         }
 

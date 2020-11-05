@@ -5,50 +5,50 @@
                 <div class="verticalSection">
                     <div class="sectionTitleContainer flex align-items-center">
                         <h2 class="sectionTitle">${HeaderProfileInformation}</h2>
-                        <a is="emby-linkbutton" class="raised button-alt headerHelpButton" target="_blank" href="https://web.archive.org/web/20181216120305/https://github.com/MediaBrowser/Wiki/wiki/Dlna-profiles">${Help}</a>
+                        <a is="otg-linkbutton" class="raised button-alt headerHelpButton" target="_blank" href="https://web.archive.org/web/20181216120305/https://github.com/MediaBrowser/Wiki/wiki/Dlna-profiles">${Help}</a>
                     </div>
                 </div>
                 <div data-role="controlgroup" data-type="horizontal" data-mini="true">
-                    <a href="#" is="emby-linkbutton" data-role="button" class="radioTabButton" id="radioInfo" data-value="tabInfo">${TabInfo}</a>
-                    <a href="#" is="emby-linkbutton" data-role="button" class="radioTabButton" id="radioDirectPlay" data-value="tabDirectPlayProfiles">${TabDirectPlay}</a>
-                    <a href="#" is="emby-linkbutton" data-role="button" class="radioTabButton" id="radioTranscoding" data-value="tabTranscodingProfiles">${TabTranscoding}</a>
-                    <a href="#" is="emby-linkbutton" data-role="button" class="radioTabButton" id="radioContainers" data-value="tabContainerProfiles">${TabContainers}</a>
-                    <a href="#" is="emby-linkbutton" data-role="button" class="radioTabButton" id="radioCodecs" data-value="tabCodecProfiles">${TabCodecs}</a>
-                    <a href="#" is="emby-linkbutton" data-role="button" class="radioTabButton" id="radioMediaProfiles" data-value="tabMediaProfiles">${TabResponses}</a>
+                    <a href="#" is="otg-linkbutton" data-role="button" class="radioTabButton" id="radioInfo" data-value="tabInfo">${TabInfo}</a>
+                    <a href="#" is="otg-linkbutton" data-role="button" class="radioTabButton" id="radioDirectPlay" data-value="tabDirectPlayProfiles">${TabDirectPlay}</a>
+                    <a href="#" is="otg-linkbutton" data-role="button" class="radioTabButton" id="radioTranscoding" data-value="tabTranscodingProfiles">${TabTranscoding}</a>
+                    <a href="#" is="otg-linkbutton" data-role="button" class="radioTabButton" id="radioContainers" data-value="tabContainerProfiles">${TabContainers}</a>
+                    <a href="#" is="otg-linkbutton" data-role="button" class="radioTabButton" id="radioCodecs" data-value="tabCodecProfiles">${TabCodecs}</a>
+                    <a href="#" is="otg-linkbutton" data-role="button" class="radioTabButton" id="radioMediaProfiles" data-value="tabMediaProfiles">${TabResponses}</a>
                 </div>
                 <br />
                 <div class="tabContent tabInfo">
                     <div class="inputContainer">
-                        <input is="emby-input" type="text" id="txtName" required="required" label="${LabelName}" />
+                        <input is="otg-input" type="text" id="txtName" required="required" label="${LabelName}" />
                     </div>
                     <div class="selectContainer">
-                        <select is="emby-select" id="selectUser" label="${LabelUserLibrary}"></select>
+                        <select is="otg-select" id="selectUser" label="${LabelUserLibrary}"></select>
                         <div class="fieldDescription">${LabelUserLibraryHelp}</div>
                     </div>
                     <div>
                         <h3 class="checkboxListLabel">${LabelSupportedMediaTypes}</h3>
                         <div class="checkboxList paperList checkboxList-paperList">
                             <label>
-                                <input is="emby-checkbox" type="checkbox" id="chkAudio" data-value="Audio" class="chkMediaType" />
+                                <input is="otg-checkbox" type="checkbox" id="chkAudio" data-value="Audio" class="chkMediaType" />
                                 <span>${OptionProfileAudio}</span>
                             </label>
                             <label>
-                                <input is="emby-checkbox" type="checkbox" id="chkPhoto" data-value="Photo" class="chkMediaType" />
+                                <input is="otg-checkbox" type="checkbox" id="chkPhoto" data-value="Photo" class="chkMediaType" />
                                 <span>${OptionProfilePhoto}</span>
                             </label>
                             <label>
-                                <input is="emby-checkbox" type="checkbox" id="chkVideo" data-value="Video" class="chkMediaType" />
+                                <input is="otg-checkbox" type="checkbox" id="chkVideo" data-value="Video" class="chkMediaType" />
                                 <span>${OptionProfileVideo}</span>
                             </label>
                         </div>
                     </div>
                     <br />
                     <div class="inputContainer">
-                        <input is="emby-input" type="number" id="txtMaxAllowedBitrate" pattern="[0-9]*" min="1" label="${LabelMaxStreamingBitrate}" />
+                        <input is="otg-input" type="number" id="txtMaxAllowedBitrate" pattern="[0-9]*" min="1" label="${LabelMaxStreamingBitrate}" />
                         <div class="fieldDescription">${LabelMaxStreamingBitrateHelp}</div>
                     </div>
                     <div class="inputContainer">
-                        <input is="emby-input" type="number" id="txtMusicStreamingTranscodingBitrate" pattern="[0-9]*" min="1" label="${LabelMusicStreamingTranscodingBitrate}" />
+                        <input is="otg-input" type="number" id="txtMusicStreamingTranscodingBitrate" pattern="[0-9]*" min="1" label="${LabelMusicStreamingTranscodingBitrate}" />
                         <div class="fieldDescription">${LabelMusicStreamingTranscodingBitrateHelp}</div>
                     </div>
                     <div style="display:none;">
@@ -56,171 +56,171 @@
                         <input type="checkbox" id="chkIgnoreTranscodeByteRangeRequests" data-mini="true" />
                         <div class="fieldDescription">${OptionIgnoreTranscodeByteRangeRequestsHelp}</div>
                     </div>
-                    <div is="emby-collapse" title="${HeaderIdentification}">
+                    <div is="otg-collapse" title="${HeaderIdentification}">
                         <div class="collapseContent">
                             <h3>${HeaderIdentificationCriteriaHelp}</h3>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtIdFriendlyName" label="${LabelFriendlyName}" />
+                                <input is="otg-input" type="text" id="txtIdFriendlyName" label="${LabelFriendlyName}" />
                                 <div class="fieldDescription">${LabelIdentificationFieldHelp}</div>
                             </div>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtIdManufacturer" label="${LabelManufacturer}" />
+                                <input is="otg-input" type="text" id="txtIdManufacturer" label="${LabelManufacturer}" />
                                 <div class="fieldDescription">${LabelIdentificationFieldHelp}</div>
                             </div>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtIdManufacturerUrl" label="${LabelManufacturerUrl}" />
+                                <input is="otg-input" type="text" id="txtIdManufacturerUrl" label="${LabelManufacturerUrl}" />
                                 <div class="fieldDescription">${LabelIdentificationFieldHelp}</div>
                             </div>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtIdModelName" label="${LabelModelName}" />
+                                <input is="otg-input" type="text" id="txtIdModelName" label="${LabelModelName}" />
                                 <div class="fieldDescription">${LabelIdentificationFieldHelp}</div>
                             </div>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtIdModelNumber" label="${LabelModelNumber}" />
+                                <input is="otg-input" type="text" id="txtIdModelNumber" label="${LabelModelNumber}" />
                                 <div class="fieldDescription">${LabelIdentificationFieldHelp}</div>
                             </div>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtIdModelDesription" label="${LabelModelDescription}" />
+                                <input is="otg-input" type="text" id="txtIdModelDesription" label="${LabelModelDescription}" />
                                 <div class="fieldDescription">${LabelIdentificationFieldHelp}</div>
                             </div>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtIdModelUrl" label="${LabelModelUrl}" />
+                                <input is="otg-input" type="text" id="txtIdModelUrl" label="${LabelModelUrl}" />
                                 <div class="fieldDescription">${LabelIdentificationFieldHelp}</div>
                             </div>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtIdSerialNumber" label="${LabelSerialNumber}" />
+                                <input is="otg-input" type="text" id="txtIdSerialNumber" label="${LabelSerialNumber}" />
                                 <div class="fieldDescription">${LabelIdentificationFieldHelp}</div>
                             </div>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtIdDeviceDescription" label="${LabelDeviceDescription}" />
+                                <input is="otg-input" type="text" id="txtIdDeviceDescription" label="${LabelDeviceDescription}" />
                                 <div class="fieldDescription">${LabelIdentificationFieldHelp}</div>
                             </div>
                             <div>
                                 <h2 style="vertical-align:middle;display:inline-block;">${HeaderHttpHeaders}</h2>
-                                <button is="emby-button" type="button" class="fab btnAddIdentificationHttpHeader submit sectionTitleButton" style="margin-left:1em;" title="${ButtonAdd}">
+                                <button is="otg-button" type="button" class="fab btnAddIdentificationHttpHeader submit sectionTitleButton" style="margin-left:1em;" title="${ButtonAdd}">
                                     <i class="md-icon">add</i>
                                 </button>
                             </div>
                             <div class="httpHeaderIdentificationList"></div>
                         </div>
                     </div>
-                    <div is="emby-collapse" title="${HeaderDisplay}">
+                    <div is="otg-collapse" title="${HeaderDisplay}">
                         <div class="collapseContent">
                             <br />
                             <div class="checkboxContainer checkboxContainer-withDescription">
                                 <label>
-                                    <input is="emby-checkbox" type="checkbox" id="chkRequiresPlainFolders" />
+                                    <input is="otg-checkbox" type="checkbox" id="chkRequiresPlainFolders" />
                                     <span>${OptionPlainStorageFolders}</span>
                                 </label>
                                 <div class="fieldDescription checkboxFieldDescription">${OptionPlainStorageFoldersHelp}</div>
                             </div>
                             <div class="checkboxContainer checkboxContainer-withDescription">
                                 <label>
-                                    <input is="emby-checkbox" type="checkbox" id="chkRequiresPlainVideoItems" />
+                                    <input is="otg-checkbox" type="checkbox" id="chkRequiresPlainVideoItems" />
                                     <span>${OptionPlainVideoItems}</span>
                                 </label>
                                 <div class="fieldDescription checkboxFieldDescription">${OptionPlainVideoItemsHelp}</div>
                             </div>
                         </div>
                     </div>
-                    <div is="emby-collapse" title="${HeaderImageSettings}">
+                    <div is="otg-collapse" title="${HeaderImageSettings}">
                         <div class="collapseContent">
                             <div class="checkboxContainer checkboxContainer-withDescription">
                                 <label>
-                                    <input is="emby-checkbox" type="checkbox" id="chkEnableAlbumArtInDidl" data-mini="true" />
+                                    <input is="otg-checkbox" type="checkbox" id="chkEnableAlbumArtInDidl" data-mini="true" />
                                     <span>${LabelEmbedAlbumArtDidl}</span>
                                 </label>
                                 <div class="fieldDescription checkboxFieldDescription">${LabelEmbedAlbumArtDidlHelp}</div>
                             </div>
                             <div class="checkboxContainer checkboxContainer-withDescription">
                                 <label>
-                                    <input is="emby-checkbox" type="checkbox" id="chkEnableSingleImageLimit" data-mini="true" />
+                                    <input is="otg-checkbox" type="checkbox" id="chkEnableSingleImageLimit" data-mini="true" />
                                     <span>${LabelEnableSingleImageInDidlLimit}</span>
                                 </label>
                                 <div class="fieldDescription checkboxFieldDescription">${LabelEnableSingleImageInDidlLimitHelp}</div>
                             </div>
                             <div class="inputContainer">
-                                <input type="text" is="emby-input" id="txtAlbumArtPn" label="${LabelAlbumArtPN}" />
+                                <input type="text" is="otg-input" id="txtAlbumArtPn" label="${LabelAlbumArtPN}" />
                                 <div class="fieldDescription">${LabelAlbumArtHelp}</div>
                             </div>
                             <div class="inputContainer">
-                                <input type="number" is="emby-input" id="txtAlbumArtMaxWidth" pattern="[0-9]*" min="1" label="${LabelAlbumArtMaxWidth}" />
+                                <input type="number" is="otg-input" id="txtAlbumArtMaxWidth" pattern="[0-9]*" min="1" label="${LabelAlbumArtMaxWidth}" />
                                 <div class="fieldDescription">${LabelAlbumArtMaxWidthHelp}</div>
                             </div>
                             <div class="inputContainer">
-                                <input type="number" is="emby-input" id="txtAlbumArtMaxHeight" pattern="[0-9]*" min="1" label="${LabelAlbumArtMaxHeight}" />
+                                <input type="number" is="otg-input" id="txtAlbumArtMaxHeight" pattern="[0-9]*" min="1" label="${LabelAlbumArtMaxHeight}" />
                                 <div class="fieldDescription">${LabelAlbumArtMaxHeightHelp}</div>
                             </div>
                             <div class="inputContainer">
-                                <input type="number" is="emby-input" id="txtIconMaxWidth" pattern="[0-9]*" min="1" label="${LabelIconMaxWidth}" />
+                                <input type="number" is="otg-input" id="txtIconMaxWidth" pattern="[0-9]*" min="1" label="${LabelIconMaxWidth}" />
                                 <div class="fieldDescription">${LabelIconMaxWidthHelp}</div>
                             </div>
                             <div class="inputContainer">
-                                <input type="number" is="emby-input" id="txtIconMaxHeight" pattern="[0-9]*" min="1" label="${LabelIconMaxHeight}" />
+                                <input type="number" is="otg-input" id="txtIconMaxHeight" pattern="[0-9]*" min="1" label="${LabelIconMaxHeight}" />
                                 <div class="fieldDescription">${LabelIconMaxHeightHelp}</div>
                             </div>
                         </div>
                     </div>
-                    <div is="emby-collapse" title="${HeaderServerSettings}">
+                    <div is="otg-collapse" title="${HeaderServerSettings}">
                         <div class="collapseContent">
                             <p>${HeaderProfileServerSettingsHelp}</p>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtInfoFriendlyName" label="${LabelFriendlyName}" />
+                                <input is="otg-input" type="text" id="txtInfoFriendlyName" label="${LabelFriendlyName}" />
                             </div>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtInfoManufacturer" label="${LabelManufacturer}" />
+                                <input is="otg-input" type="text" id="txtInfoManufacturer" label="${LabelManufacturer}" />
                             </div>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtInfoManufacturerUrl" label="${LabelManufacturerUrl}" />
+                                <input is="otg-input" type="text" id="txtInfoManufacturerUrl" label="${LabelManufacturerUrl}" />
                             </div>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtInfoModelName" label="${LabelModelName}" />
+                                <input is="otg-input" type="text" id="txtInfoModelName" label="${LabelModelName}" />
                             </div>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtInfoModelNumber" label="${LabelModelNumber}" />
+                                <input is="otg-input" type="text" id="txtInfoModelNumber" label="${LabelModelNumber}" />
                             </div>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtInfoModelDesription" label="${LabelModelDescription}" />
+                                <input is="otg-input" type="text" id="txtInfoModelDesription" label="${LabelModelDescription}" />
                             </div>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtInfoModelUrl" label="${LabelModelUrl}" />
+                                <input is="otg-input" type="text" id="txtInfoModelUrl" label="${LabelModelUrl}" />
                             </div>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtInfoSerialNumber" label="${LabelSerialNumber}" />
+                                <input is="otg-input" type="text" id="txtInfoSerialNumber" label="${LabelSerialNumber}" />
                             </div>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtProtocolInfo" label="${LabelProtocolInfo}" />
+                                <input is="otg-input" type="text" id="txtProtocolInfo" label="${LabelProtocolInfo}" />
                                 <div class="fieldDescription">${LabelProtocolInfoHelp}</div>
                             </div>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtXDlnaCap" label="${LabelXDlnaCap}" />
+                                <input is="otg-input" type="text" id="txtXDlnaCap" label="${LabelXDlnaCap}" />
                                 <div class="fieldDescription">${LabelXDlnaCapHelp}</div>
                             </div>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtXDlnaDoc" label="${LabelXDlnaDoc}" />
+                                <input is="otg-input" type="text" id="txtXDlnaDoc" label="${LabelXDlnaDoc}" />
                                 <div class="fieldDescription">${LabelXDlnaDocHelp}</div>
                             </div>
                             <div class="inputContainer">
-                                <input is="emby-input" type="text" id="txtSonyAggregationFlags" label="${LabelSonyAggregationFlags}" />
+                                <input is="otg-input" type="text" id="txtSonyAggregationFlags" label="${LabelSonyAggregationFlags}" />
                                 <div class="fieldDescription">${LabelSonyAggregationFlagsHelp}</div>
                             </div>
                         </div>
                     </div>
-                    <div is="emby-collapse" title="${HeaderSubtitleProfiles}">
+                    <div is="otg-collapse" title="${HeaderSubtitleProfiles}">
                         <div class="collapseContent">
                             <p>${HeaderSubtitleProfilesHelp}</p>
-                            <button is="emby-button" type="button" class="raised submit block btnAddSubtitleProfile">
+                            <button is="otg-button" type="button" class="raised submit block btnAddSubtitleProfile">
                                 <span>${ButtonAdd}</span>
                             </button>
                             <div class="subtitleProfileList"></div>
                             <br />
                         </div>
                     </div>
-                    <div is="emby-collapse" title="${HeaderXmlSettings}">
+                    <div is="otg-collapse" title="${HeaderXmlSettings}">
                         <div class="collapseContent">
                             <div>
                                 <h2 style="vertical-align:middle;display:inline-block;">${HeaderXmlDocumentAttributes}</h2>
-                                <button is="emby-button" type="button" class="fab btnAddXmlDocumentAttribute submit sectionTitleButton" style="margin-left:1em;" title="${ButtonAdd}">
+                                <button is="otg-button" type="button" class="fab btnAddXmlDocumentAttribute submit sectionTitleButton" style="margin-left:1em;" title="${ButtonAdd}">
                                     <i class="md-icon">add</i>
                                 </button>
                             </div>
@@ -232,40 +232,40 @@
                 </div>
                 <div class="tabContent tabDirectPlayProfiles">
                     <p>${HeaderDirectPlayProfileHelp}</p>
-                    <button is="emby-button" class="raised submit block btnAddDirectPlayProfile" type="button" data-mini="true" data-icon="plus">${ButtonNew}</button>
+                    <button is="otg-button" class="raised submit block btnAddDirectPlayProfile" type="button" data-mini="true" data-icon="plus">${ButtonNew}</button>
                     <br />
                     <div class="directPlayProfiles"></div>
                 </div>
                 <div class="tabContent tabTranscodingProfiles">
                     <p>${HeaderTranscodingProfileHelp}</p>
-                    <button is="emby-button" class="raised submit block btnAddTranscodingProfile" type="button" data-mini="true" data-icon="plus">${ButtonNew}</button>
+                    <button is="otg-button" class="raised submit block btnAddTranscodingProfile" type="button" data-mini="true" data-icon="plus">${ButtonNew}</button>
                     <br />
                     <div class="transcodingProfiles"></div>
                 </div>
                 <div class="tabContent tabContainerProfiles">
                     <p>${HeaderContainerProfileHelp}</p>
-                    <button is="emby-button" class="raised submit block btnAddContainerProfile" type="button" data-mini="true" data-icon="plus">${ButtonNew}</button>
+                    <button is="otg-button" class="raised submit block btnAddContainerProfile" type="button" data-mini="true" data-icon="plus">${ButtonNew}</button>
                     <br />
                     <div class="containerProfiles"></div>
                 </div>
                 <div class="tabContent tabCodecProfiles">
                     <p>${HeaderCodecProfileHelp}</p>
-                    <button is="emby-button" class="raised submit block btnAddCodecProfile" type="button" data-icon="plus">${ButtonNew}</button>
+                    <button is="otg-button" class="raised submit block btnAddCodecProfile" type="button" data-icon="plus">${ButtonNew}</button>
                     <br />
                     <div class="codecProfiles"></div>
                 </div>
                 <div class="tabContent tabMediaProfiles">
                     <p>${HeaderResponseProfileHelp}</p>
-                    <button is="emby-button" class="raised submit block btnAddResponseProfile" type="button" data-mini="true" data-icon="plus">${ButtonNew}</button>
+                    <button is="otg-button" class="raised submit block btnAddResponseProfile" type="button" data-mini="true" data-icon="plus">${ButtonNew}</button>
                     <br />
                     <div class="mediaProfiles"></div>
                 </div>
                 <br />
                 <div>
-                    <button is="emby-button" type="submit" class="raised button-submit block">
+                    <button is="otg-button" type="submit" class="raised button-submit block">
                         <span>${ButtonSave}</span>
                     </button>
-                    <button is="emby-button" type="button" class="button-cancel raised block" onclick="Dashboard.navigate('dlnaprofiles.html');">
+                    <button is="otg-button" type="button" class="button-cancel raised block" onclick="Dashboard.navigate('dlnaprofiles.html');">
                         <span>${ButtonCancel}</span>
                     </button>
                 </div>
@@ -279,33 +279,33 @@
             </div>
             <div data-role="content">
                 <div class="selectContainer">
-                    <select id="selectDirectPlayProfileType" name="selectDirectPlayProfileType" is="emby-select" label="${LabelType}">
+                    <select id="selectDirectPlayProfileType" name="selectDirectPlayProfileType" is="otg-select" label="${LabelType}">
                         <option value="Audio">${OptionProfileAudio}</option>
                         <option value="Photo">${OptionProfilePhoto}</option>
                         <option value="Video">${OptionProfileVideo}</option>
                     </select>
                 </div>
                 <div class="inputContainer">
-                    <input is="emby-input" type="text" id="txtDirectPlayContainer" label="${LabelProfileContainer}" />
+                    <input is="otg-input" type="text" id="txtDirectPlayContainer" label="${LabelProfileContainer}" />
                     <div class="fieldDescription">${LabelProfileContainersHelp}</div>
                 </div>
                 <div id="fldDirectPlayVideoCodec" style="margin: 1em 0;">
                     <div class="inputContainer">
-                        <input is="emby-input" type="text" id="txtDirectPlayVideoCodec" label="${LabelProfileVideoCodecs}" />
+                        <input is="otg-input" type="text" id="txtDirectPlayVideoCodec" label="${LabelProfileVideoCodecs}" />
                         <div class="fieldDescription">${LabelProfileCodecsHelp}</div>
                     </div>
                 </div>
                 <div id="fldDirectPlayAudioCodec" style="margin: 1em 0 2em;">
                     <div class="inputContainer">
-                        <input is="emby-input" type="text" id="txtDirectPlayAudioCodec" label="${LabelProfileAudioCodecs}" />
+                        <input is="otg-input" type="text" id="txtDirectPlayAudioCodec" label="${LabelProfileAudioCodecs}" />
                         <div class="fieldDescription">${LabelProfileCodecsHelp}</div>
                     </div>
                 </div>
                 <p>
-                    <button is="emby-button" type="submit" class="raised button-submit block" data-icon="check" data-mini="true">
+                    <button is="otg-button" type="submit" class="raised button-submit block" data-icon="check" data-mini="true">
                         <span>${ButtonOk}</span>
                     </button>
-                    <button is="emby-button" type="button" class="raised button-cancel block" data-icon="delete" onclick="$(this).parents('.dialog').addClass('hide');" data-mini="true">
+                    <button is="otg-button" type="button" class="raised button-cancel block" data-icon="delete" onclick="$(this).parents('.dialog').addClass('hide');" data-mini="true">
                         <span>${ButtonCancel}</span>
                     </button>
                 </p>
@@ -327,7 +327,7 @@
                 <br />
                 <div class="tabContent tabTranscodingBasics" style="display: none;">
                     <div class="selectContainer">
-                        <select id="selectTranscodingProfileType" name="selectTranscodingProfileType" is="emby-select" label="${LabelType}">
+                        <select id="selectTranscodingProfileType" name="selectTranscodingProfileType" is="otg-select" label="${LabelType}">
                             <option value="Audio">${OptionProfileAudio}</option>
                             <option value="Photo">${OptionProfilePhoto}</option>
                             <option value="Video">${OptionProfileVideo}</option>
@@ -335,23 +335,23 @@
                     </div>
                     <div id="fldTranscodingProtocol" style="margin: 1em 0;">
                         <div class="selectContainer">
-                            <select id="selectTranscodingProtocol" name="selectTranscodingProtocol" is="emby-select" label="${LabelProtocol}">
+                            <select id="selectTranscodingProtocol" name="selectTranscodingProtocol" is="otg-select" label="${LabelProtocol}">
                                 <option value="Http">${OptionProtocolHttp}</option>
                                 <option value="Hls">${OptionProtocolHls}</option>
                             </select>
                         </div>
                     </div>
                     <div class="inputContainer">
-                        <input is="emby-input" type="text" id="txtTranscodingContainer" label="${LabelTranscodingContainer}"; required="required" />
+                        <input is="otg-input" type="text" id="txtTranscodingContainer" label="${LabelTranscodingContainer}"; required="required" />
                     </div>
                     <div id="fldTranscodingVideoCodec" style="margin: 1em 0;">
                         <div class="inputContainer">
-                            <input is="emby-input" type="text" id="txtTranscodingVideoCodec" label="${LabelTranscodingVideoCodec}" />
+                            <input is="otg-input" type="text" id="txtTranscodingVideoCodec" label="${LabelTranscodingVideoCodec}" />
                         </div>
                     </div>
                     <div id="fldTranscodingAudioCodec" style="margin: 1em 0;">
                         <div class="inputContainer">
-                            <input is="emby-input" type="text" id="txtTranscodingAudioCodec" label="${LabelTranscodingAudioCodec}" />
+                            <input is="otg-input" type="text" id="txtTranscodingAudioCodec" label="${LabelTranscodingAudioCodec}" />
                         </div>
                     </div>
                 </div>
@@ -359,7 +359,7 @@
                     <div id="fldEnableMpegtsM2TsMode" style="margin: 1em 0;">
                         <div class="checkboxContainer checkboxContainer-withDescription">
                             <label>
-                                <input is="emby-checkbox" type="checkbox" id="chkEnableMpegtsM2TsMode" />
+                                <input is="otg-checkbox" type="checkbox" id="chkEnableMpegtsM2TsMode" />
                                 <span>${OptionEnableM2tsMode}</span>
                             </label>
                             <div class="fieldDescription checkboxFieldDescription">${OptionEnableM2tsModeHelp}</div>
@@ -368,7 +368,7 @@
                     <div id="fldEstimateContentLength" style="margin: 1em 0;">
                         <div class="checkboxContainer checkboxContainer-withDescription">
                             <label>
-                                <input is="emby-checkbox" type="checkbox" id="chkEstimateContentLength" />
+                                <input is="otg-checkbox" type="checkbox" id="chkEstimateContentLength" />
                                 <span>${OptionEstimateContentLength}</span>
                             </label>
                         </div>
@@ -376,7 +376,7 @@
                     <div id="fldReportByteRangeRequests" style="margin: 1em 0;">
                         <div class="checkboxContainer checkboxContainer-withDescription">
                             <label>
-                                <input is="emby-checkbox" type="checkbox" id="chkReportByteRangeRequests" />
+                                <input is="otg-checkbox" type="checkbox" id="chkReportByteRangeRequests" />
                                 <span>${OptionReportByteRangeSeekingWhenTranscoding}</span>
                             </label>
                             <div class="fieldDescription checkboxFieldDescription">${OptionReportByteRangeSeekingWhenTranscodingHelp}</div>
@@ -384,10 +384,10 @@
                     </div>
                 </div>
                 <p>
-                    <button is="emby-button" type="submit" class="raised button-submit block" data-icon="check" data-mini="true">
+                    <button is="otg-button" type="submit" class="raised button-submit block" data-icon="check" data-mini="true">
                         <span>${ButtonOk}</span>
                     </button>
-                    <button is="emby-button" type="button" class="raised button-cancel block" data-icon="delete" onclick="$(this).parents('.dialog').addClass('hide');" data-mini="true">
+                    <button is="otg-button" type="button" class="raised button-cancel block" data-icon="delete" onclick="$(this).parents('.dialog').addClass('hide');" data-mini="true">
                         <span>${ButtonCancel}</span>
                     </button>
                 </p>
@@ -403,23 +403,23 @@
                 <p>${HeaderContainerProfileHelp}</p>
                 <div class="tabContent tabContainerBasics">
                     <div class="selectContainer">
-                        <select id="selectContainerProfileType" name="selectContainerProfileType" is="emby-select" label="${LabelType}">
+                        <select id="selectContainerProfileType" name="selectContainerProfileType" is="otg-select" label="${LabelType}">
                             <option value="Audio">${OptionProfileAudio}</option>
                             <option value="Photo">${OptionProfilePhoto}</option>
                             <option value="Video">${OptionProfileVideo}</option>
                         </select>
                     </div>
                     <div class="inputContainer">
-                        <input is="emby-input" type="text" id="txtContainerProfileContainer" label="${LabelProfileContainer}" />
+                        <input is="otg-input" type="text" id="txtContainerProfileContainer" label="${LabelProfileContainer}" />
                         <div class="fieldDescription">${LabelProfileContainersHelp}</div>
                     </div>
                 </div>
                 <div class="tabContent tabContainerConditions" style="display: none;"></div>
                 <p>
-                    <button is="emby-button" type="submit" class="raised button-submit block" data-icon="check" data-mini="true">
+                    <button is="otg-button" type="submit" class="raised button-submit block" data-icon="check" data-mini="true">
                         <span>${ButtonOk}</span>
                     </button>
-                    <button is="emby-button" type="button" class="raised button-cancel block" data-icon="delete" onclick="$(this).parents('.dialog').addClass('hide');" data-mini="true">
+                    <button is="otg-button" type="button" class="raised button-cancel block" data-icon="delete" onclick="$(this).parents('.dialog').addClass('hide');" data-mini="true">
                         <span>${ButtonCancel}</span>
                     </button>
                 </p>
@@ -434,21 +434,21 @@
             <div data-role="content">
                 <p>${HeaderCodecProfileHelp}</p>
                 <div class="selectContainer">
-                    <select id="selectCodecProfileType" name="selectCodecProfileType" is="emby-select" label="${LabelType}">
+                    <select id="selectCodecProfileType" name="selectCodecProfileType" is="otg-select" label="${LabelType}">
                         <option value="Video">${OptionProfileVideo}</option>
                         <option value="VideoAudio">${OptionProfileVideoAudio}</option>
                         <option value="Audio">${OptionProfileAudio}</option>
                     </select>
                 </div>
                 <div class="inputContainer">
-                    <input is="emby-input" type="text" id="txtCodecProfileCodec" label="${LabelProfileCodecs}" />
+                    <input is="otg-input" type="text" id="txtCodecProfileCodec" label="${LabelProfileCodecs}" />
                     <div class="fieldDescription">${LabelProfileCodecsHelp}</div>
                 </div>
                 <p>
-                    <button is="emby-button" type="submit" class="raised button-submit block" data-icon="check" data-mini="true">
+                    <button is="otg-button" type="submit" class="raised button-submit block" data-icon="check" data-mini="true">
                         <span>${ButtonOk}</span>
                     </button>
-                    <button is="emby-button" type="button" class="raised button-cancel block" data-icon="delete" onclick="$(this).parents('.dialog').addClass('hide');" data-mini="true">
+                    <button is="otg-button" type="button" class="raised button-cancel block" data-icon="delete" onclick="$(this).parents('.dialog').addClass('hide');" data-mini="true">
                         <span>${ButtonCancel}</span>
                     </button>
                 </p>
@@ -462,33 +462,33 @@
             </div>
             <div data-role="content">
                 <div class="selectContainer">
-                    <select id="selectResponseProfileType" name="selectResponseProfileType" is="emby-select" label="${LabelType}">
+                    <select id="selectResponseProfileType" name="selectResponseProfileType" is="otg-select" label="${LabelType}">
                         <option value="Audio">${OptionProfileAudio}</option>
                         <option value="Photo">${OptionProfilePhoto}</option>
                         <option value="Video">${OptionProfileVideo}</option>
                     </select>
                 </div>
                 <div class="inputContainer">
-                    <input is="emby-input" type="text" id="txtResponseProfileContainer" label="${LabelProfileContainer}" />
+                    <input is="otg-input" type="text" id="txtResponseProfileContainer" label="${LabelProfileContainer}" />
                     <div class="fieldDescription">${LabelProfileContainersHelp}</div>
                 </div>
                 <div id="fldResponseProfileVideoCodec" style="margin: 1em 0;">
                     <div class="inputContainer">
-                        <input is="emby-input" type="text" id="txtResponseProfileVideoCodec" label="${LabelProfileVideoCodecs}" />
+                        <input is="otg-input" type="text" id="txtResponseProfileVideoCodec" label="${LabelProfileVideoCodecs}" />
                         <div class="fieldDescription">${LabelProfileCodecsHelp}</div>
                     </div>
                 </div>
                 <div id="fldResponseProfileAudioCodec" style="margin: 1em 0 2em;">
                     <div class="inputContainer">
-                        <input is="emby-input" type="text" id="txtResponseProfileAudioCodec" label="${LabelProfileAudioCodecs}" />
+                        <input is="otg-input" type="text" id="txtResponseProfileAudioCodec" label="${LabelProfileAudioCodecs}" />
                         <div class="fieldDescription">${LabelProfileCodecsHelp}</div>
                     </div>
                 </div>
                 <p>
-                    <button is="emby-button" type="submit" class="raised button-submit block" data-icon="check" data-mini="true">
+                    <button is="otg-button" type="submit" class="raised button-submit block" data-icon="check" data-mini="true">
                         <span>${ButtonOk}</span>
                     </button>
-                    <button is="emby-button" type="button" class="raised button-cancel block" data-icon="delete" onclick="$(this).parents('.dialog').addClass('hide');" data-mini="true">
+                    <button is="otg-button" type="button" class="raised button-cancel block" data-icon="delete" onclick="$(this).parents('.dialog').addClass('hide');" data-mini="true">
                         <span>${ButtonCancel}</span>
                     </button>
                 </p>
@@ -502,23 +502,23 @@
             </div>
             <div data-role="content">
                 <div class="inputContainer">
-                    <input is="emby-input" type="text" id="txtIdentificationHeaderName" label="${LabelName}" />
+                    <input is="otg-input" type="text" id="txtIdentificationHeaderName" label="${LabelName}" />
                 </div>
                 <div class="inputContainer">
-                    <input is="emby-input" type="text" id="txtIdentificationHeaderValue" label="${LabelValue}" />
+                    <input is="otg-input" type="text" id="txtIdentificationHeaderValue" label="${LabelValue}" />
                 </div>
                 <div class="selectContainer">
-                    <select id="selectMatchType" name="selectMatchType" is="emby-select" label="${LabelMatchType}">
+                    <select id="selectMatchType" name="selectMatchType" is="otg-select" label="${LabelMatchType}">
                         <option value="Equals">${OptionEquals}</option>
                         <option value="Regex">${OptionRegex}</option>
                         <option value="Substring">${OptionSubstring}</option>
                     </select>
                 </div>
                 <p>
-                    <button is="emby-button" type="submit" class="raised button-submit block" data-icon="check" data-mini="true">
+                    <button is="otg-button" type="submit" class="raised button-submit block" data-icon="check" data-mini="true">
                         <span>${ButtonOk}</span>
                     </button>
-                    <button is="emby-button" type="button" class="raised button-cancel block" data-icon="delete" onclick="$(this).parents('.dialog').addClass('hide');" data-mini="true">
+                    <button is="otg-button" type="button" class="raised button-cancel block" data-icon="delete" onclick="$(this).parents('.dialog').addClass('hide');" data-mini="true">
                         <span>${ButtonCancel}</span>
                     </button>
                 </p>
@@ -532,16 +532,16 @@
             </div>
             <div data-role="content">
                 <div class="inputContainer">
-                    <input is="emby-input" type="text" id="txtXmlAttributeName" label="${LabelName}" />
+                    <input is="otg-input" type="text" id="txtXmlAttributeName" label="${LabelName}" />
                 </div>
                 <div class="inputContainer">
-                    <input is="emby-input" type="text" id="txtXmlAttributeValue" label="${LabelValue}" />
+                    <input is="otg-input" type="text" id="txtXmlAttributeValue" label="${LabelValue}" />
                 </div>
                 <p>
-                    <button is="emby-button" type="submit" class="raised button-submit block" data-icon="check" data-mini="true">
+                    <button is="otg-button" type="submit" class="raised button-submit block" data-icon="check" data-mini="true">
                         <span>${ButtonOk}</span>
                     </button>
-                    <button is="emby-button" type="button" class="raised button-cancel block" data-icon="delete" onclick="$(this).parents('.dialog').addClass('hide');" data-mini="true">
+                    <button is="otg-button" type="button" class="raised button-cancel block" data-icon="delete" onclick="$(this).parents('.dialog').addClass('hide');" data-mini="true">
                         <span>${ButtonCancel}</span>
                     </button>
                 </p>
@@ -555,27 +555,27 @@
             </div>
             <div data-role="content">
                 <div class="inputContainer">
-                    <input is="emby-input" type="text" id="txtSubtitleProfileFormat" label="${LabelFormat}" />
+                    <input is="otg-input" type="text" id="txtSubtitleProfileFormat" label="${LabelFormat}" />
                     <div class="fieldDescription">${LabelSubtitleFormatHelp}</div>
                 </div>
                 <div class="selectContainer">
-                    <select id="selectSubtitleProfileMethod" name="selectSubtitleProfileMethod" is="emby-select" label="${LabelMethod}">
+                    <select id="selectSubtitleProfileMethod" name="selectSubtitleProfileMethod" is="otg-select" label="${LabelMethod}">
                         <option value="Embed">${OptionEmbedSubtitles}</option>
                         <option value="External">${OptionExternallyDownloaded}</option>
                         <option value="Hls">${OptionHlsSegmentedSubtitles}</option>
                     </select>
                 </div>
                 <div class="selectContainer">
-                    <select id="selectSubtitleProfileDidlMode" name="selectSubtitleProfileDidlMode" is="emby-select" label="${LabelDidlMode}">
+                    <select id="selectSubtitleProfileDidlMode" name="selectSubtitleProfileDidlMode" is="otg-select" label="${LabelDidlMode}">
                         <option value="">${OptionResElement}</option>
                         <option value="CaptionInfoEx">${OptionCaptionInfoExSamsung}</option>
                     </select>
                 </div>
                 <p>
-                    <button is="emby-button" type="submit" class="raised button-submit block" data-icon="check" data-mini="true">
+                    <button is="otg-button" type="submit" class="raised button-submit block" data-icon="check" data-mini="true">
                         <span>${ButtonOk}</span>
                     </button>
-                    <button is="emby-button" type="button" class="raised button-cancel block" data-icon="delete" onclick="$(this).parents('.dialog').addClass('hide');" data-mini="true">
+                    <button is="otg-button" type="button" class="raised button-cancel block" data-icon="delete" onclick="$(this).parents('.dialog').addClass('hide');" data-mini="true">
                         <span>${ButtonCancel}</span>
                     </button>
                 </p>

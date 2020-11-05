@@ -1,4 +1,4 @@
-define(['dialogHelper', 'loading', 'apphost', 'layoutManager', 'connectionManager', 'appRouter', 'globalize', 'emby-checkbox', 'emby-input', 'paper-icon-button-light', 'emby-select', 'material-icons', 'css!./../formdialog', 'emby-button', 'flexStyles'], function (dialogHelper, loading, appHost, layoutManager, connectionManager, appRouter, globalize) {
+define(['dialogHelper', 'loading', 'apphost', 'layoutManager', 'connectionManager', 'appRouter', 'globalize', 'otg-checkbox', 'otg-input', 'paper-icon-button-light', 'otg-select', 'material-icons', 'css!./../formdialog', 'otg-button', 'flexStyles'], function (dialogHelper, loading, appHost, layoutManager, connectionManager, appRouter, globalize) {
     'use strict';
 
     var currentServerId;
@@ -147,19 +147,19 @@ define(['dialogHelper', 'loading', 'apphost', 'layoutManager', 'connectionManage
         html += '<br/>';
         html += '<br/>';
         html += '<div class="selectContainer">';
-        html += '<select is="emby-select" label="' + globalize.translate('LabelCollection') + '" id="selectCollectionToAddTo" autofocus></select>';
+        html += '<select is="otg-select" label="' + globalize.translate('LabelCollection') + '" id="selectCollectionToAddTo" autofocus></select>';
         html += '</div>';
         html += '</div>';
 
         html += '<div class="newCollectionInfo">';
 
         html += '<div class="inputContainer">';
-        html += '<input is="emby-input" type="text" id="txtNewCollectionName" required="required" label="' + globalize.translate('LabelName') + '" />';
+        html += '<input is="otg-input" type="text" id="txtNewCollectionName" required="required" label="' + globalize.translate('LabelName') + '" />';
         html += '<div class="fieldDescription">' + globalize.translate('NewCollectionNameExample') + '</div>';
         html += '</div>';
 
         html += '<label class="checkboxContainer">';
-        html += '<input is="emby-checkbox" type="checkbox" id="chkEnableInternetMetadata" />';
+        html += '<input is="otg-checkbox" type="checkbox" id="chkEnableInternetMetadata" />';
         html += '<span>' + globalize.translate('SearchForCollectionInternetMetadata') + '</span>';
         html += '</label>';
 
@@ -167,7 +167,7 @@ define(['dialogHelper', 'loading', 'apphost', 'layoutManager', 'connectionManage
         html += '</div>';
 
         html += '<div class="formDialogFooter">';
-        html += '<button is="emby-button" type="submit" class="raised btnSubmit block formDialogFooterItem button-submit">' + globalize.translate('ButtonOk') + '</button>';
+        html += '<button is="otg-button" type="submit" class="raised btnSubmit block formDialogFooterItem button-submit">' + globalize.translate('ButtonOk') + '</button>';
         html += '</div>';
 
         html += '<input type="hidden" class="fldSelectedItemIds" />';
@@ -249,7 +249,7 @@ define(['dialogHelper', 'loading', 'apphost', 'layoutManager', 'connectionManage
         html += '</h3>';
 
         if (appHost.supports('externallinks')) {
-            html += '<a is="emby-linkbutton" class="button-link btnHelp flex align-items-center" href="https://web.archive.org/web/20181216120305/https://github.com/MediaBrowser/Wiki/wiki/Collections" target="_blank" style="margin-left:auto;margin-right:.5em;padding:.25em;" title="' + globalize.translate('Help') + '"><i class="md-icon">info</i><span style="margin-left:.25em;">' + globalize.translate('Help') + '</span></a>';
+            html += '<a is="otg-linkbutton" class="button-link btnHelp flex align-items-center" href="https://web.archive.org/web/20181216120305/https://github.com/MediaBrowser/Wiki/wiki/Collections" target="_blank" style="margin-left:auto;margin-right:.5em;padding:.25em;" title="' + globalize.translate('Help') + '"><i class="md-icon">info</i><span style="margin-left:.25em;">' + globalize.translate('Help') + '</span></a>';
         }
 
         html += '</div>';

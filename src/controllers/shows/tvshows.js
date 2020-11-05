@@ -1,4 +1,4 @@
-define(["layoutManager", "loading", "events", "libraryBrowser", "imageLoader", "listView", "cardBuilder", "alphaPicker", "emby-itemscontainer"], function (layoutManager, loading, events, libraryBrowser, imageLoader, listView, cardBuilder, alphaPicker) {
+define(["layoutManager", "loading", "events", "libraryBrowser", "imageLoader", "listView", "cardBuilder", "alphaPicker", "otg-itemscontainer"], function (layoutManager, loading, events, libraryBrowser, imageLoader, listView, cardBuilder, alphaPicker) {
     "use strict";
 
     return function (view, params, tabContent) {

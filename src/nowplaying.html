@@ -9,7 +9,7 @@
                 <h2 class="nowPlayingPageTitle"></h2>
 
                 <div class="sliderContainer nowPlayingPositionSliderContainer">
-                    <input type="range" is="emby-slider" pin step="1" min="0" max="100" value="0" class="nowPlayingPositionSlider" />
+                    <input type="range" is="otg-slider" pin step="1" min="0" max="100" value="0" class="nowPlayingPositionSlider" />
                 </div>
 
                 <div class="nowPlayingInfoButtons">
@@ -66,7 +66,7 @@
                             <i class="xlargePaperIconButton md-icon">volume_up</i>
                         </button>
                         <div class="sliderContainer nowPlayingVolumeSliderContainer">
-                            <input is="emby-slider" type="range" step="1" min="0" max="100" value="0" class="nowPlayingVolumeSlider" />
+                            <input is="otg-slider" type="range" step="1" min="0" max="100" value="0" class="nowPlayingVolumeSlider" />
                         </div>
                     </div>
                 </div>
@@ -118,32 +118,32 @@
         </div>
         <div>
             <div class="sendMessageSection">
-                <div is="emby-collapse" title="${HeaderSendMessage}">
+                <div is="otg-collapse" title="${HeaderSendMessage}">
                 <div class="collapseContent" style="text-align: left;">
                     <form class="sendMessageForm">
                         <div class="inputContainer">
-                            <input is="emby-input" class="sendMessageElement" type="text" id="txtMessageTitle" label="${LabelMessageTitle}" required />
+                            <input is="otg-input" class="sendMessageElement" type="text" id="txtMessageTitle" label="${LabelMessageTitle}" required />
                         </div>
                         <br />
                         <div class="inputContainer">
-                            <input is="emby-input" class="sendMessageElement" type="text" id="txtMessageText" label="${LabelMessageText}" required />
+                            <input is="otg-input" class="sendMessageElement" type="text" id="txtMessageText" label="${LabelMessageText}" required />
                         </div>
                         <p>
-                            <button is="emby-button" class="sendMessageElement button-submit block raised" type="submit" raised>${ButtonSend}</button>
+                            <button is="otg-button" class="sendMessageElement button-submit block raised" type="submit" raised>${ButtonSend}</button>
                         </p>
                     </form>
                 </div>
                 </div>
             </div>
             <div class="sendTextSection">
-                <div is="emby-collapse" title="${HeaderTypeText}">
+                <div is="otg-collapse" title="${HeaderTypeText}">
                 <div  class="collapseContent" style="text-align: left;">
                     <form class="typeTextForm">
                         <div class="inputContainer">
-                            <input is="emby-input" class="typeTextElement" type="text" id="txtTypeText" label="${LabelTypeText}" required />
+                            <input is="otg-input" class="typeTextElement" type="text" id="txtTypeText" label="${LabelTypeText}" required />
                         </div>
                         <p>
-                            <button is="emby-button" class="typeTextElement button-submit block raised" type="submit" raised>${ButtonSend}</button>
+                            <button is="otg-button" class="typeTextElement button-submit block raised" type="submit" raised>${ButtonSend}</button>
                         </p>
                     </form>
                 </div>
@@ -159,7 +159,7 @@
                     <i class="md-icon">save</i>
                 </button>
             </div>
-            <div class="playlist itemsContainer vertical-list" is="emby-itemscontainer" data-dragreorder="true">
+            <div class="playlist itemsContainer vertical-list" is="otg-itemscontainer" data-dragreorder="true">
             </div>
         </div>
         <br />

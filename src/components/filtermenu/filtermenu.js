@@ -1,4 +1,4 @@
-define(['require', 'dom', 'focusManager', 'dialogHelper', 'loading', 'apphost', 'inputManager', 'layoutManager', 'connectionManager', 'appRouter', 'globalize', 'userSettings', 'emby-checkbox', 'emby-input', 'paper-icon-button-light', 'emby-select', 'material-icons', 'css!./../formdialog', 'emby-button', 'flexStyles'], function (require, dom, focusManager, dialogHelper, loading, appHost, inputManager, layoutManager, connectionManager, appRouter, globalize, userSettings) {
+define(['require', 'dom', 'focusManager', 'dialogHelper', 'loading', 'apphost', 'inputManager', 'layoutManager', 'connectionManager', 'appRouter', 'globalize', 'userSettings', 'otg-checkbox', 'otg-input', 'paper-icon-button-light', 'otg-select', 'material-icons', 'css!./../formdialog', 'otg-button', 'flexStyles'], function (require, dom, focusManager, dialogHelper, loading, appHost, inputManager, layoutManager, connectionManager, appRouter, globalize, userSettings) {
     'use strict';
 
     function onSubmit(e) {
@@ -27,7 +27,7 @@ define(['require', 'dom', 'focusManager', 'dialogHelper', 'loading', 'apphost', 
 
             var checkedHtml = isCheckedFn(filter) ? ' checked' : '';
             itemHtml += '<label>';
-            itemHtml += '<input is="emby-checkbox" type="checkbox"' + checkedHtml + ' data-filter="' + filter.Id + '" class="' + cssClass + '"/>';
+            itemHtml += '<input is="otg-checkbox" type="checkbox"' + checkedHtml + ' data-filter="' + filter.Id + '" class="' + cssClass + '"/>';
             itemHtml += '<span>' + filter.Name + '</span>';
             itemHtml += '</label>';
 

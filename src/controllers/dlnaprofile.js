@@ -1,4 +1,4 @@
-define(["jQuery", "loading", "fnchecked", "emby-select", "emby-button", "emby-input", "emby-checkbox", "listViewStyle", "emby-button"], function ($, loading) {
+define(["jQuery", "loading", "fnchecked", "otg-select", "otg-button", "otg-input", "otg-checkbox", "listViewStyle", "otg-button"], function ($, loading) {
     "use strict";
 
     function loadProfile(page) {
@@ -257,7 +257,7 @@ define(["jQuery", "loading", "fnchecked", "emby-select", "emby-button", "emby-in
             }
 
             html += "<div>";
-            html += '<a is="emby-linkbutton" href="#" class="lnkEditSubProfile" data-profileindex="' + i + '">';
+            html += '<a is="otg-linkbutton" href="#" class="lnkEditSubProfile" data-profileindex="' + i + '">';
             html += "<p>" + Globalize.translate("ValueContainer").replace("{0}", profile.Container || allText) + "</p>";
 
             if ("Video" == profile.Type) {
@@ -317,7 +317,7 @@ define(["jQuery", "loading", "fnchecked", "emby-select", "emby-button", "emby-in
             }
 
             html += "<div>";
-            html += '<a is="emby-linkbutton" href="#" class="lnkEditSubProfile" data-profileindex="' + i + '">';
+            html += '<a is="otg-linkbutton" href="#" class="lnkEditSubProfile" data-profileindex="' + i + '">';
             html += "<p>Protocol: " + (profile.Protocol || "Http") + "</p>";
             html += "<p>" + Globalize.translate("ValueContainer").replace("{0}", profile.Container || allText) + "</p>";
 
@@ -403,7 +403,7 @@ define(["jQuery", "loading", "fnchecked", "emby-select", "emby-button", "emby-in
             }
 
             html += "<div>";
-            html += '<a is="emby-linkbutton" href="#" class="lnkEditSubProfile" data-profileindex="' + i + '">';
+            html += '<a is="otg-linkbutton" href="#" class="lnkEditSubProfile" data-profileindex="' + i + '">';
             html += "<p>" + Globalize.translate("ValueContainer").replace("{0}", profile.Container || allText) + "</p>";
 
             if (profile.Conditions && profile.Conditions.length) {
@@ -475,7 +475,7 @@ define(["jQuery", "loading", "fnchecked", "emby-select", "emby-button", "emby-in
             }
 
             html += "<div>";
-            html += '<a is="emby-linkbutton" href="#" class="lnkEditSubProfile" data-profileindex="' + i + '">';
+            html += '<a is="otg-linkbutton" href="#" class="lnkEditSubProfile" data-profileindex="' + i + '">';
             html += "<p>" + Globalize.translate("ValueCodec").replace("{0}", profile.Codec || allText) + "</p>";
 
             if (profile.Conditions && profile.Conditions.length) {
@@ -546,7 +546,7 @@ define(["jQuery", "loading", "fnchecked", "emby-select", "emby-button", "emby-in
             }
 
             html += "<div>";
-            html += '<a is="emby-linkbutton" href="#" class="lnkEditSubProfile" data-profileindex="' + i + '">';
+            html += '<a is="otg-linkbutton" href="#" class="lnkEditSubProfile" data-profileindex="' + i + '">';
             html += "<p>" + Globalize.translate("ValueContainer").replace("{0}", profile.Container || allText) + "</p>";
 
             if ("Video" == profile.Type) {

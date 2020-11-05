@@ -106,7 +106,7 @@ define(["browser", "appStorage", "apphost", "loading", "connectionManager", "glo
                 cssClass += " checkedInitial";
             }
             var checkedAttribute = isChecked ? " checked" : "";
-            itemSelectionPanel.innerHTML = '<label class="checkboxContainer"><input type="checkbox" is="emby-checkbox" data-outlineclass="multiSelectCheckboxOutline" class="' + cssClass + '"' + checkedAttribute + '/><span></span></label>';
+            itemSelectionPanel.innerHTML = '<label class="checkboxContainer"><input type="checkbox" is="otg-checkbox" data-outlineclass="multiSelectCheckboxOutline" class="' + cssClass + '"' + checkedAttribute + '/><span></span></label>';
             var chkItemSelect = itemSelectionPanel.querySelector(".chkItemSelect");
             chkItemSelect.addEventListener("change", onSelectionChange);
         }
@@ -321,7 +321,7 @@ define(["browser", "appStorage", "apphost", "loading", "connectionManager", "glo
 
         [].forEach.call(selectedElements, function (i) {
 
-            var container = dom.parentWithAttribute(i, "is", "emby-itemscontainer");
+            var container = dom.parentWithAttribute(i, "is", "otg-itemscontainer");
 
             if (container && elems.indexOf(container) === -1) {
                 elems.push(container);
@@ -362,7 +362,7 @@ define(["browser", "appStorage", "apphost", "loading", "connectionManager", "glo
 
     function showSelections(initialCard) {
 
-        require(["emby-checkbox"], function () {
+        require(["otg-checkbox"], function () {
             var cards = document.querySelectorAll(".card");
             for (var i = 0, length = cards.length; i < length; i++) {
                 showSelection(cards[i], initialCard === cards[i]);

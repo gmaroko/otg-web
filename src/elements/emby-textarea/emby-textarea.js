@@ -1,4 +1,4 @@
-define(['layoutManager', 'browser', 'css!./emby-textarea', 'registerElement', 'emby-input'], function (layoutManager, browser) {
+define(['layoutManager', 'browser', 'css!./otg-textarea', 'registerElement', 'otg-input'], function (layoutManager, browser) {
     'use strict';
 
     function autoGrow(textarea, maxLines) {
@@ -100,12 +100,12 @@ define(['layoutManager', 'browser', 'css!./emby-textarea', 'registerElement', 'e
 
     EmbyTextAreaPrototype.attachedCallback = function () {
 
-        if (this.classList.contains('emby-textarea')) {
+        if (this.classList.contains('otg-textarea')) {
             return;
         }
 
         this.rows = 1;
-        this.classList.add('emby-textarea');
+        this.classList.add('otg-textarea');
 
         var parentNode = this.parentNode;
         var label = this.ownerDocument.createElement('label');
@@ -131,7 +131,7 @@ define(['layoutManager', 'browser', 'css!./emby-textarea', 'registerElement', 'e
         new autoGrow(this);
     };
 
-    document.registerElement('emby-textarea', {
+    document.registerElement('otg-textarea', {
         prototype: EmbyTextAreaPrototype,
         extends: 'textarea'
     });

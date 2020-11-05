@@ -1,4 +1,4 @@
-define(["loading", "libraryMenu", "dom", "globalize", "cardStyle", "emby-button"], function (loading, libraryMenu, dom, globalize) {
+define(["loading", "libraryMenu", "dom", "globalize", "cardStyle", "otg-button"], function (loading, libraryMenu, dom, globalize) {
     "use strict";
 
     function deletePlugin(page, uniqueid, name) {
@@ -41,7 +41,7 @@ define(["loading", "libraryMenu", "dom", "globalize", "cardStyle", "emby-button"
         html += '<div class="cardBox visualCardBox">';
         html += '<div class="cardScalable">';
         html += '<div class="cardPadder cardPadder-backdrop"></div>';
-        html += configPageUrl ? '<a class="cardContent cardImageContainer" is="emby-linkbutton" href="' + configPageUrl + '">' : '<div class="cardContent noConfigPluginCard noHoverEffect cardImageContainer">';
+        html += configPageUrl ? '<a class="cardContent cardImageContainer" is="otg-linkbutton" href="' + configPageUrl + '">' : '<div class="cardContent noConfigPluginCard noHoverEffect cardImageContainer">';
 
         if (plugin.ImageUrl) {
             html += '<div class="cardImage coveredImage" style="background-image:url(\'' + plugin.ImageUrl + "');\">";
@@ -95,7 +95,7 @@ define(["loading", "libraryMenu", "dom", "globalize", "cardStyle", "emby-button"
         } else {
             html += '<div style="padding:5px;">';
             html += "<p>" + globalize.translate("MessageNoPluginsInstalled") + "</p>";
-            html += '<p><a is="emby-linkbutton" class="button-link" href="availableplugins.html">';
+            html += '<p><a is="otg-linkbutton" class="button-link" href="availableplugins.html">';
             html += globalize.translate("BrowsePluginCatalogMessage");
             html += "</a></p>";
             html += "</div>";

@@ -1,4 +1,4 @@
-define(["loading", "appRouter", "layoutManager", "userSettings", "connectionManager", "cardBuilder", "datetime", "mediaInfo", "backdrop", "listView", "itemContextMenu", "itemHelper", "dom", "indicators", "apphost", "imageLoader", "libraryMenu", "globalize", "browser", "events", "scrollHelper", "playbackManager", "libraryBrowser", "scrollStyles", "emby-itemscontainer", "emby-checkbox", "emby-button", "emby-playstatebutton", "emby-ratingbutton", "emby-scroller", "emby-select"], function (loading, appRouter, layoutManager, userSettings, connectionManager, cardBuilder, datetime, mediaInfo, backdrop, listView, itemContextMenu, itemHelper, dom, indicators, appHost, imageLoader, libraryMenu, globalize, browser, events, scrollHelper, playbackManager, libraryBrowser) {
+define(["loading", "appRouter", "layoutManager", "userSettings", "connectionManager", "cardBuilder", "datetime", "mediaInfo", "backdrop", "listView", "itemContextMenu", "itemHelper", "dom", "indicators", "apphost", "imageLoader", "libraryMenu", "globalize", "browser", "events", "scrollHelper", "playbackManager", "libraryBrowser", "scrollStyles", "otg-itemscontainer", "otg-checkbox", "otg-button", "otg-playstatebutton", "otg-ratingbutton", "otg-scroller", "otg-select"], function (loading, appRouter, layoutManager, userSettings, connectionManager, cardBuilder, datetime, mediaInfo, backdrop, listView, itemContextMenu, itemHelper, dom, indicators, appHost, imageLoader, libraryMenu, globalize, browser, events, scrollHelper, playbackManager, libraryBrowser) {
     "use strict";
 
     function getPromise(apiClient, params) {
@@ -63,7 +63,7 @@ define(["loading", "appRouter", "layoutManager", "userSettings", "connectionMana
     function getProgramScheduleHtml(items, options) {
         options = options || {};
         var html = "";
-        html += '<div is="emby-itemscontainer" class="itemsContainer vertical-list" data-contextmenu="false">';
+        html += '<div is="otg-itemscontainer" class="itemsContainer vertical-list" data-contextmenu="false">';
         html += listView.getListViewHtml({
             items: items,
             enableUserDataButtons: false,
@@ -332,7 +332,7 @@ define(["loading", "appRouter", "layoutManager", "userSettings", "connectionMana
                 itemType: "MusicArtist",
                 serverId: serverId
             });
-            html.push('<a style="color:inherit;" class="button-link" is="emby-linkbutton" href="' + href + '">' + artist.Name + "</a>");
+            html.push('<a style="color:inherit;" class="button-link" is="otg-linkbutton" href="' + href + '">' + artist.Name + "</a>");
         }
 
         return html = html.join(" / ");
@@ -359,7 +359,7 @@ define(["loading", "appRouter", "layoutManager", "userSettings", "connectionMana
             }, {
                 context: context
             });
-            parentNameHtml.push('<a style="color:inherit;" class="button-link" is="emby-linkbutton" href="' + parentRoute + '">' + item.SeriesName + "</a>");
+            parentNameHtml.push('<a style="color:inherit;" class="button-link" is="otg-linkbutton" href="' + parentRoute + '">' + item.SeriesName + "</a>");
         } else if (item.IsSeries || item.EpisodeTitle) {
             parentNameHtml.push(item.Name);
         }
@@ -374,7 +374,7 @@ define(["loading", "appRouter", "layoutManager", "userSettings", "connectionMana
             }, {
                 context: context
             });
-            parentNameHtml.push('<a style="color:inherit;" class="button-link" is="emby-linkbutton" href="' + parentRoute + '">' + item.SeriesName + "</a>");
+            parentNameHtml.push('<a style="color:inherit;" class="button-link" is="otg-linkbutton" href="' + parentRoute + '">' + item.SeriesName + "</a>");
         } else if (null != item.ParentIndexNumber && "Episode" === item.Type) {
             parentRoute = appRouter.getRouteUrl({
                 Id: item.SeasonId,
@@ -385,7 +385,7 @@ define(["loading", "appRouter", "layoutManager", "userSettings", "connectionMana
             }, {
                 context: context
             });
-            parentNameHtml.push('<a style="color:inherit;" class="button-link" is="emby-linkbutton" href="' + parentRoute + '">' + item.SeasonName + "</a>");
+            parentNameHtml.push('<a style="color:inherit;" class="button-link" is="otg-linkbutton" href="' + parentRoute + '">' + item.SeasonName + "</a>");
         } else if (null != item.ParentIndexNumber && item.IsSeries) {
             parentNameHtml.push(item.SeasonName || "S" + item.ParentIndexNumber);
         } else if (item.Album && item.AlbumId && ("MusicVideo" === item.Type || "Audio" === item.Type)) {
@@ -398,7 +398,7 @@ define(["loading", "appRouter", "layoutManager", "userSettings", "connectionMana
             }, {
                 context: context
             });
-            parentNameHtml.push('<a style="color:inherit;" class="button-link" is="emby-linkbutton" href="' + parentRoute + '">' + item.Album + "</a>");
+            parentNameHtml.push('<a style="color:inherit;" class="button-link" is="otg-linkbutton" href="' + parentRoute + '">' + item.Album + "</a>");
         } else if (item.Album) {
             parentNameHtml.push(item.Album);
         }
@@ -606,7 +606,7 @@ define(["loading", "appRouter", "layoutManager", "userSettings", "connectionMana
         var itemBirthLocation = page.querySelector("#itemBirthLocation");
 
         if ("Person" == item.Type && item.ProductionLocations && item.ProductionLocations.length) {
-            var gmap = '<a is="emby-linkbutton" class="button-link textlink" target="_blank" href="https://maps.google.com/maps?q=' + item.ProductionLocations[0] + '">' + item.ProductionLocations[0] + "</a>";
+            var gmap = '<a is="otg-linkbutton" class="button-link textlink" target="_blank" href="https://maps.google.com/maps?q=' + item.ProductionLocations[0] + '">' + item.ProductionLocations[0] + "</a>";
             itemBirthLocation.classList.remove("hide");
             itemBirthLocation.innerHTML = globalize.translate("BirthPlaceValue").replace("{0}", gmap);
         } else {
@@ -714,12 +714,12 @@ define(["loading", "appRouter", "layoutManager", "userSettings", "connectionMana
         var links = [];
 
         if (!layoutManager.tv && item.HomePageUrl) {
-            links.push('<a style="color:inherit;" is="emby-linkbutton" class="button-link" href="' + item.HomePageUrl + '" target="_blank">' + globalize.translate("ButtonWebsite") + "</a>");
+            links.push('<a style="color:inherit;" is="otg-linkbutton" class="button-link" href="' + item.HomePageUrl + '" target="_blank">' + globalize.translate("ButtonWebsite") + "</a>");
         }
         if (item.ExternalUrls) {
             for (var i = 0, length = item.ExternalUrls.length; i < length; i++) {
                 var url = item.ExternalUrls[i];
-                links.push('<a style="color:inherit;" is="emby-linkbutton" class="button-link" href="' + url.Url + '" target="_blank">' + url.Name + "</a>");
+                links.push('<a style="color:inherit;" is="otg-linkbutton" class="button-link" href="' + url.Url + '" target="_blank">' + url.Name + "</a>");
             }
         }
 
@@ -802,7 +802,7 @@ define(["loading", "appRouter", "layoutManager", "userSettings", "connectionMana
         }
 
         if (editable) {
-            html += "<a class='itemDetailGalleryLink' is='emby-linkbutton' style='display:block;margin:0;padding:0;' href='#'>";
+            html += "<a class='itemDetailGalleryLink' is='otg-linkbutton' style='display:block;margin:0;padding:0;' href='#'>";
         }
 
         if (detectRatio && item.PrimaryImageAspectRatio) {
@@ -994,7 +994,7 @@ define(["loading", "appRouter", "layoutManager", "userSettings", "connectionMana
         }
 
         var html = genres.map(function (p) {
-            return '<a style="color:inherit;" class="button-link" is="emby-linkbutton" href="' + appRouter.getRouteUrl({
+            return '<a style="color:inherit;" class="button-link" is="otg-linkbutton" href="' + appRouter.getRouteUrl({
                 Name: p.Name,
                 Type: type,
                 ServerId: item.ServerId,
@@ -1018,7 +1018,7 @@ define(["loading", "appRouter", "layoutManager", "userSettings", "connectionMana
             return "Director" === p.Type;
         });
         var html = directors.map(function (p) {
-            return '<a style="color:inherit;" class="button-link" is="emby-linkbutton" href="' + appRouter.getRouteUrl({
+            return '<a style="color:inherit;" class="button-link" is="otg-linkbutton" href="' + appRouter.getRouteUrl({
                 Name: p.Name,
                 Type: "Person",
                 ServerId: item.ServerId,
@@ -1166,7 +1166,7 @@ define(["loading", "appRouter", "layoutManager", "userSettings", "connectionMana
 
                 if (card) {
                     setTimeout(function () {
-                        section.querySelector(".emby-scroller").toStart(card.previousSibling || card, true);
+                        section.querySelector(".otg-scroller").toStart(card.previousSibling || card, true);
                     }, 100);
                 }
             });
@@ -1309,7 +1309,7 @@ define(["loading", "appRouter", "layoutManager", "userSettings", "connectionMana
                     itemType: "Studio",
                     serverId: item.ServerId
                 });
-                html += ' on <a class="textlink button-link" is="emby-linkbutton" href="' + href + '">' + item.Studios[0].Name + "</a>";
+                html += ' on <a class="textlink button-link" is="otg-linkbutton" href="' + href + '">' + item.Studios[0].Name + "</a>";
             }
         }
         if (html) {
@@ -1533,7 +1533,7 @@ define(["loading", "appRouter", "layoutManager", "userSettings", "connectionMana
                         month: "long",
                         day: "numeric"
                     }) + "</h2>";
-                    html += '<div is="emby-itemscontainer" class="vertical-list padded-left padded-right">' + listView.getListViewHtml({
+                    html += '<div is="otg-itemscontainer" class="vertical-list padded-left padded-right">' + listView.getListViewHtml({
                         items: currentItems,
                         enableUserDataButtons: false,
                         showParentTitle: true,
@@ -1558,7 +1558,7 @@ define(["loading", "appRouter", "layoutManager", "userSettings", "connectionMana
                 month: "long",
                 day: "numeric"
             }) + "</h2>";
-            html += '<div is="emby-itemscontainer" class="vertical-list padded-left padded-right">' + listView.getListViewHtml({
+            html += '<div is="otg-itemscontainer" class="vertical-list padded-left padded-right">' + listView.getListViewHtml({
                 items: currentItems,
                 enableUserDataButtons: false,
                 showParentTitle: true,
@@ -1731,7 +1731,7 @@ define(["loading", "appRouter", "layoutManager", "userSettings", "connectionMana
         html += "</h2>";
         html += '<button class="btnAddToCollection sectionTitleButton" type="button" is="paper-icon-button-light" style="margin-left:1em;"><i class="md-icon" icon="add">add</i></button>';
         html += "</div>";
-        html += '<div is="emby-itemscontainer" class="itemsContainer collectionItemsContainer vertical-wrap padded-left padded-right">';
+        html += '<div is="otg-itemscontainer" class="itemsContainer collectionItemsContainer vertical-wrap padded-left padded-right">';
         var shape = "MusicAlbum" == type.type ? getSquareShape(false) : getPortraitShape(false);
         html += cardBuilder.getCardsHtml({
             items: items,
@@ -1755,7 +1755,7 @@ define(["loading", "appRouter", "layoutManager", "userSettings", "connectionMana
             require(["alert"], function (alert) {
                 alert({
                     text: globalize.translate("AddItemToCollectionHelp"),
-                    html: globalize.translate("AddItemToCollectionHelp") + '<br/><br/><a is="emby-linkbutton" class="button-link" target="_blank" href="https://web.archive.org/web/20181216120305/https://github.com/MediaBrowser/Wiki/wiki/Collections">' + globalize.translate("ButtonLearnMore") + "</a>"
+                    html: globalize.translate("AddItemToCollectionHelp") + '<br/><br/><a is="otg-linkbutton" class="button-link" target="_blank" href="https://web.archive.org/web/20181216120305/https://github.com/MediaBrowser/Wiki/wiki/Collections">' + globalize.translate("ButtonLearnMore") + "</a>"
                 });
             });
         });
@@ -1826,7 +1826,7 @@ define(["loading", "appRouter", "layoutManager", "userSettings", "connectionMana
         });
 
         if (limit && items.length > limit) {
-            html += '<p style="margin: 0;padding-left:5px;"><button is="emby-button" type="button" class="raised more ' + moreButtonClass + '">' + globalize.translate("ButtonMore") + "</button></p>";
+            html += '<p style="margin: 0;padding-left:5px;"><button is="otg-button" type="button" class="raised more ' + moreButtonClass + '">' + globalize.translate("ButtonMore") + "</button></p>";
         }
 
         return html;

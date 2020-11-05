@@ -5,12 +5,12 @@
                 <div class="verticalSection">
                     <div class="sectionTitleContainer flex align-items-center">
                         <h2 class="sectionTitle">${TabTranscoding}</h2>
-                        <a is="emby-linkbutton" class="raised button-alt headerHelpButton" target="_blank" href="https://otg.com/docs">${Help}</a>
+                        <a is="otg-linkbutton" class="raised button-alt headerHelpButton" target="_blank" href="https://otg.com/docs">${Help}</a>
                     </div>
                 </div>
 
                 <div class="selectContainer">
-                    <select is="emby-select" id="selectVideoDecoder" label="${LabelHardwareAccelerationType}">
+                    <select is="otg-select" id="selectVideoDecoder" label="${LabelHardwareAccelerationType}">
                         <option value="">${OptionNone}</option>
                         <option value="amf">AMD AMF</option>
                         <option value="qsv">Intel Quick Sync</option>
@@ -23,7 +23,7 @@
                     <div class="fieldDescription">${LabelHardwareAccelerationTypeHelp}</div>
                 </div>
                 <div class="inputContainer hide fldVaapiDevice">
-                    <input is="emby-input" type="text" id="txtVaapiDevice" label="${LabelVaapiDevice}" />
+                    <input is="otg-input" type="text" id="txtVaapiDevice" label="${LabelVaapiDevice}" />
                     <div class="fieldDescription">${LabelVaapiDeviceHelp}</div>
                 </div>
 
@@ -32,31 +32,31 @@
                         <h3 class="checkboxListLabel">${LabelEnableHardwareDecodingFor}</h3>
                         <div class="checkboxList">
                             <label>
-                                <input type="checkbox" is="emby-checkbox" class="chkDecodeCodec" data-codec="h264" data-types="qsv,nvenc,omx,mediacodec" />
+                                <input type="checkbox" is="otg-checkbox" class="chkDecodeCodec" data-codec="h264" data-types="qsv,nvenc,omx,mediacodec" />
                                 <span>H264</span>
                             </label>
                             <label>
-                                <input type="checkbox" is="emby-checkbox" class="chkDecodeCodec" data-codec="hevc" data-types="qsv,nvenc,mediacodec" />
+                                <input type="checkbox" is="otg-checkbox" class="chkDecodeCodec" data-codec="hevc" data-types="qsv,nvenc,mediacodec" />
                                 <span>HEVC</span>
                             </label>
                             <label>
-                                <input type="checkbox" is="emby-checkbox" class="chkDecodeCodec" data-codec="mpeg2video" data-types="qsv,nvenc,omx,mediacodec" />
+                                <input type="checkbox" is="otg-checkbox" class="chkDecodeCodec" data-codec="mpeg2video" data-types="qsv,nvenc,omx,mediacodec" />
                                 <span>MPEG2</span>
                             </label>
                             <label>
-                                <input type="checkbox" is="emby-checkbox" class="chkDecodeCodec" data-codec="mpeg4" data-types="nvenc,mediacodec" />
+                                <input type="checkbox" is="otg-checkbox" class="chkDecodeCodec" data-codec="mpeg4" data-types="nvenc,mediacodec" />
                                 <span>MPEG4</span>
                             </label>
                             <label>
-                                <input type="checkbox" is="emby-checkbox" class="chkDecodeCodec" data-codec="vc1" data-types="qsv,nvenc" />
+                                <input type="checkbox" is="otg-checkbox" class="chkDecodeCodec" data-codec="vc1" data-types="qsv,nvenc" />
                                 <span>VC1</span>
                             </label>
                             <label>
-                                <input type="checkbox" is="emby-checkbox" class="chkDecodeCodec" data-codec="vp8" data-types="mediacodec" />
+                                <input type="checkbox" is="otg-checkbox" class="chkDecodeCodec" data-codec="vp8" data-types="mediacodec" />
                                 <span>VP8</span>
                             </label>
                             <label>
-                                <input type="checkbox" is="emby-checkbox" class="chkDecodeCodec" data-codec="vp9" data-types="mediacodec" />
+                                <input type="checkbox" is="otg-checkbox" class="chkDecodeCodec" data-codec="vp9" data-types="mediacodec" />
                                 <span>VP9</span>
                             </label>
                         </div>
@@ -65,7 +65,7 @@
                     <div class="checkboxListContainer">
                         <div class="checkboxList">
                             <label>
-                                <input type="checkbox" is="emby-checkbox" id="chkHardwareEncoding" />
+                                <input type="checkbox" is="otg-checkbox" id="chkHardwareEncoding" />
                                 <span>${EnableHardwareEncoding}</span>
                             </label>
                         </div>
@@ -73,7 +73,7 @@
                 </div>
 
                 <div class="selectContainer">
-                    <select is="emby-select" id="selectThreadCount" label="${LabelTranscodingThreadCount}">
+                    <select is="otg-select" id="selectThreadCount" label="${LabelTranscodingThreadCount}">
                         <option value="-1">${OptionAuto}</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -91,9 +91,9 @@
                 <div class="inputContainer fldEncoderPath">
                     <div style="display: flex; align-items: center;">
                         <div style="flex-grow:1;">
-                            <input is="emby-input" class="txtEncoderPath" label="${LabelffmpegPath}" autocomplete="off" />
+                            <input is="otg-input" class="txtEncoderPath" label="${LabelffmpegPath}" autocomplete="off" />
                         </div>
-                        <button type="button" is="paper-icon-button-light" id="btnSelectEncoderPath" class="emby-input-iconbutton"><i class="md-icon">search</i></button>
+                        <button type="button" is="paper-icon-button-light" id="btnSelectEncoderPath" class="otg-input-iconbutton"><i class="md-icon">search</i></button>
                     </div>
                     <div class="fieldDescription">
                         <div>${LabelffmpegPathHelp}</div>
@@ -102,19 +102,19 @@
                 <div class="inputContainer">
                     <div style="display: flex; align-items: center;">
                         <div style="flex-grow:1;">
-                            <input is="emby-input" id="txtTranscodingTempPath" label="${LabelTranscodePath}" autocomplete="off" />
+                            <input is="otg-input" id="txtTranscodingTempPath" label="${LabelTranscodePath}" autocomplete="off" />
                         </div>
-                        <button type="button" is="paper-icon-button-light" id="btnSelectTranscodingTempPath" class="emby-input-iconbutton"><i class="md-icon">search</i></button>
+                        <button type="button" is="paper-icon-button-light" id="btnSelectTranscodingTempPath" class="otg-input-iconbutton"><i class="md-icon">search</i></button>
                     </div>
                     <div class="fieldDescription">${LabelTranscodingTempPathHelp}</div>
                 </div>
                 <div class="inputContainer">
-                    <input is="emby-input" type="number" id="txtDownMixAudioBoost" pattern="[0-9]*" required="required" min=".5" max="3" step=".1" label="${LabelDownMixAudioScale}" />
+                    <input is="otg-input" type="number" id="txtDownMixAudioBoost" pattern="[0-9]*" required="required" min=".5" max="3" step=".1" label="${LabelDownMixAudioScale}" />
                     <div class="fieldDescription">${LabelDownMixAudioScaleHelp}</div>
                 </div>
 
                 <div class="selectContainer">
-                    <select is="emby-select" id="selectH264Preset" label="${LabelH264EncodingPreset}">
+                    <select is="otg-select" id="selectH264Preset" label="${LabelH264EncodingPreset}">
                         <option value="">${OptionAuto}</option>
                         <option value="veryslow">veryslow</option>
                         <option value="slower">slower</option>
@@ -129,20 +129,20 @@
                     <div class="fieldDescription">${H264EncodingPresetHelp}</div>
                 </div>
                 <div class="inputContainer">
-                    <input is="emby-input" type="number" id="txtH264Crf" pattern="[0-9]*" min="0" max="51" step="1" label="${LabelH264Crf}" />
+                    <input is="otg-input" type="number" id="txtH264Crf" pattern="[0-9]*" min="0" max="51" step="1" label="${LabelH264Crf}" />
                     <div class="fieldDescription">${H264CrfHelp}</div>
                 </div>
 
                 <div class="checkboxContainer checkboxContainer-withDescription">
                     <label>
-                        <input is="emby-checkbox" type="checkbox" id="chkEnableSubtitleExtraction" />
+                        <input is="otg-checkbox" type="checkbox" id="chkEnableSubtitleExtraction" />
                         <span>${AllowOnTheFlySubtitleExtraction}</span>
                     </label>
                     <div class="fieldDescription checkboxFieldDescription">${AllowOnTheFlySubtitleExtractionHelp}</div>
                 </div>
 
                 <div>
-                    <button is="emby-button" type="submit" class="raised button-submit block"><span>${ButtonSave}</span></button>
+                    <button is="otg-button" type="submit" class="raised button-submit block"><span>${ButtonSave}</span></button>
                 </div>
             </form>
         </div>

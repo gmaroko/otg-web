@@ -1,4 +1,4 @@
-define(["loading", "libraryMenu", "globalize", "emby-checkbox", "emby-select"], function(loading, libraryMenu, globalize) {
+define(["loading", "libraryMenu", "globalize", "otg-checkbox", "otg-select"], function(loading, libraryMenu, globalize) {
     "use strict";
 
     function onSubmit(e) {

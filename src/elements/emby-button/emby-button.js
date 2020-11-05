@@ -1,4 +1,4 @@
-define(['browser', 'dom', 'layoutManager', 'shell', 'appRouter', 'apphost', 'css!./emby-button', 'registerElement'], function (browser, dom, layoutManager, shell, appRouter, appHost) {
+define(['browser', 'dom', 'layoutManager', 'shell', 'appRouter', 'apphost', 'css!./otg-button', 'registerElement'], function (browser, dom, layoutManager, shell, appRouter, appHost) {
     'use strict';
 
     var EmbyButtonPrototype = Object.create(HTMLButtonElement.prototype);
@@ -21,11 +21,11 @@ define(['browser', 'dom', 'layoutManager', 'shell', 'appRouter', 'apphost', 'css
     }
 
     EmbyButtonPrototype.createdCallback = function () {
-        if (this.classList.contains('emby-button')) {
+        if (this.classList.contains('otg-button')) {
             return;
         }
 
-        this.classList.add('emby-button');
+        this.classList.add('otg-button');
         // TODO replace all instances of element-showfocus with this method
         if (layoutManager.tv) {
             // handles all special css for tv layout
@@ -56,12 +56,12 @@ define(['browser', 'dom', 'layoutManager', 'shell', 'appRouter', 'apphost', 'css
     EmbyLinkButtonPrototype.createdCallback = EmbyButtonPrototype.createdCallback;
     EmbyLinkButtonPrototype.attachedCallback = EmbyButtonPrototype.attachedCallback;
 
-    document.registerElement('emby-button', {
+    document.registerElement('otg-button', {
         prototype: EmbyButtonPrototype,
         extends: 'button'
     });
 
-    document.registerElement('emby-linkbutton', {
+    document.registerElement('otg-linkbutton', {
         prototype: EmbyLinkButtonPrototype,
         extends: 'a'
     });

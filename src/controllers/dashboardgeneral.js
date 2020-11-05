@@ -1,4 +1,4 @@
-define(["jQuery", "loading", "fnchecked", "emby-checkbox", "emby-textarea", "emby-input", "emby-select", "emby-button"], function($, loading) {
+define(["jQuery", "loading", "fnchecked", "otg-checkbox", "otg-textarea", "otg-input", "otg-select", "otg-button"], function($, loading) {
     "use strict";
 
     function loadPage(page, config, languageOptions, systemInfo) {

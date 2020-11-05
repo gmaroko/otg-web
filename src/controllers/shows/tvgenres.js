@@ -1,4 +1,4 @@
-define(["layoutManager", "loading", "libraryBrowser", "cardBuilder", "lazyLoader", "apphost", "globalize", "appRouter", "dom", "emby-button"], function (layoutManager, loading, libraryBrowser, cardBuilder, lazyLoader, appHost, globalize, appRouter, dom) {
+define(["layoutManager", "loading", "libraryBrowser", "cardBuilder", "lazyLoader", "apphost", "globalize", "appRouter", "dom", "otg-button"], function (layoutManager, loading, libraryBrowser, cardBuilder, lazyLoader, appHost, globalize, appRouter, dom) {
     "use strict";
 
     return function (view, params, tabContent) {
@@ -134,7 +134,7 @@ define(["layoutManager", "loading", "libraryBrowser", "cardBuilder", "lazyLoader
                     var item = items[i];
                     html += '<div class="verticalSection">';
                     html += '<div class="sectionTitleContainer sectionTitleContainer-cards padded-left">';
-                    html += '<a is="emby-linkbutton" href="' + appRouter.getRouteUrl(item, {
+                    html += '<a is="otg-linkbutton" href="' + appRouter.getRouteUrl(item, {
                         context: "tvshows",
                         parentId: params.topParentId
                     }) + '" class="more button-flat button-flat-mini sectionTitleTextButton btnMoreFromGenre' + item.Id + '">';
@@ -149,9 +149,9 @@ define(["layoutManager", "loading", "libraryBrowser", "cardBuilder", "lazyLoader
                         if (layoutManager.tv) {
                             scrollXClass += "smoothScrollX";
                         }
-                        html += '<div is="emby-itemscontainer" class="itemsContainer ' + scrollXClass + ' lazy padded-left padded-right" data-id="' + item.Id + '">';
+                        html += '<div is="otg-itemscontainer" class="itemsContainer ' + scrollXClass + ' lazy padded-left padded-right" data-id="' + item.Id + '">';
                     } else {
-                        html += '<div is="emby-itemscontainer" class="itemsContainer vertical-wrap lazy padded-left padded-right" data-id="' + item.Id + '">';
+                        html += '<div is="otg-itemscontainer" class="itemsContainer vertical-wrap lazy padded-left padded-right" data-id="' + item.Id + '">';
                     }
                     html += "</div>";
                     html += "</div>";

@@ -4,7 +4,7 @@
         ${Display}
     </h2>
     <div class="selectContainer languageSection hide">
-        <select id="selectLanguage" is="emby-select" label="${LabelDisplayLanguage}">
+        <select id="selectLanguage" is="otg-select" label="${LabelDisplayLanguage}">
             <option value="">${Auto}</option>
             <option value="ar">Arabic</option>
             <option value="be-BY">Belarusian (Belarus)</option>
@@ -55,13 +55,13 @@
         <div class="fieldDescription">
             <div>${LabelDisplayLanguageHelp}</div>
             <div class="learnHowToContributeContainer hide" style="margin-top: .25em;">
-                <a is="emby-linkbutton" class="button-link" href="https://github.com/gmaroko/otg" target="_blank">${LearnHowYouCanContribute}</a>
+                <a is="otg-linkbutton" class="button-link" href="https://github.com/gmaroko/otg" target="_blank">${LearnHowYouCanContribute}</a>
             </div>
         </div>
     </div>
 
     <div class="selectContainer fldDateTimeLocale hide">
-        <select is="emby-select" class="selectDateTimeLocale" label="${LabelDateTimeLocale}">
+        <select is="otg-select" class="selectDateTimeLocale" label="${LabelDateTimeLocale}">
             <option value="">${AutoBasedOnLanguageSetting}</option>
             <option value="ar">Arabic</option>
             <option value="be-BY">Belarusian (Belarus)</option>
@@ -112,7 +112,7 @@
     </div>
 
     <div class="selectContainer fldDisplayMode hide">
-        <select is="emby-select" class="selectLayout" label="${LabelDisplayMode}">
+        <select is="otg-select" class="selectLayout" label="${LabelDisplayMode}">
             <option value="">${Auto}</option>
             <option value="desktop">${Desktop}</option>
             <option value="mobile">${Mobile}</option>
@@ -123,41 +123,41 @@
     </div>
 
     <div class="selectContainer hide selectSkinContainer">
-        <select is="emby-select" class="selectSkin" label="${LabelSkin}"></select>
+        <select is="otg-select" class="selectSkin" label="${LabelSkin}"></select>
     </div>
 
     <div class="selectContainer">
-        <select id="selectTheme" is="emby-select" label="${LabelTheme}"></select>
+        <select id="selectTheme" is="otg-select" label="${LabelTheme}"></select>
     </div>
 
     <div class="selectContainer selectDashboardThemeContainer hide">
-        <select id="selectDashboardTheme" is="emby-select" label="${LabelDashboardTheme}"></select>
+        <select id="selectDashboardTheme" is="otg-select" label="${LabelDashboardTheme}"></select>
     </div>
     <div class="selectContainer hide selectScreensaverContainer">
-        <select is="emby-select" class="selectScreensaver" label="${LabelScreensaver}"></select>
+        <select is="otg-select" class="selectScreensaver" label="${LabelScreensaver}"></select>
     </div>
 
     <div class="selectContainer fldSoundEffects hide">
-        <select is="emby-select" class="selectSoundEffects" label="${LabelSoundEffects}"></select>
+        <select is="otg-select" class="selectSoundEffects" label="${LabelSoundEffects}"></select>
     </div>
 
     <div class="checkboxContainer checkboxContainer-withDescription fldBackdrops hide">
         <label>
-            <input type="checkbox" is="emby-checkbox" id="chkBackdrops" />
+            <input type="checkbox" is="otg-checkbox" id="chkBackdrops" />
             <span>${EnableBackdrops}</span>
         </label>
         <div class="fieldDescription checkboxFieldDescription">${EnableBackdropsHelp}</div>
     </div>
     <div class="checkboxContainer checkboxContainer-withDescription fldThemeSong hide">
         <label>
-            <input type="checkbox" is="emby-checkbox" id="chkThemeSong" />
+            <input type="checkbox" is="otg-checkbox" id="chkThemeSong" />
             <span>${EnableThemeSongs}</span>
         </label>
         <div class="fieldDescription checkboxFieldDescription">${EnableThemeSongsHelp}</div>
     </div>
     <div class="checkboxContainer checkboxContainer-withDescription fldThemeVideo hide">
         <label>
-            <input type="checkbox" is="emby-checkbox" id="chkThemeVideo" />
+            <input type="checkbox" is="otg-checkbox" id="chkThemeVideo" />
             <span>${EnableThemeVideos}</span>
         </label>
         <div class="fieldDescription checkboxFieldDescription">${EnableThemeVideosHelp}</div>
@@ -165,20 +165,20 @@
 
     <div class="checkboxContainer hide fldAutorun">
         <label>
-            <input type="checkbox" is="emby-checkbox" class="chkRunAtStartup" />
+            <input type="checkbox" is="otg-checkbox" class="chkRunAtStartup" />
             <span>${RunAtStartup}</span>
         </label>
     </div>
 
     <div class="checkboxContainer checkboxContainer-withDescription fldDisplayMissingEpisodes hide">
         <label>
-            <input type="checkbox" is="emby-checkbox" class="chkDisplayMissingEpisodes" />
+            <input type="checkbox" is="otg-checkbox" class="chkDisplayMissingEpisodes" />
             <span>${DisplayMissingEpisodesWithinSeasons}</span>
         </label>
         <div class="fieldDescription checkboxFieldDescription">${DisplayMissingEpisodesWithinSeasonsHelp}</div>
     </div>
 
-    <button is="emby-button" type="submit" class="raised button-submit block btnSave hide">
+    <button is="otg-button" type="submit" class="raised button-submit block btnSave hide">
         <span>${Save}</span>
     </button>
 </form>

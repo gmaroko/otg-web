@@ -1,4 +1,4 @@
-define(["datetime", "loading", "apphost", "listViewStyle", "emby-button", "flexStyles"], function(datetime, loading, appHost) {
+define(["datetime", "loading", "apphost", "listViewStyle", "otg-button", "flexStyles"], function(datetime, loading, appHost) {
     "use strict";
     return function(view, params) {
         view.addEventListener("viewbeforeshow", function() {
@@ -13,7 +13,7 @@ define(["datetime", "loading", "apphost", "listViewStyle", "emby-button", "flexS
                     });
                     logUrl += "&api_key=" + apiClient.accessToken();
                     var logHtml = "";
-                    logHtml += '<a is="emby-linkbutton" href="' + logUrl + '" target="_blank" class="listItem listItem-border" style="color:inherit;">';
+                    logHtml += '<a is="otg-linkbutton" href="' + logUrl + '" target="_blank" class="listItem listItem-border" style="color:inherit;">';
                     logHtml += '<div class="listItemBody two-line">';
                     logHtml += "<h3 class='listItemBodyText'>" + log.Name + "</h3>";
                     var date = datetime.parseISO8601Date(log.DateModified, true);

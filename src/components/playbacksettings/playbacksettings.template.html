@@ -5,10 +5,10 @@
             ${HeaderAudioSettings}
         </h2>
         <div class="selectContainer">
-            <select is="emby-select" id="selectAudioLanguage" label="${LabelAudioLanguagePreference}"></select>
+            <select is="otg-select" id="selectAudioLanguage" label="${LabelAudioLanguagePreference}"></select>
         </div>
         <label class="checkboxContainer">
-            <input type="checkbox" is="emby-checkbox" class="chkPlayDefaultAudioTrack" />
+            <input type="checkbox" is="otg-checkbox" class="chkPlayDefaultAudioTrack" />
             <span>${LabelPlayDefaultAudioTrack}</span>
         </label>
     </div>
@@ -19,13 +19,13 @@
                 ${HeaderVideoQuality}
             </h2>
             <div class="selectContainer fldVideoInNetworkQuality hide">
-                <select is="emby-select" class="selectVideoInNetworkQuality" label="${LabelHomeNetworkQuality}"></select>
+                <select is="otg-select" class="selectVideoInNetworkQuality" label="${LabelHomeNetworkQuality}"></select>
             </div>
             <div class="selectContainer fldVideoInternetQuality hide">
-                <select is="emby-select" class="selectVideoInternetQuality" label="${LabelInternetQuality}"></select>
+                <select is="otg-select" class="selectVideoInternetQuality" label="${LabelInternetQuality}"></select>
             </div>
             <div class="selectContainer fldChromecastQuality hide">
-                <select is="emby-select" class="selectChromecastVideoQuality" label="${LabelMaxChromecastBitrate}"></select>
+                <select is="otg-select" class="selectChromecastVideoQuality" label="${LabelMaxChromecastBitrate}"></select>
             </div>
         </div>
 
@@ -34,7 +34,7 @@
                 ${HeaderMusicQuality}
             </h2>
             <div class="selectContainer">
-                <select is="emby-select" class="selectMusicInternetQuality" label="${LabelInternetQuality}"></select>
+                <select is="otg-select" class="selectMusicInternetQuality" label="${LabelInternetQuality}"></select>
             </div>
         </div>
     </div>
@@ -45,20 +45,20 @@
         </h2>
         <div class="checkboxContainer checkboxContainer-withDescription cinemaModeOptions">
             <label>
-                <input type="checkbox" is="emby-checkbox" class="chkEnableCinemaMode" />
+                <input type="checkbox" is="otg-checkbox" class="chkEnableCinemaMode" />
                 <span>${EnableCinemaMode}</span>
             </label>
             <div class="fieldDescription checkboxFieldDescription">${CinemaModeConfigurationHelp}</div>
         </div>
         <div class="checkboxContainer fldEpisodeAutoPlay hide">
             <label>
-                <input type="checkbox" is="emby-checkbox" class="chkEpisodeAutoPlay" />
+                <input type="checkbox" is="otg-checkbox" class="chkEpisodeAutoPlay" />
                 <span>${PlayNextEpisodeAutomatically}</span>
             </label>
         </div>
         <div class="checkboxContainer checkboxContainer-withDescription fldEnableNextVideoOverlay hide">
             <label>
-                <input type="checkbox" is="emby-checkbox" class="chkEnableNextVideoOverlay" />
+                <input type="checkbox" is="otg-checkbox" class="chkEnableNextVideoOverlay" />
                 <span>${EnableNextVideoInfoOverlay}</span>
             </label>
             <div class="fieldDescription checkboxFieldDescription">${EnableNextVideoInfoOverlayHelp}</div>
@@ -66,7 +66,7 @@
 
         <div class="checkboxContainer fldExternalPlayer checkboxContainer-withDescription hide">
             <label>
-                <input type="checkbox" is="emby-checkbox" class="chkExternalVideoPlayer" />
+                <input type="checkbox" is="otg-checkbox" class="chkExternalVideoPlayer" />
                 <span>${EnableExternalVideoPlayers}</span>
             </label>
             <div class="fieldDescription checkboxFieldDescription">
@@ -75,15 +75,15 @@
         </div>
 
         <div class="selectContainer">
-            <select is="emby-select" class="selectSkipForwardLength" label="${LabelSkipForwardLength}"></select>
+            <select is="otg-select" class="selectSkipForwardLength" label="${LabelSkipForwardLength}"></select>
         </div>
 
         <div class="selectContainer">
-            <select is="emby-select" class="selectSkipBackLength" label="${LabelSkipBackLength}"></select>
+            <select is="otg-select" class="selectSkipBackLength" label="${LabelSkipBackLength}"></select>
         </div>
     </div>
 
-    <button is="emby-button" type="submit" class="raised button-submit block btnSave hide">
+    <button is="otg-button" type="submit" class="raised button-submit block btnSave hide">
         <span>${ButtonSave}</span>
     </button>
 </form>

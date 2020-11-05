@@ -1,4 +1,4 @@
-define(["globalize", "listView", "layoutManager", "userSettings", "focusManager", "cardBuilder", "loading", "connectionManager", "alphaNumericShortcuts", "scroller", "playbackManager", "alphaPicker", "emby-itemscontainer", "emby-scroller"], function (globalize, listView, layoutManager, userSettings, focusManager, cardBuilder, loading, connectionManager, AlphaNumericShortcuts, scroller, playbackManager, alphaPicker) {
+define(["globalize", "listView", "layoutManager", "userSettings", "focusManager", "cardBuilder", "loading", "connectionManager", "alphaNumericShortcuts", "scroller", "playbackManager", "alphaPicker", "otg-itemscontainer", "otg-scroller"], function (globalize, listView, layoutManager, userSettings, focusManager, cardBuilder, loading, connectionManager, AlphaNumericShortcuts, scroller, playbackManager, alphaPicker) {
     "use strict";
 
     function getInitialLiveTvQuery(instance, params) {

@@ -1,4 +1,4 @@
-define(['layoutManager', 'globalize', 'require', 'events', 'connectionManager', 'cardBuilder', 'appRouter', 'emby-scroller', 'emby-itemscontainer', 'emby-button'], function (layoutManager, globalize, require, events, connectionManager, cardBuilder, appRouter) {
+define(['layoutManager', 'globalize', 'require', 'events', 'connectionManager', 'cardBuilder', 'appRouter', 'otg-scroller', 'otg-itemscontainer', 'otg-button'], function (layoutManager, globalize, require, events, connectionManager, cardBuilder, appRouter) {
     'use strict';
 
     function loadSuggestions(instance, context, apiClient) {
@@ -25,7 +25,7 @@ define(['layoutManager', 'globalize', 'require', 'events', 'connectionManager', 
 
                 var href = appRouter.getRouteUrl(i);
 
-                var itemHtml = '<div><a is="emby-linkbutton" class="button-link" style="display:inline-block;padding:.5em 1em;" href="' + href + '">';
+                var itemHtml = '<div><a is="otg-linkbutton" class="button-link" style="display:inline-block;padding:.5em 1em;" href="' + href + '">';
                 itemHtml += i.Name;
                 itemHtml += '</a></div>';
                 return itemHtml;

@@ -1,4 +1,4 @@
-.emby-select {
+.otg-select {
     display: block;
     margin: 0;
     margin-bottom: 0 !important;
@@ -15,38 +15,38 @@
     width: 100%;
 }
 
-    .emby-select[disabled] {
+    .otg-select[disabled] {
         background: none !important;
         border-color: transparent !important;
         color: inherit !important;
         appearance: none;
     }
 
-.selectContainer-inline > .emby-select {
+.selectContainer-inline > .otg-select {
     padding: .3em 1.9em .3em .5em;
     font-size: inherit;
 }
 
-    .selectContainer-inline > .emby-select[disabled] {
+    .selectContainer-inline > .otg-select[disabled] {
         padding-left: 0;
         padding-right: 0;
     }
 
-.emby-select::-moz-focus-inner {
+.otg-select::-moz-focus-inner {
     border: 0;
 }
 
-.emby-select-focusscale {
+.otg-select-focusscale {
     transition: transform 180ms ease-out !important;
     transform-origin: center center;
 }
 
-    .emby-select-focusscale:focus {
+    .otg-select-focusscale:focus {
         transform: scale(1.04);
         z-index: 1;
     }
 
-.emby-select + .fieldDescription {
+.otg-select + .fieldDescription {
     margin-top: .25em;
 }
 
@@ -72,7 +72,7 @@
     flex-shrink: 0;
 }
 
-.emby-select-withcolor {
+.otg-select-withcolor {
     appearance: none;
     border-radius: .2em;
 }
@@ -91,7 +91,7 @@
     font-size: 90%;
 }
 
-.emby-select[disabled] + .selectArrowContainer {
+.otg-select[disabled] + .selectArrowContainer {
     display: none;
 }
 
@@ -100,6 +100,6 @@
     font-size: 1.7em;
 }
 
-.emby-select-iconbutton {
+.otg-select-iconbutton {
     align-self: flex-end;
 }

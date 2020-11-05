@@ -1,4 +1,4 @@
-define(["datetime", "loading", "libraryMenu", "dom", "globalize", "emby-button"], function (datetime, loading, libraryMenu, dom, globalize) {
+define(["datetime", "loading", "libraryMenu", "dom", "globalize", "otg-button"], function (datetime, loading, libraryMenu, dom, globalize) {
     "use strict";
 
     function revoke(page, key) {
@@ -20,7 +20,7 @@ define(["datetime", "loading", "libraryMenu", "dom", "globalize", "emby-button"]
             var html = "";
             html += '<tr class="detailTableBodyRow detailTableBodyRow-shaded">';
             html += '<td class="detailTableBodyCell">';
-            html += '<button type="button" is="emby-button" data-token="' + item.AccessToken + '" class="raised raised-mini btnRevoke" data-mini="true" title="' + globalize.translate("ButtonRevoke") + '" style="margin:0;">' + globalize.translate("ButtonRevoke") + "</button>";
+            html += '<button type="button" is="otg-button" data-token="' + item.AccessToken + '" class="raised raised-mini btnRevoke" data-mini="true" title="' + globalize.translate("ButtonRevoke") + '" style="margin:0;">' + globalize.translate("ButtonRevoke") + "</button>";
             html += "</td>";
             html += '<td class="detailTableBodyCell" style="vertical-align:middle;">';
             html += item.AccessToken;

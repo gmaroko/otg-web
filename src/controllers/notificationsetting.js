@@ -1,4 +1,4 @@
-define(["jQuery", "emby-checkbox", "fnchecked"], function ($) {
+define(["jQuery", "otg-checkbox", "fnchecked"], function ($) {
     "use strict";
 
     function fillItems(elem, items, cssClass, idPrefix, currentList, isEnabledList) {
@@ -6,7 +6,7 @@ define(["jQuery", "emby-checkbox", "fnchecked"], function ($) {
         html += items.map(function (u) {
             var isChecked = isEnabledList ? currentList.indexOf(u.Id) != -1 : currentList.indexOf(u.Id) == -1;
             var checkedHtml = isChecked ? ' checked="checked"' : "";
-            return '<label><input is="emby-checkbox" class="' + cssClass + '" type="checkbox" data-itemid="' + u.Id + '"' + checkedHtml + "/><span>" + u.Name + "</span></label>";
+            return '<label><input is="otg-checkbox" class="' + cssClass + '" type="checkbox" data-itemid="' + u.Id + '"' + checkedHtml + "/><span>" + u.Name + "</span></label>";
         }).join("");
         html += "</div>";
         elem.html(html).trigger("create");

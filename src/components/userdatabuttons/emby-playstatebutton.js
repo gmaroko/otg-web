@@ -1,4 +1,4 @@
-define(['connectionManager', 'serverNotifications', 'events', 'globalize', 'emby-button'], function (connectionManager, serverNotifications, events, globalize, EmbyButtonPrototype) {
+define(['connectionManager', 'serverNotifications', 'events', 'globalize', 'otg-button'], function (connectionManager, serverNotifications, events, globalize, EmbyButtonPrototype) {
     'use strict';
 
     function addNotificationEvent(instance, name, handler) {
@@ -152,7 +152,7 @@ define(['connectionManager', 'serverNotifications', 'events', 'globalize', 'emby
         }
     };
 
-    document.registerElement('emby-playstatebutton', {
+    document.registerElement('otg-playstatebutton', {
         prototype: EmbyPlaystateButtonPrototype,
         extends: 'button'
     });

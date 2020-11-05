@@ -1,4 +1,4 @@
-define(["loading", "libraryBrowser", "cardBuilder", "dom", "apphost", "imageLoader", "globalize", "layoutManager", "scrollStyles", "emby-itemscontainer"], function (loading, libraryBrowser, cardBuilder, dom, appHost, imageLoader, globalize, layoutManager) {
+define(["loading", "libraryBrowser", "cardBuilder", "dom", "apphost", "imageLoader", "globalize", "layoutManager", "scrollStyles", "otg-itemscontainer"], function (loading, libraryBrowser, cardBuilder, dom, appHost, imageLoader, globalize, layoutManager) {
     "use strict";
 
     function enableScrollX() {
@@ -132,7 +132,7 @@ define(["loading", "libraryBrowser", "cardBuilder", "dom", "apphost", "imageLoad
 
             if (result.Items.length) {
                 if (html += '<div class="sectionTitleContainer sectionTitleContainer-cards padded-left">', !layoutManager.tv && options.Limit && result.Items.length >= options.Limit) {
-                    html += '<a is="emby-linkbutton" href="' + ("list.html?serverId=" + ApiClient.serverId() + "&type=" + section.types + "&IsFavorite=true") + '" class="more button-flat button-flat-mini sectionTitleTextButton">';
+                    html += '<a is="otg-linkbutton" href="' + ("list.html?serverId=" + ApiClient.serverId() + "&type=" + section.types + "&IsFavorite=true") + '" class="more button-flat button-flat-mini sectionTitleTextButton">';
                     html += '<h2 class="sectionTitle sectionTitle-cards">';
                     html += globalize.translate(section.name);
                     html += "</h2>";
@@ -149,9 +149,9 @@ define(["loading", "libraryBrowser", "cardBuilder", "dom", "apphost", "imageLoad
                         scrollXClass += " smoothScrollX";
                     }
 
-                    html += '<div is="emby-itemscontainer" class="itemsContainer ' + scrollXClass + ' padded-left padded-right">';
+                    html += '<div is="otg-itemscontainer" class="itemsContainer ' + scrollXClass + ' padded-left padded-right">';
                 } else {
-                    html += '<div is="emby-itemscontainer" class="itemsContainer vertical-wrap padded-left padded-right">';
+                    html += '<div is="otg-itemscontainer" class="itemsContainer vertical-wrap padded-left padded-right">';
                 }
 
                 var supportsImageAnalysis = appHost.supports("imageanalysis");

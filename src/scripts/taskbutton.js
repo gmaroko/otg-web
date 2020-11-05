@@ -1,4 +1,4 @@
-define(["events", "userSettings", "serverNotifications", "connectionManager", "emby-button"], function (events, userSettings, serverNotifications, connectionManager) {
+define(["events", "userSettings", "serverNotifications", "connectionManager", "otg-button"], function (events, userSettings, serverNotifications, connectionManager) {
     "use strict";
 
     return function (options) {

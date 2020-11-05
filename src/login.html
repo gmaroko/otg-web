@@ -12,23 +12,23 @@
             </div>
 
             <div class="inputContainer">
-                <input is="emby-input" type="text" id="txtManualName" required="required" label="${LabelUser}" autocomplete="username" />
+                <input is="otg-input" type="text" id="txtManualName" required="required" label="${LabelUser}" autocomplete="username" />
             </div>
 
             <div class="inputContainer">
-                <input is="emby-input" id="txtManualPassword" type="password" label="${LabelPassword}" autocomplete="current-password" />
+                <input is="otg-input" id="txtManualPassword" type="password" label="${LabelPassword}" autocomplete="current-password" />
             </div>
 
             <label class="checkboxContainer">
-                <input is="emby-checkbox" type="checkbox" class="chkRememberLogin" checked />
+                <input is="otg-checkbox" type="checkbox" class="chkRememberLogin" checked />
                 <span>${RememberMe}</span>
             </label>
 
-            <button is="emby-button" type="submit" class="raised button-submit block">
+            <button is="otg-button" type="submit" class="raised button-submit block">
                 <span>${ButtonSignIn}</span>
             </button>
             <div style="margin-top:.5em;">
-                <button is="emby-button" type="button" class="raised cancel block btnCancel">
+                <button is="otg-button" type="button" class="raised cancel block btnCancel">
                     <span>${ButtonCancel}</span>
                 </button>
             </div>
@@ -42,15 +42,15 @@
         </div>
 
         <div class="readOnlyContent" style="margin: .5em auto 1em;">
-            <button is="emby-button" type="button" class="raised cancel block btnManual">
+            <button is="otg-button" type="button" class="raised cancel block btnManual">
                 <span>${ButtonManualLogin}</span>
             </button>
 
-            <button is="emby-button" type="button" class="raised cancel block btnForgotPassword">
+            <button is="otg-button" type="button" class="raised cancel block btnForgotPassword">
                 <span>${ButtonForgotPassword}</span>
             </button>
 
-            <a is="emby-linkbutton" href="selectserver.html" class="raised block btnSelectServer">
+            <a is="otg-linkbutton" href="selectserver.html" class="raised block btnSelectServer">
                 <span>${ButtonChangeServer}</span>
             </a>
 

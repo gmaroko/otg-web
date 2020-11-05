@@ -5,25 +5,25 @@
 </style>
 <h2>${HeaderLibrarySettings}</h2>
 <div class="selectContainer fldMetadataLanguage hide">
-    <select is="emby-select" id="selectLanguage" label="${LabelMetadataDownloadLanguage}"></select>
+    <select is="otg-select" id="selectLanguage" label="${LabelMetadataDownloadLanguage}"></select>
 </div>
 <div class="selectContainer fldMetadataCountry hide">
-    <select is="emby-select" id="selectCountry" label="${LabelCountry}"></select>
+    <select is="otg-select" id="selectCountry" label="${LabelCountry}"></select>
 </div>
 <div class="checkboxContainer checkboxContainer-withDescription chkEnablePhotosContainer">
     <label>
-        <input type="checkbox" is="emby-checkbox" class="chkEnablePhotos" checked />
+        <input type="checkbox" is="otg-checkbox" class="chkEnablePhotos" checked />
         <span>${EnablePhotos}</span>
     </label>
     <div class="fieldDescription checkboxFieldDescription">${EnablePhotosHelp}</div>
 </div>
 
 <div class="inputContainer fldSeasonZeroDisplayName hide advanced">
-    <input is="emby-input" type="text" id="txtSeasonZeroName" label="${LabelSpecialSeasonsDisplayName}" value="Specials" required />
+    <input is="otg-input" type="text" id="txtSeasonZeroName" label="${LabelSpecialSeasonsDisplayName}" value="Specials" required />
 </div>
 <div class="checkboxContainer checkboxContainer-withDescription chkEnableEmbeddedTitlesContainer hide advanced">
     <label>
-        <input is="emby-checkbox" type="checkbox" id="chkEnableEmbeddedTitles" />
+        <input is="otg-checkbox" type="checkbox" id="chkEnableEmbeddedTitles" />
         <span>${PreferEmbeddedTitlesOverFileNames}</span>
     </label>
     <div class="fieldDescription checkboxFieldDescription">${PreferEmbeddedTitlesOverFileNamesHelp}</div>
@@ -31,7 +31,7 @@
 
 <div class="checkboxContainer checkboxContainer-withDescription advanced">
     <label>
-        <input type="checkbox" is="emby-checkbox" class="chkEnableRealtimeMonitor" checked />
+        <input type="checkbox" is="otg-checkbox" class="chkEnableRealtimeMonitor" checked />
         <span>${LabelEnableRealtimeMonitor}</span>
     </label>
     <div class="fieldDescription checkboxFieldDescription">${LabelEnableRealtimeMonitorHelp}</div>
@@ -44,7 +44,7 @@
 </div>
 
 <div class="selectContainer fldAutoRefreshInterval hide advanced" style="margin: 2em 0;">
-    <select is="emby-select" id="selectAutoRefreshInterval" label="${LabelAutomaticallyRefreshInternetMetadataEvery}"></select>
+    <select is="otg-select" id="selectAutoRefreshInterval" label="${LabelAutomaticallyRefreshInternetMetadataEvery}"></select>
     <div class="fieldDescription">${MessageEnablingOptionLongerScans}</div>
 </div>
 
@@ -56,7 +56,7 @@
 
 <div class="checkboxContainer checkboxContainer-withDescription chkSaveLocalContainer hide">
     <label>
-        <input is="emby-checkbox" type="checkbox" id="chkSaveLocal" />
+        <input is="otg-checkbox" type="checkbox" id="chkSaveLocal" />
         <span>${LabelSaveLocalMetadata}</span>
     </label>
     <div class="fieldDescription checkboxFieldDescription">${LabelSaveLocalMetadataHelp}</div>
@@ -64,7 +64,7 @@
 
 <div class="checkboxContainer checkboxContainer-withDescription hide chkDownloadImagesInAdvanceContainer advanced">
     <label>
-        <input is="emby-checkbox" type="checkbox" id="chkDownloadImagesInAdvance" />
+        <input is="otg-checkbox" type="checkbox" id="chkDownloadImagesInAdvance" />
         <span>${OptionDownloadImagesInAdvance}</span>
     </label>
     <div class="fieldDescription checkboxFieldDescription">${OptionDownloadImagesInAdvanceHelp}</div>
@@ -72,7 +72,7 @@
 
 <div class="checkboxContainer checkboxContainer-withDescription chkAutomaticallyGroupSeriesContainer hide advanced">
     <label>
-        <input type="checkbox" is="emby-checkbox" class="chkAutomaticallyGroupSeries" checked />
+        <input type="checkbox" is="otg-checkbox" class="chkAutomaticallyGroupSeries" checked />
         <span>${OptionAutomaticallyGroupSeries}</span>
     </label>
     <div class="fieldDescription checkboxFieldDescription">${OptionAutomaticallyGroupSeriesHelp}</div>
@@ -80,7 +80,7 @@
 
 <div class="checkboxContainer checkboxContainer-withDescription hide chkImportMissingEpisodesContainer advanced">
     <label>
-        <input is="emby-checkbox" type="checkbox" id="chkImportMissingEpisodes" />
+        <input is="otg-checkbox" type="checkbox" id="chkImportMissingEpisodes" />
         <span>${LabelDisplayMissingEpisodesWithinSeasons}</span>
     </label>
     <div class="fieldDescription checkboxFieldDescription">${ImportMissingEpisodesHelp}</div>
@@ -90,7 +90,7 @@
     <h2>${HeaderChapterImages}</h2>
     <div class="checkboxContainer checkboxContainer-withDescription fldExtractChapterImages">
         <label>
-            <input type="checkbox" is="emby-checkbox" class="chkExtractChapterImages" />
+            <input type="checkbox" is="otg-checkbox" class="chkExtractChapterImages" />
             <span>${OptionExtractChapterImage}</span>
         </label>
         <div class="fieldDescription checkboxFieldDescription">${ExtractChapterImagesHelp}</div>
@@ -98,7 +98,7 @@
 
     <div class="checkboxContainer checkboxContainer-withDescription fldExtractChaptersDuringLibraryScan advanced">
         <label>
-            <input type="checkbox" is="emby-checkbox" class="chkExtractChaptersDuringLibraryScan" />
+            <input type="checkbox" is="otg-checkbox" class="chkExtractChaptersDuringLibraryScan" />
             <span>${LabelExtractChaptersDuringLibraryScan}</span>
         </label>
         <div class="fieldDescription checkboxFieldDescription">${LabelExtractChaptersDuringLibraryScanHelp}</div>
@@ -120,21 +120,21 @@
 
     <div class="checkboxContainer checkboxContainer-withDescription">
         <label>
-            <input is="emby-checkbox" type="checkbox" id="chkRequirePerfectMatch" checked />
+            <input is="otg-checkbox" type="checkbox" id="chkRequirePerfectMatch" checked />
             <span>${OptionRequirePerfectSubtitleMatch}</span>
         </label>
         <div class="fieldDescription checkboxFieldDescription">${OptionRequirePerfectSubtitleMatchHelp}</div>
     </div>
     <div class="checkboxContainer checkboxContainer-withDescription advanced">
         <label>
-            <input is="emby-checkbox" type="checkbox" id="chkSkipIfAudioTrackPresent" />
+            <input is="otg-checkbox" type="checkbox" id="chkSkipIfAudioTrackPresent" />
             <span>${LabelSkipIfAudioTrackPresent}</span>
         </label>
         <div class="fieldDescription checkboxFieldDescription">${LabelSkipIfAudioTrackPresentHelp}</div>
     </div>
     <div class="checkboxContainer checkboxContainer-withDescription advanced">
         <label>
-            <input is="emby-checkbox" type="checkbox" id="chkSkipIfGraphicalSubsPresent" />
+            <input is="otg-checkbox" type="checkbox" id="chkSkipIfGraphicalSubsPresent" />
             <span>${LabelSkipIfGraphicalSubsPresent}</span>
         </label>
         <div class="fieldDescription checkboxFieldDescription">${LabelSkipIfGraphicalSubsPresentHelp}</div>
@@ -142,7 +142,7 @@
 
     <div class="checkboxContainer checkboxContainer-withDescription advanced">
         <label>
-            <input type="checkbox" is="emby-checkbox" id="chkSaveSubtitlesLocally" checked />
+            <input type="checkbox" is="otg-checkbox" id="chkSaveSubtitlesLocally" checked />
             <span>${SaveSubtitlesIntoMediaFolders}</span>
         </label>
         <div class="fieldDescription checkboxFieldDescription">${SaveSubtitlesIntoMediaFoldersHelp}</div>

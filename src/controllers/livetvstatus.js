@@ -1,4 +1,4 @@
-define(["jQuery", "globalize", "scripts/taskbutton", "dom", "libraryMenu", "layoutManager", "loading", "browser", "listViewStyle", "flexStyles", "emby-itemscontainer", "cardStyle", "material-icons", "emby-button"], function ($, globalize, taskButton, dom, libraryMenu, layoutManager, loading, browser) {
+define(["jQuery", "globalize", "scripts/taskbutton", "dom", "libraryMenu", "layoutManager", "loading", "browser", "listViewStyle", "flexStyles", "otg-itemscontainer", "cardStyle", "material-icons", "otg-button"], function ($, globalize, taskButton, dom, libraryMenu, layoutManager, loading, browser) {
     "use strict";
 
     var enableFocusTransform = !browser.slow && !browser.edge;
@@ -103,7 +103,7 @@ define(["jQuery", "globalize", "scripts/taskbutton", "dom", "libraryMenu", "layo
                 html += '<div class="listItem">';
                 html += '<i class="listItemIcon md-icon">dvr</i>';
                 html += '<div class="listItemBody two-line">';
-                html += '<a is="emby-linkbutton" style="display:block;padding:0;margin:0;text-align:left;" class="clearLink" href="' + getProviderConfigurationUrl(provider.Type) + "&id=" + provider.Id + '">';
+                html += '<a is="otg-linkbutton" style="display:block;padding:0;margin:0;text-align:left;" class="clearLink" href="' + getProviderConfigurationUrl(provider.Type) + "&id=" + provider.Id + '">';
                 html += '<h3 class="listItemBodyText">';
                 html += getProviderName(provider.Type);
                 html += "</h3>";

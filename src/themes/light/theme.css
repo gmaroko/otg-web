@@ -10,7 +10,7 @@ html {
   background-color: #303030
 }
 
-.emby-collapsible-button {
+.otg-collapsible-button {
     border-color: #ccc;
     border-color: rgba(0, 0, 0, .158)
 }
@@ -241,49 +241,49 @@ html {
     color: #CB272A
 }
 
-.emby-input,
-.emby-textarea {
+.otg-input,
+.otg-textarea {
     color: inherit;
     background: #fff;
     border: .07em solid rgba(0, 0, 0, .158);
     border-radius: .15em
 }
 
-.emby-input:focus,
-.emby-textarea:focus {
+.otg-input:focus,
+.otg-textarea:focus {
     border-color: #00a4dc
 }
 
-.emby-select-withcolor {
+.otg-select-withcolor {
     color: inherit;
     background: #fff;
     border: .07em solid rgba(0, 0, 0, .158)
 }
 
-.emby-checkbox:checked+span+.checkboxOutline,
-.emby-select-withcolor:focus {
+.otg-checkbox:checked+span+.checkboxOutline,
+.otg-select-withcolor:focus {
     border-color: #00a4dc
 }
 
-.emby-checkbox:focus+span+.checkboxOutline {
+.otg-checkbox:focus+span+.checkboxOutline {
     border-color: #000;
 }
 
-.emby-checkbox:focus:not(:checked)+span+.checkboxOutline {
+.otg-checkbox:focus:not(:checked)+span+.checkboxOutline {
     border-color: #00a4dc;
 }
 
-.emby-select-withcolor>option {
+.otg-select-withcolor>option {
     color: #000;
     background: #fff
 }
 
-.emby-select-tv-withcolor:focus {
+.otg-select-tv-withcolor:focus {
     background-color: #00a4dc;
     color: #fff
 }
 
-.emby-checkbox:checked+span+.checkboxOutline,
+.otg-checkbox:checked+span+.checkboxOutline,
 .itemProgressBarForeground {
     background-color: #00a4dc
 }
@@ -315,24 +315,24 @@ html {
     color: #fff
 }
 
-.emby-button.show-focus:focus {
+.otg-button.show-focus:focus {
     background: #00a4dc;
     color: #fff
 }
 
-.emby-tab-button {
+.otg-tab-button {
     color: #999;
 }
 
-.emby-tab-button-active {
+.otg-tab-button-active {
     color: #00a4dc;
 }
 
-.emby-tab-button.show-focus:focus {
+.otg-tab-button.show-focus:focus {
     color: #00a4dc;
 }
 
-.emby-tab-button:hover {
+.otg-tab-button:hover {
     color: #00a4dc;
 }
 
@@ -382,7 +382,7 @@ html {
     color: rgba(0, 0, 0, .54)
 }
 
-.guide-date-tab-button.emby-tab-button-active,
+.guide-date-tab-button.otg-tab-button-active,
 .guide-date-tab-button:focus {
     color: #00a4dc
 }

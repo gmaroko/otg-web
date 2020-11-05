@@ -15,16 +15,16 @@
                 <div class="txtPath fieldDescription"></div>
             </div>
             <div class="inputContainer">
-                <input is="emby-input" type="text" id="txtLookupName" class="identifyField" data-lookup="Name" label="${LabelName}" />
+                <input is="otg-input" type="text" id="txtLookupName" class="identifyField" data-lookup="Name" label="${LabelName}" />
             </div>
             <div class="fldLookupYear inputContainer">
-                <input is="emby-input" type="number" id="txtLookupYear" class="identifyField" data-lookup="Year" pattern="[0-9]*" min="1800" label="${LabelYear}" />
+                <input is="otg-input" type="number" id="txtLookupYear" class="identifyField" data-lookup="Year" pattern="[0-9]*" min="1800" label="${LabelYear}" />
             </div>
 
             <div class="identifyProviderIds"></div>
 
             <div class="formDialogFooter">
-                <button is="emby-button" type="submit" class="raised button-submit block formDialogFooterItem">
+                <button is="otg-button" type="submit" class="raised button-submit block formDialogFooterItem">
                     <span>${Search}</span>
                 </button>
             </div>
@@ -40,12 +40,12 @@
             <div class="selectedSearchResult"></div>
             <br />
             <label class="checkboxContainer">
-                <input type="checkbox" is="emby-checkbox" id="chkIdentifyReplaceImages" />
+                <input type="checkbox" is="otg-checkbox" id="chkIdentifyReplaceImages" />
                 <span>${ReplaceExistingImages}</span>
             </label>
 
             <div class="formDialogFooter">
-                <button is="emby-button" type="submit" class="raised button-submit block btnSubmit formDialogFooterItem">
+                <button is="otg-button" type="submit" class="raised button-submit block btnSubmit formDialogFooterItem">
                     <span>${ButtonOk}</span>
                 </button>
             </div>

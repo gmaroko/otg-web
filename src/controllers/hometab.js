@@ -1,4 +1,4 @@
-define(["userSettings", "loading", "connectionManager", "apphost", "layoutManager", "focusManager", "homeSections", "emby-itemscontainer"], function (userSettings, loading, connectionManager, appHost, layoutManager, focusManager, homeSections) {
+define(["userSettings", "loading", "connectionManager", "apphost", "layoutManager", "focusManager", "homeSections", "otg-itemscontainer"], function (userSettings, loading, connectionManager, appHost, layoutManager, focusManager, homeSections) {
     "use strict";
 
     function HomeTab(view, params) {

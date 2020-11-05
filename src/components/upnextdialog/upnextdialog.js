@@ -1,4 +1,4 @@
-define(['dom', 'playbackManager', 'connectionManager', 'events', 'mediaInfo', 'layoutManager', 'focusManager', 'globalize', 'itemHelper', 'css!./upnextdialog', 'emby-button', 'flexStyles'], function (dom, playbackManager, connectionManager, events, mediaInfo, layoutManager, focusManager, globalize, itemHelper) {
+define(['dom', 'playbackManager', 'connectionManager', 'events', 'mediaInfo', 'layoutManager', 'focusManager', 'globalize', 'itemHelper', 'css!./upnextdialog', 'otg-button', 'flexStyles'], function (dom, playbackManager, connectionManager, events, mediaInfo, layoutManager, focusManager, globalize, itemHelper) {
     'use strict';
 
     var transitionEndEventName = dom.whichTransitionEvent();
@@ -106,11 +106,11 @@ define(['dom', 'playbackManager', 'connectionManager', 'events', 'mediaInfo', 'l
 
         html += '<div class="flex flex-direction-row upNextDialog-buttons" style="margin-top:1em;">';
 
-        html += '<button type="button" is="emby-button" class="raised raised-mini btnStartNow upNextDialog-button">';
+        html += '<button type="button" is="otg-button" class="raised raised-mini btnStartNow upNextDialog-button">';
         html += globalize.translate('HeaderStartNow');
         html += '</button>';
 
-        html += '<button type="button" is="emby-button" class="raised raised-mini btnHide upNextDialog-button">';
+        html += '<button type="button" is="otg-button" class="raised raised-mini btnHide upNextDialog-button">';
         html += globalize.translate('Hide');
         html += '</button>';
 

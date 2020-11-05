@@ -8,10 +8,10 @@
             <div style="vertical-align:top;margin:1em 2em;display:inline-block;">
                 <h2 class="username" style="margin:0;font-size:xx-large;"></h2>
                 <br/>
-                <button is="emby-button" type="button" class="raised hide" id="btnAddImage">
+                <button is="otg-button" type="button" class="raised hide" id="btnAddImage">
                     <span>${ButtonAddImage}</span>
                 </button>
-                <button is="emby-button" type="button" class="raised hide" id="btnDeleteImage">
+                <button is="otg-button" type="button" class="raised hide" id="btnDeleteImage">
                     <span>${ButtonDeleteImage}</span>
                 </button>
             </div>
@@ -22,19 +22,19 @@
                     ${HeaderPassword}
                 </h2>
                 <div id="fldCurrentPassword" class="inputContainer hide">
-                    <input is="emby-input" type="password" id="txtCurrentPassword" label="${LabelCurrentPassword}" autocomplete="off" />
+                    <input is="otg-input" type="password" id="txtCurrentPassword" label="${LabelCurrentPassword}" autocomplete="off" />
                 </div>
                 <div class="inputContainer">
-                    <input is="emby-input" type="password" id="txtNewPassword" label="${LabelNewPassword}" autocomplete="off" />
+                    <input is="otg-input" type="password" id="txtNewPassword" label="${LabelNewPassword}" autocomplete="off" />
                 </div>
                 <div class="inputContainer">
-                    <input is="emby-input" type="password" id="txtNewPasswordConfirm" label="${LabelNewPasswordConfirm}" autocomplete="off" />
+                    <input is="otg-input" type="password" id="txtNewPasswordConfirm" label="${LabelNewPasswordConfirm}" autocomplete="off" />
                 </div>
                 <div>
-                    <button is="emby-button" type="submit" class="raised button-submit block">
+                    <button is="otg-button" type="submit" class="raised button-submit block">
                         <span>${ButtonSave}</span>
                     </button>
-                    <button is="emby-button" type="button" id="btnResetPassword" class="raised cancel block hide">
+                    <button is="otg-button" type="button" id="btnResetPassword" class="raised cancel block hide">
                         <span>${ButtonResetPassword}</span>
                     </button>
                 </div>
@@ -46,20 +46,20 @@
                 <div>${EasyPasswordHelp}</div>
                 <br />
                 <div class="inputContainer">
-                    <input is="emby-input" type="number" id="txtEasyPassword" label="${LabelEasyPinCode}" autocomplete="off" pattern="[0-9]*" step="1" maxlength="5" />
+                    <input is="otg-input" type="number" id="txtEasyPassword" label="${LabelEasyPinCode}" autocomplete="off" pattern="[0-9]*" step="1" maxlength="5" />
                 </div>
                 <div class="checkboxContainer checkboxContainer-withDescription">
                     <label>
-                        <input type="checkbox" is="emby-checkbox" class="chkEnableLocalEasyPassword" />
+                        <input type="checkbox" is="otg-checkbox" class="chkEnableLocalEasyPassword" />
                         <span>${LabelInNetworkSignInWithEasyPassword}</span>
                     </label>
                     <div class="fieldDescription checkboxFieldDescription">${LabelInNetworkSignInWithEasyPasswordHelp}</div>
                 </div>
                 <div>
-                    <button is="emby-button" type="submit" class="raised button-submit block">
+                    <button is="otg-button" type="submit" class="raised button-submit block">
                         <span>${ButtonSave}</span>
                     </button>
-                    <button is="emby-button" type="button" id="btnResetEasyPassword" class="raised cancel block hide">
+                    <button is="otg-button" type="button" id="btnResetEasyPassword" class="raised cancel block hide">
                         <span>${ButtonResetEasyPassword}</span>
                     </button>
                 </div>

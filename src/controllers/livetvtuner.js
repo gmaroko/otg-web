@@ -1,4 +1,4 @@
-define(["globalize", "loading", "libraryMenu", "dom", "emby-input", "emby-button", "emby-checkbox", "emby-select"], function (globalize, loading, libraryMenu, dom) {
+define(["globalize", "loading", "libraryMenu", "dom", "otg-input", "otg-button", "otg-checkbox", "otg-select"], function (globalize, loading, libraryMenu, dom) {
     "use strict";
 
     function isM3uVariant(type) {

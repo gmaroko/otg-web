@@ -8,7 +8,7 @@
                 <div class="verticalSection">
                     <div class="sectionTitleContainer flex align-items-center">
                         <h1 class="sectionTitle pluginName"></h1>
-                        <a is="emby-linkbutton" class="raised button-alt headerHelpButton" target="_blank" href="https://otg.com/docs">${Help}</a>
+                        <a is="otg-linkbutton" class="raised button-alt headerHelpButton" target="_blank" href="https://otg.com/docs">${Help}</a>
                     </div>
 
                     <p id="tagline" style="font-style: italic;"></p>
@@ -24,11 +24,11 @@
                     <form class="addPluginForm">
                         <p id="pCurrentVersion"></p>
                         <div id="pSelectVersion" class="hide selectContainer">
-                            <select id="selectVersion" name="selectVersion" is="emby-select" label="${LabelSelectVersionToInstall}"></select>
+                            <select id="selectVersion" name="selectVersion" is="otg-select" label="${LabelSelectVersionToInstall}"></select>
                         </div>
 
                         <p id="btnInstallDiv" class="hide">
-                            <button is="emby-button" type="submit" id="btnInstall" class="raised button-submit block">
+                            <button is="otg-button" type="submit" id="btnInstall" class="raised button-submit block">
                                 <span>${Install}</span>
                             </button>
                             <div class="fieldDescription">${ServerRestartNeededAfterPluginInstall}</div>
@@ -39,16 +39,16 @@
             </div>
             <br />
             <div class="readOnlyContent">
-                <div is="emby-collapse" title="${HeaderDeveloperInfo}">
+                <div is="otg-collapse" title="${HeaderDeveloperInfo}">
                     <div class="collapseContent">
                         <p id="developer"></p>
                         <p id="pViewWebsite" style="display: none;">
-                            <a is="emby-linkbutton" class="button-link" href="#" target="_blank">${ButtonViewWebsite}</a>
+                            <a is="otg-linkbutton" class="button-link" href="#" target="_blank">${ButtonViewWebsite}</a>
                         </p>
                     </div>
                 </div>
 
-                <div is="emby-collapse" title="${HeaderRevisionHistory}">
+                <div is="otg-collapse" title="${HeaderRevisionHistory}">
                     <div class="collapseContent">
                         <div id="revisionHistory"></div>
                     </div>

@@ -160,7 +160,7 @@ define(["dom", "layoutManager", "inputManager", "connectionManager", "events", "
     function refreshLibraryInfoInDrawer(user, drawer) {
         var html = "";
         html += '<div style="height:.5em;"></div>';
-        html += '<a is="emby-linkbutton" class="navMenuOption lnkMediaFolder" href="home.html"><i class="md-icon navMenuOptionIcon">home</i><span class="navMenuOptionText">' + globalize.translate("ButtonHome") + "</span></a>";
+        html += '<a is="otg-linkbutton" class="navMenuOption lnkMediaFolder" href="home.html"><i class="md-icon navMenuOptionIcon">home</i><span class="navMenuOptionText">' + globalize.translate("ButtonHome") + "</span></a>";
 
         // libraries are added here
         html += '<div class="libraryMenuOptions">';
@@ -171,8 +171,8 @@ define(["dom", "layoutManager", "inputManager", "connectionManager", "events", "
             html += '<h3 class="sidebarHeader">';
             html += globalize.translate("HeaderAdmin");
             html += "</h3>";
-            html += '<a is="emby-linkbutton" class="navMenuOption lnkMediaFolder lnkManageServer" data-itemid="dashboard" href="dashboard.html"><i class="md-icon navMenuOptionIcon">dashboard</i><span class="navMenuOptionText">' + globalize.translate("TabDashboard") + "</span></a>";
-            html += '<a is="emby-linkbutton" class="navMenuOption lnkMediaFolder editorViewMenu" data-itemid="editor" href="edititemmetadata.html"><i class="md-icon navMenuOptionIcon">mode_edit</i><span class="navMenuOptionText">' + globalize.translate("Metadata") + "</span></a>";
+            html += '<a is="otg-linkbutton" class="navMenuOption lnkMediaFolder lnkManageServer" data-itemid="dashboard" href="dashboard.html"><i class="md-icon navMenuOptionIcon">dashboard</i><span class="navMenuOptionText">' + globalize.translate("TabDashboard") + "</span></a>";
+            html += '<a is="otg-linkbutton" class="navMenuOption lnkMediaFolder editorViewMenu" data-itemid="editor" href="edititemmetadata.html"><i class="md-icon navMenuOptionIcon">mode_edit</i><span class="navMenuOptionText">' + globalize.translate("Metadata") + "</span></a>";
             html += "</div>";
         }
 
@@ -183,10 +183,10 @@ define(["dom", "layoutManager", "inputManager", "connectionManager", "events", "
             html += "</h3>";
 
             if (appHost.supports("multiserver")) {
-                html += '<a is="emby-linkbutton" class="navMenuOption lnkMediaFolder" data-itemid="selectserver" href="selectserver.html?showuser=1"><i class="md-icon navMenuOptionIcon">wifi</i><span class="navMenuOptionText">' + globalize.translate("ButtonSelectServer") + "</span></a>";
+                html += '<a is="otg-linkbutton" class="navMenuOption lnkMediaFolder" data-itemid="selectserver" href="selectserver.html?showuser=1"><i class="md-icon navMenuOptionIcon">wifi</i><span class="navMenuOptionText">' + globalize.translate("ButtonSelectServer") + "</span></a>";
             }
 
-            html += '<a is="emby-linkbutton" class="navMenuOption lnkMediaFolder btnLogout" data-itemid="logout" href="#"><i class="md-icon navMenuOptionIcon">exit_to_app</i><span class="navMenuOptionText">' + globalize.translate("ButtonSignOut") + "</span></a>";
+            html += '<a is="otg-linkbutton" class="navMenuOption lnkMediaFolder btnLogout" data-itemid="logout" href="#"><i class="md-icon navMenuOptionIcon">exit_to_app</i><span class="navMenuOptionText">' + globalize.translate("ButtonSignOut") + "</span></a>";
             html += "</div>";
         }
 
@@ -387,7 +387,7 @@ define(["dom", "layoutManager", "inputManager", "connectionManager", "events", "
         pageIds = pageIds ? ' data-pageids="' + pageIds + '"' : "";
         var pageUrls = item.pageUrls ? item.pageUrls.join("|") : "";
         pageUrls = pageUrls ? ' data-pageurls="' + pageUrls + '"' : "";
-        menuHtml += '<a is="emby-linkbutton" class="navMenuOption" href="' + item.href + '"' + pageIds + pageUrls + ">";
+        menuHtml += '<a is="otg-linkbutton" class="navMenuOption" href="' + item.href + '"' + pageIds + pageUrls + ">";
 
         if (item.icon) {
             menuHtml += '<i class="md-icon navMenuOptionIcon">' + item.icon + "</i>";
@@ -424,7 +424,7 @@ define(["dom", "layoutManager", "inputManager", "connectionManager", "events", "
     function createDashboardMenu(apiClient) {
         return getToolsMenuHtml(apiClient).then(function (toolsMenuHtml) {
             var html = "";
-            html += '<a class="adminDrawerLogo clearLink" is="emby-linkbutton" href="home.html">';
+            html += '<a class="adminDrawerLogo clearLink" is="otg-linkbutton" href="home.html">';
             html += '<img src="assets/img/logo.png" />';
             html += "</a>";
             html += toolsMenuHtml;
@@ -517,7 +517,7 @@ define(["dom", "layoutManager", "inputManager", "connectionManager", "events", "
                         i.onclick;
                     }
 
-                    return '<a is="emby-linkbutton" data-itemid="' + itemId + '" class="lnkMediaFolder navMenuOption" href="' + getItemHref(i, i.CollectionType) + '"><i class="md-icon navMenuOptionIcon">' + icon + '</i><span class="sectionName navMenuOptionText">' + i.Name + "</span></a>";
+                    return '<a is="otg-linkbutton" data-itemid="' + itemId + '" class="lnkMediaFolder navMenuOption" href="' + getItemHref(i, i.CollectionType) + '"><i class="md-icon navMenuOptionIcon">' + icon + '</i><span class="sectionName navMenuOptionText">' + i.Name + "</span></a>";
                 }).join("");
                 libraryMenuOptions.innerHTML = html;
                 var elem = libraryMenuOptions;

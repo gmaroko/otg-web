@@ -1,4 +1,4 @@
-define(["jQuery", "loading", "fnchecked", "emby-button"], function ($, loading) {
+define(["jQuery", "loading", "fnchecked", "otg-button"], function ($, loading) {
     "use strict";
 
     function loadPage(page, config) {

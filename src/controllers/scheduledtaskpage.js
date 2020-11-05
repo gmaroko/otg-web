@@ -1,4 +1,4 @@
-define(["jQuery", "loading", "datetime", "dom", "globalize", "emby-input", "emby-button", "emby-select"], function ($, loading, datetime, dom, globalize) {
+define(["jQuery", "loading", "datetime", "dom", "globalize", "otg-input", "otg-button", "otg-select"], function ($, loading, datetime, dom, globalize) {
     "use strict";
 
     function fillTimeOfDay(select) {

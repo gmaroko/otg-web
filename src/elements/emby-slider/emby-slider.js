@@ -1,4 +1,4 @@
-define(['browser', 'dom', 'layoutManager', 'css!./emby-slider', 'registerElement', 'emby-input'], function (browser, dom, layoutManager) {
+define(['browser', 'dom', 'layoutManager', 'css!./otg-slider', 'registerElement', 'otg-input'], function (browser, dom, layoutManager) {
     'use strict';
 
     var EmbySliderPrototype = Object.create(HTMLInputElement.prototype);
@@ -372,7 +372,7 @@ define(['browser', 'dom', 'layoutManager', 'css!./emby-slider', 'registerElement
         this.backgroundLower = null;
     };
 
-    document.registerElement('emby-slider', {
+    document.registerElement('otg-slider', {
         prototype: EmbySliderPrototype,
         extends: 'input'
     });

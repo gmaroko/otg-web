@@ -1,4 +1,4 @@
-define(["loading", "dom", "libraryMenu", "globalize", "scripts/imagehelper", "humanedate", "emby-button", "emby-itemscontainer", "cardStyle"], function (loading, dom, libraryMenu, globalize, imageHelper) {
+define(["loading", "dom", "libraryMenu", "globalize", "scripts/imagehelper", "humanedate", "otg-button", "otg-itemscontainer", "cardStyle"], function (loading, dom, libraryMenu, globalize, imageHelper) {
     "use strict";
 
     function canDelete(deviceId) {
@@ -73,7 +73,7 @@ define(["loading", "dom", "libraryMenu", "globalize", "scripts/imagehelper", "hu
             deviceHtml += '<div class="cardBox visualCardBox">';
             deviceHtml += '<div class="cardScalable">';
             deviceHtml += '<div class="cardPadder cardPadder-backdrop"></div>';
-            deviceHtml += '<a is="emby-linkbutton" href="' + (canEdit ? "device.html?id=" + device.Id : "#") + '" class="cardContent cardImageContainer">';
+            deviceHtml += '<a is="otg-linkbutton" href="' + (canEdit ? "device.html?id=" + device.Id : "#") + '" class="cardContent cardImageContainer">';
             var iconUrl = imageHelper.getDeviceIcon(device);
 
             if (iconUrl) {

@@ -1,4 +1,4 @@
-.emby-button {
+.otg-button {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -28,12 +28,12 @@
     transition: 0.2s;
 }
 
-.emby-button.show-focus:focus {
+.otg-button.show-focus:focus {
     transform: scale(1.2);
     z-index: 1;
 }
 
-.emby-button::-moz-focus-inner {
+.otg-button::-moz-focus-inner {
     border: 0;
 }
 
@@ -56,7 +56,7 @@
     text-decoration: underline;
 }
 
-.emby-button > i {
+.otg-button > i {
     /* For non-fab buttons that have icons */
     font-size: 1.36em;
 }
@@ -75,7 +75,7 @@
     text-align: center;
 }
 
-.emby-button.block {
+.otg-button.block {
     display: block;
     align-items: center;
     justify-content: center;
@@ -147,7 +147,7 @@
         margin: 0 auto;
     }
 
-.emby-button-foreground {
+.otg-button-foreground {
     position: relative;
     z-index: 1;
 }

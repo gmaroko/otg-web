@@ -7,10 +7,10 @@
         </h2>
 
         <div class="selectContainer">
-            <select is="emby-select" id="selectSubtitleLanguage" label="${LabelPreferredSubtitleLanguage}"></select>
+            <select is="otg-select" id="selectSubtitleLanguage" label="${LabelPreferredSubtitleLanguage}"></select>
         </div>
         <div class="selectContainer">
-            <select is="emby-select" id="selectSubtitlePlaybackMode" label="${LabelSubtitlePlaybackMode}">
+            <select is="otg-select" id="selectSubtitlePlaybackMode" label="${LabelSubtitlePlaybackMode}">
                 <option value="Default">${Default}</option>
                 <option value="Smart">${Smart}</option>
                 <option value="OnlyForced">${OnlyForcedSubtitles}</option>
@@ -24,7 +24,7 @@
             <div class="fieldDescription subtitlesNoneHelp subtitlesHelp hide">${NoSubtitlesHelp}</div>
         </div>
         <div class="selectContainer fldBurnIn hide">
-            <select is="emby-select" id="selectSubtitleBurnIn" label="${LabelBurnSubtitles}">
+            <select is="otg-select" id="selectSubtitleBurnIn" label="${LabelBurnSubtitles}">
                 <option value="">${Auto}</option>
                 <option value="onlyimageformats">${OnlyImageFormats}</option>
                 <option value="allcomplexformats">${AllComplexFormats}</option>
@@ -52,7 +52,7 @@
         </div>
 
         <div class="selectContainer">
-            <select is="emby-select" id="selectTextSize" label="${LabelTextSize}">
+            <select is="otg-select" id="selectTextSize" label="${LabelTextSize}">
                 <option value="smaller">${Smaller}</option>
                 <option value="small">${Small}</option>
                 <option value="">${Normal}</option>
@@ -62,7 +62,7 @@
             </select>
         </div>
         <div class="selectContainer">
-            <select is="emby-select" id="selectFont" label="${LabelFont}">
+            <select is="otg-select" id="selectFont" label="${LabelFont}">
                 <option value="">${Default}</option>
                 <option value="typewriter">${Typewriter}</option>
                 <option value="print">${Print}</option>
@@ -72,13 +72,13 @@
             </select>
         </div>
         <div class="inputContainer hide">
-            <input is="emby-input" id="inputTextBackground" label="${LabelTextBackgroundColor}" type="text" />
+            <input is="otg-input" id="inputTextBackground" label="${LabelTextBackgroundColor}" type="text" />
         </div>
         <div class="inputContainer hide">
-            <input is="emby-input" id="inputTextColor" label="${LabelTextColor}" type="text" />
+            <input is="otg-input" id="inputTextColor" label="${LabelTextColor}" type="text" />
         </div>
         <div class="selectContainer">
-            <select is="emby-select" id="selectDropShadow" label="${LabelDropShadow}">
+            <select is="otg-select" id="selectDropShadow" label="${LabelDropShadow}">
                 <option value="none">${None}</option>
                 <option value="raised">${Raised}</option>
                 <option value="depressed">${Depressed}</option>
@@ -88,7 +88,7 @@
         </div>
     </div>
 
-    <button is="emby-button" type="submit" class="raised button-submit block btnSave hide">
+    <button is="otg-button" type="submit" class="raised button-submit block btnSave hide">
         <span>${Save}</span>
     </button>
 </form>

@@ -1,4 +1,4 @@
-define(['dialogHelper', 'layoutManager', 'globalize', 'browser', 'dom', 'emby-button', 'css!./actionsheet', 'material-icons', 'scrollStyles', 'listViewStyle'], function (dialogHelper, layoutManager, globalize, browser, dom) {
+define(['dialogHelper', 'layoutManager', 'globalize', 'browser', 'dom', 'otg-button', 'css!./actionsheet', 'material-icons', 'scrollStyles', 'listViewStyle'], function (dialogHelper, layoutManager, globalize, browser, dom) {
     'use strict';
 
     function getOffsets(elems) {
@@ -220,7 +220,7 @@ define(['dialogHelper', 'layoutManager', 'globalize', 'browser', 'dom', 'emby-bu
 
             // Check for null in case int 0 was passed in
             var optionId = option.id == null || option.id === '' ? option.value : option.id;
-            html += '<button' + autoFocus + ' is="emby-button" type="button" class="' + menuItemClass + '" data-id="' + optionId + '">';
+            html += '<button' + autoFocus + ' is="otg-button" type="button" class="' + menuItemClass + '" data-id="' + optionId + '">';
 
             itemIcon = icons[i];
 
@@ -256,7 +256,7 @@ define(['dialogHelper', 'layoutManager', 'globalize', 'browser', 'dom', 'emby-bu
 
         if (options.showCancel) {
             html += '<div class="buttons">';
-            html += '<button is="emby-button" type="button" class="btnCloseActionSheet">' + globalize.translate('ButtonCancel') + '</button>';
+            html += '<button is="otg-button" type="button" class="btnCloseActionSheet">' + globalize.translate('ButtonCancel') + '</button>';
             html += '</div>';
         }
         html += '</div>';

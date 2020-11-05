@@ -1,4 +1,4 @@
-define(["jQuery", "loading", "emby-checkbox", "emby-input", "listViewStyle", "paper-icon-button-light"], function ($, loading) {
+define(["jQuery", "loading", "otg-checkbox", "otg-input", "listViewStyle", "paper-icon-button-light"], function ($, loading) {
     "use strict";
 
     return function (page, providerId, options) {
@@ -120,7 +120,7 @@ define(["jQuery", "loading", "emby-checkbox", "emby-input", "listViewStyle", "pa
                 var enabledTuners = providerInfo.EnabledTuners || [];
                 var isChecked = providerInfo.EnableAllTuners || -1 !== enabledTuners.indexOf(device.Id);
                 var checkedAttribute = isChecked ? " checked" : "";
-                html += '<label class="listItemCheckboxContainer"><input type="checkbox" is="emby-checkbox" class="chkTuner" data-id="' + device.Id + '" ' + checkedAttribute + "><span></span></label>";
+                html += '<label class="listItemCheckboxContainer"><input type="checkbox" is="otg-checkbox" class="chkTuner" data-id="' + device.Id + '" ' + checkedAttribute + "><span></span></label>";
                 html += '<div class="listItemBody two-line">';
                 html += '<div class="listItemBodyText">';
                 html += device.FriendlyName || getTunerName(device.Type);

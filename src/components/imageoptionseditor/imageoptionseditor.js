@@ -1,4 +1,4 @@
-define(["globalize", "dom", "dialogHelper", "emby-checkbox", "emby-select", "emby-input"], function (globalize, dom, dialogHelper) {
+define(["globalize", "dom", "dialogHelper", "otg-checkbox", "otg-select", "otg-input"], function (globalize, dom, dialogHelper) {
     "use strict";
 
     function getDefaultImageConfig(itemType, type) {

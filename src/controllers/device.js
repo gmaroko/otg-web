@@ -1,4 +1,4 @@
-define(["loading", "libraryMenu", "dom", "emby-input", "emby-button"], function (loading, libraryMenu, dom) {
+define(["loading", "libraryMenu", "dom", "otg-input", "otg-button"], function (loading, libraryMenu, dom) {
     "use strict";
 
     function load(page, device, deviceOptions) {

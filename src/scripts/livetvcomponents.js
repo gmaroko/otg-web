@@ -79,9 +79,9 @@ define(["layoutManager", "datetime", "cardBuilder", "apphost"], function (layout
                     scrollXClass += " smoothScrollX";
                 }
 
-                html += '<div is="emby-itemscontainer" class="itemsContainer ' + scrollXClass + ' padded-left padded-right">';
+                html += '<div is="otg-itemscontainer" class="itemsContainer ' + scrollXClass + ' padded-left padded-right">';
             } else {
-                html += '<div is="emby-itemscontainer" class="itemsContainer vertical-wrap padded-left padded-right">';
+                html += '<div is="otg-itemscontainer" class="itemsContainer vertical-wrap padded-left padded-right">';
             }
 
             html += cardBuilder.getCardsHtml({

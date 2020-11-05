@@ -1,4 +1,4 @@
-define(["loading", "emby-checkbox", "emby-button", "emby-select"], function (loading) {
+define(["loading", "otg-checkbox", "otg-button", "otg-select"], function (loading) {
     "use strict";
 
     function save(page) {

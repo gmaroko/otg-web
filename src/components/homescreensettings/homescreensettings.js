@@ -1,4 +1,4 @@
-define(['require', 'apphost', 'layoutManager', 'focusManager', 'globalize', 'loading', 'connectionManager', 'homeSections', 'dom', 'events', 'listViewStyle', 'emby-select', 'emby-checkbox'], function (require, appHost, layoutManager, focusManager, globalize, loading, connectionManager, homeSections, dom, events) {
+define(['require', 'apphost', 'layoutManager', 'focusManager', 'globalize', 'loading', 'connectionManager', 'homeSections', 'dom', 'events', 'listViewStyle', 'otg-select', 'otg-checkbox'], function (require, appHost, layoutManager, focusManager, globalize, loading, connectionManager, homeSections, dom, events) {
     "use strict";
 
     var numConfigurableSections = 7;
@@ -19,7 +19,7 @@ define(['require', 'apphost', 'layoutManager', 'focusManager', 'globalize', 'loa
             var checkedHtml = isChecked ? ' checked="checked"' : '';
 
             currentHtml += '<label>';
-            currentHtml += '<input type="checkbox" is="emby-checkbox" class="chkGroupFolder" data-folderid="' + i.Id + '" id="' + id + '"' + checkedHtml + '/>';
+            currentHtml += '<input type="checkbox" is="otg-checkbox" class="chkGroupFolder" data-folderid="' + i.Id + '" id="' + id + '"' + checkedHtml + '/>';
             currentHtml += '<span>' + i.Name + '</span>';
             currentHtml += '</label>';
 
@@ -205,7 +205,7 @@ define(['require', 'apphost', 'layoutManager', 'focusManager', 'globalize', 'loa
             isChecked = (user.Configuration.MyMediaExcludes || []).indexOf(item.Id) === -1;
             html += '<div>';
             html += '<label>';
-            html += '<input type="checkbox" is="emby-checkbox" class="chkIncludeInMyMedia" data-folderid="' + item.Id + '"' + (isChecked ? ' checked="checked"' : '') + '/>';
+            html += '<input type="checkbox" is="otg-checkbox" class="chkIncludeInMyMedia" data-folderid="' + item.Id + '"' + (isChecked ? ' checked="checked"' : '') + '/>';
             html += '<span>' + globalize.translate('DisplayInMyMedia') + '</span>';
             html += '</label>';
             html += '</div>';
@@ -216,7 +216,7 @@ define(['require', 'apphost', 'layoutManager', 'focusManager', 'globalize', 'loa
 
             isChecked = user.Configuration.LatestItemsExcludes.indexOf(item.Id) === -1;
             html += '<label class="fldIncludeInLatest">';
-            html += '<input type="checkbox" is="emby-checkbox" class="chkIncludeInLatest" data-folderid="' + item.Id + '"' + (isChecked ? ' checked="checked"' : '') + '/>';
+            html += '<input type="checkbox" is="otg-checkbox" class="chkIncludeInLatest" data-folderid="' + item.Id + '"' + (isChecked ? ' checked="checked"' : '') + '/>';
             html += '<span>' + globalize.translate('DisplayInOtherHomeScreenSections') + '</span>';
             html += '</label>';
         }
@@ -230,7 +230,7 @@ define(['require', 'apphost', 'layoutManager', 'focusManager', 'globalize', 'loa
 
             var idForLanding = item.CollectionType === 'livetv' ? item.CollectionType : item.Id;
             html += '<div class="selectContainer">';
-            html += '<select is="emby-select" class="selectLanding" data-folderid="' + idForLanding + '" label="' + globalize.translate('LabelDefaultScreen') + '">';
+            html += '<select is="otg-select" class="selectLanding" data-folderid="' + idForLanding + '" label="' + globalize.translate('LabelDefaultScreen') + '">';
 
             var userValue = userSettings.get('landing-' + idForLanding);
 

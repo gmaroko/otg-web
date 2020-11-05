@@ -39,7 +39,7 @@ define(['datetime', 'itemHelper', 'css!./indicators.css', 'material-icons'], fun
             foregroundClass += ' itemProgressBarForeground-recording';
         }
 
-        return '<div is="emby-progressbar" data-automode="time" data-starttime="' + start + '" data-endtime="' + end + '" class="' + containerClass + '"><div class="' + foregroundClass + '" style="width:' + pct + '%;"></div></div>';
+        return '<div is="otg-progressbar" data-automode="time" data-starttime="' + start + '" data-endtime="' + end + '" class="' + containerClass + '"><div class="' + foregroundClass + '" style="width:' + pct + '%;"></div></div>';
     }
 
     function getProgressBarHtml(item, options) {
@@ -214,7 +214,7 @@ define(['datetime', 'itemHelper', 'css!./indicators.css', 'material-icons'], fun
         }
     };
 
-    document.registerElement('emby-progressbar', {
+    document.registerElement('otg-progressbar', {
         prototype: ProgressBarPrototype,
         extends: 'div'
     });

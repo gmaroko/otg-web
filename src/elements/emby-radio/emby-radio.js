@@ -1,4 +1,4 @@
-define(['css!./emby-radio', 'registerElement'], function () {
+define(['css!./otg-radio', 'registerElement'], function () {
     'use strict';
 
     var EmbyRadioPrototype = Object.create(HTMLInputElement.prototype);
@@ -41,7 +41,7 @@ define(['css!./emby-radio', 'registerElement'], function () {
         this.addEventListener('keydown', onKeyDown);
     };
 
-    document.registerElement('emby-radio', {
+    document.registerElement('otg-radio', {
         prototype: EmbyRadioPrototype,
         extends: 'input'
     });

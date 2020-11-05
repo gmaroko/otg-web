@@ -63,7 +63,7 @@ define(["jQuery", "datetime", "loading", "libraryMenu", "listViewStyle", "paper-
         for (var i = 0, length = items.length; i < length; i++) {
             var item = items[i];
             var checkedAttribute = -1 != user.Policy.BlockUnratedItems.indexOf(item.value) ? ' checked="checked"' : "";
-            html += '<label><input type="checkbox" is="emby-checkbox" class="chkUnratedItem" data-itemtype="' + item.value + '" type="checkbox"' + checkedAttribute + "><span>" + item.name + "</span></label>";
+            html += '<label><input type="checkbox" is="otg-checkbox" class="chkUnratedItem" data-itemtype="' + item.value + '" type="checkbox"' + checkedAttribute + "><span>" + item.name + "</span></label>";
         }
 
         html += "</div>";

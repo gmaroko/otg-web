@@ -1,4 +1,4 @@
-define(["jQuery", "apphost", "scripts/taskbutton", "loading", "libraryMenu", "globalize", "dom", "indicators", "scripts/imagehelper", "cardStyle", "emby-itemrefreshindicator"], function ($, appHost, taskButton, loading, libraryMenu, globalize, dom, indicators, imageHelper) {
+define(["jQuery", "apphost", "scripts/taskbutton", "loading", "libraryMenu", "globalize", "dom", "indicators", "scripts/imagehelper", "cardStyle", "otg-itemrefreshindicator"], function ($, appHost, taskButton, loading, libraryMenu, globalize, dom, indicators, imageHelper) {
     "use strict";
 
     function addVirtualFolder(page) {
@@ -203,7 +203,7 @@ define(["jQuery", "apphost", "scripts/taskbutton", "loading", "libraryMenu", "gl
     }
 
     function getLink(text, url) {
-        return globalize.translate(text, '<a is="emby-linkbutton" class="button-link" href="' + url + '" target="_blank" data-autohide="true">', "</a>");
+        return globalize.translate(text, '<a is="otg-linkbutton" class="button-link" href="' + url + '" target="_blank" data-autohide="true">', "</a>");
     }
 
     function getCollectionTypeOptions() {
@@ -273,7 +273,7 @@ define(["jQuery", "apphost", "scripts/taskbutton", "loading", "libraryMenu", "gl
 
         if (hasCardImageContainer) {
             html += '<div class="cardIndicators backdropCardIndicators">';
-            html += '<div is="emby-itemrefreshindicator"' + (virtualFolder.RefreshProgress || virtualFolder.RefreshStatus && "Idle" !== virtualFolder.RefreshStatus ? "" : ' class="hide"') + ' data-progress="' + (virtualFolder.RefreshProgress || 0) + '" data-status="' + virtualFolder.RefreshStatus + '"></div>';
+            html += '<div is="otg-itemrefreshindicator"' + (virtualFolder.RefreshProgress || virtualFolder.RefreshStatus && "Idle" !== virtualFolder.RefreshStatus ? "" : ' class="hide"') + ' data-progress="' + (virtualFolder.RefreshProgress || 0) + '" data-status="' + virtualFolder.RefreshStatus + '"></div>';
             html += "</div>";
             html += "</div>";
         }

@@ -1,4 +1,4 @@
-define(['require', 'inputManager', 'browser', 'globalize', 'connectionManager', 'scrollHelper', 'serverNotifications', 'loading', 'datetime', 'focusManager', 'playbackManager', 'userSettings', 'imageLoader', 'events', 'layoutManager', 'itemShortcuts', 'dom', 'css!./guide.css', 'programStyles', 'material-icons', 'scrollStyles', 'emby-button', 'paper-icon-button-light', 'emby-tabs', 'emby-scroller', 'flexStyles', 'registerElement'], function (require, inputManager, browser, globalize, connectionManager, scrollHelper, serverNotifications, loading, datetime, focusManager, playbackManager, userSettings, imageLoader, events, layoutManager, itemShortcuts, dom) {
+define(['require', 'inputManager', 'browser', 'globalize', 'connectionManager', 'scrollHelper', 'serverNotifications', 'loading', 'datetime', 'focusManager', 'playbackManager', 'userSettings', 'imageLoader', 'events', 'layoutManager', 'itemShortcuts', 'dom', 'css!./guide.css', 'programStyles', 'material-icons', 'scrollStyles', 'otg-button', 'paper-icon-button-light', 'otg-tabs', 'otg-scroller', 'flexStyles', 'registerElement'], function (require, inputManager, browser, globalize, connectionManager, scrollHelper, serverNotifications, loading, datetime, focusManager, playbackManager, userSettings, imageLoader, events, layoutManager, itemShortcuts, dom) {
     'use strict';
 
     function showViewSettings(instance) {
@@ -541,7 +541,7 @@ define(['require', 'inputManager', 'browser', 'globalize', 'connectionManager', 
                     timerAttributes += ' data-seriestimerid="' + program.SeriesTimerId + '"';
                 }
 
-                var isAttribute = endPercent >= 2 ? ' is="emby-programcell"' : '';
+                var isAttribute = endPercent >= 2 ? ' is="otg-programcell"' : '';
 
                 html += '<button' + isAttribute + ' data-action="' + clickAction + '"' + timerAttributes + ' data-channelid="' + program.ChannelId + '" data-id="' + program.Id + '" data-serverid="' + program.ServerId + '" data-startdate="' + program.StartDate + '" data-enddate="' + program.EndDate + '" data-type="' + program.Type + '" class="' + cssClass + '" style="left:' + startPercent + '%;width:' + endPercent + '%;">';
 
@@ -669,7 +669,7 @@ define(['require', 'inputManager', 'browser', 'globalize', 'connectionManager', 
 
             programGrid.innerHTML = html.join('');
 
-            programCells = programGrid.querySelectorAll('[is=emby-programcell]');
+            programCells = programGrid.querySelectorAll('[is=otg-programcell]');
 
             updateProgramCellsOnScroll(programGrid, programCells);
         }
@@ -833,14 +833,14 @@ define(['require', 'inputManager', 'browser', 'globalize', 'connectionManager', 
 
         function getDateTabText(date, isActive, tabIndex) {
 
-            var cssClass = isActive ? 'emby-tab-button guide-date-tab-button emby-tab-button-active' : 'emby-tab-button guide-date-tab-button';
+            var cssClass = isActive ? 'otg-tab-button guide-date-tab-button otg-tab-button-active' : 'otg-tab-button guide-date-tab-button';
 
-            var html = '<button is="emby-button" class="' + cssClass + '" data-index="' + tabIndex + '" data-date="' + date.getTime() + '">';
+            var html = '<button is="otg-button" class="' + cssClass + '" data-index="' + tabIndex + '" data-date="' + date.getTime() + '">';
             var tabText = datetime.toLocaleDateString(date, { weekday: 'short' });
 
             tabText += '<br/>';
             tabText += date.getDate();
-            html += '<div class="emby-button-foreground">' + tabText + '</div>';
+            html += '<div class="otg-button-foreground">' + tabText + '</div>';
             html += '</button>';
 
             return html;
@@ -890,7 +890,7 @@ define(['require', 'inputManager', 'browser', 'globalize', 'connectionManager', 
                 tabIndex++;
             }
 
-            page.querySelector('.emby-tabs-slider').innerHTML = dateTabsHtml;
+            page.querySelector('.otg-tabs-slider').innerHTML = dateTabsHtml;
             page.querySelector('.guideDateTabs').refresh();
 
             var newDate = new Date();
@@ -1261,7 +1261,7 @@ define(['require', 'inputManager', 'browser', 'globalize', 'connectionManager', 
         this.guideProgramName = null;
     };
 
-    document.registerElement('emby-programcell', {
+    document.registerElement('otg-programcell', {
         prototype: ProgramCellPrototype,
         extends: 'button'
     });

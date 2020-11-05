@@ -1,4 +1,4 @@
-define(['datetime', 'globalize', 'appRouter', 'itemHelper', 'indicators', 'material-icons', 'css!./mediainfo.css', 'programStyles', 'emby-button'], function (datetime, globalize, appRouter, itemHelper, indicators) {
+define(['datetime', 'globalize', 'appRouter', 'itemHelper', 'indicators', 'material-icons', 'css!./mediainfo.css', 'programStyles', 'otg-button'], function (datetime, globalize, appRouter, itemHelper, indicators) {
     'use strict';
 
     function getTimerIndicator(item) {
@@ -69,7 +69,7 @@ define(['datetime', 'globalize', 'appRouter', 'itemHelper', 'indicators', 'mater
 
             if (options.interactive && item.ChannelId) {
                 miscInfo.push({
-                    html: '<a is="emby-linkbutton" class="button-flat mediaInfoItem" href="' + appRouter.getRouteUrl({
+                    html: '<a is="otg-linkbutton" class="button-flat mediaInfoItem" href="' + appRouter.getRouteUrl({
 
                         ServerId: item.ServerId,
                         Type: 'TvChannel',

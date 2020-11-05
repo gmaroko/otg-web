@@ -1,4 +1,4 @@
-define(['connectionManager', 'globalize', 'dom', 'itemHelper', 'paper-icon-button-light', 'material-icons', 'emby-button', 'css!./userdatabuttons'], function (connectionManager, globalize, dom, itemHelper) {
+define(['connectionManager', 'globalize', 'dom', 'itemHelper', 'paper-icon-button-light', 'material-icons', 'otg-button', 'css!./userdatabuttons'], function (connectionManager, globalize, dom, itemHelper) {
     'use strict';
 
     var userDataMethods = {
@@ -15,7 +15,7 @@ define(['connectionManager', 'globalize', 'dom', 'itemHelper', 'paper-icon-butto
             buttonCssClass = buttonCssClass ? (buttonCssClass + ' mini') : 'mini';
         }
 
-        var is = style === 'fab' ? 'emby-button' : 'paper-icon-button-light';
+        var is = style === 'fab' ? 'otg-button' : 'paper-icon-button-light';
         var className = style === 'fab' ? 'autoSize fab' : 'autoSize';
 
         if (buttonCssClass) {

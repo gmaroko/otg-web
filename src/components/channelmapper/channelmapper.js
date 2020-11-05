@@ -1,4 +1,4 @@
-define(["dialogHelper", "loading", "connectionManager", "globalize", "actionsheet", "emby-input", "paper-icon-button-light", "emby-button", "listViewStyle", "material-icons", "formDialogStyle"], function (dialogHelper, loading, connectionManager, globalize, actionsheet) {
+define(["dialogHelper", "loading", "connectionManager", "globalize", "actionsheet", "otg-input", "paper-icon-button-light", "otg-button", "listViewStyle", "material-icons", "formDialogStyle"], function (dialogHelper, loading, connectionManager, globalize, actionsheet) {
     "use strict";
 
     return function (options) {

@@ -1,4 +1,4 @@
-define(['shell', 'dialogHelper', 'loading', 'layoutManager', 'connectionManager', 'appRouter', 'globalize', 'emby-input', 'emby-checkbox', 'paper-icon-button-light', 'emby-select', 'material-icons', 'css!./../formdialog', 'emby-button'], function (shell, dialogHelper, loading, layoutManager, connectionManager, appRouter, globalize) {
+define(['shell', 'dialogHelper', 'loading', 'layoutManager', 'connectionManager', 'appRouter', 'globalize', 'otg-input', 'otg-checkbox', 'paper-icon-button-light', 'otg-select', 'material-icons', 'css!./../formdialog', 'otg-button'], function (shell, dialogHelper, loading, layoutManager, connectionManager, appRouter, globalize) {
     'use strict';
 
     function parentWithClass(elem, className) {
@@ -23,7 +23,7 @@ define(['shell', 'dialogHelper', 'loading', 'layoutManager', 'connectionManager'
         html += '<form style="margin:auto;">';
 
         html += '<div class="fldSelectPlaylist selectContainer">';
-        html += '<select is="emby-select" id="selectMetadataRefreshMode" label="' + globalize.translate('LabelRefreshMode') + '">';
+        html += '<select is="otg-select" id="selectMetadataRefreshMode" label="' + globalize.translate('LabelRefreshMode') + '">';
         html += '<option value="scan">' + globalize.translate('ScanForNewAndUpdatedFiles') + '</option>';
         html += '<option value="missing">' + globalize.translate('SearchForMissingMetadata') + '</option>';
         html += '<option value="all" selected>' + globalize.translate('ReplaceAllMetadata') + '</option>';
@@ -31,7 +31,7 @@ define(['shell', 'dialogHelper', 'loading', 'layoutManager', 'connectionManager'
         html += '</div>';
 
         html += '<label class="checkboxContainer hide fldReplaceExistingImages">';
-        html += '<input type="checkbox" is="emby-checkbox" class="chkReplaceImages" />';
+        html += '<input type="checkbox" is="otg-checkbox" class="chkReplaceImages" />';
         html += '<span>' + globalize.translate('ReplaceExistingImages') + '</span>';
         html += '</label>';
 
@@ -43,7 +43,7 @@ define(['shell', 'dialogHelper', 'loading', 'layoutManager', 'connectionManager'
 
         html += '<br />';
         html += '<div class="formDialogFooter">';
-        html += '<button is="emby-button" type="submit" class="raised btnSubmit block formDialogFooterItem button-submit">' + globalize.translate('Refresh') + '</button>';
+        html += '<button is="otg-button" type="submit" class="raised btnSubmit block formDialogFooterItem button-submit">' + globalize.translate('Refresh') + '</button>';
         html += '</div>';
 
         html += '</form>';

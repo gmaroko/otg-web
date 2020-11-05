@@ -1,4 +1,4 @@
-define(["datetime", "cardBuilder", "imageLoader", "apphost", "loading", "paper-icon-button-light", "emby-button"], function (datetime, cardBuilder, imageLoader, appHost, loading) {
+define(["datetime", "cardBuilder", "imageLoader", "apphost", "loading", "paper-icon-button-light", "otg-button"], function (datetime, cardBuilder, imageLoader, appHost, loading) {
     "use strict";
 
     function renderTimers(context, timers) {

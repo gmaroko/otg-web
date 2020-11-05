@@ -1,4 +1,4 @@
-define(['layoutManager', 'browser', 'actionsheet', 'css!./emby-select', 'registerElement'], function (layoutManager, browser, actionsheet) {
+define(['layoutManager', 'browser', 'actionsheet', 'css!./otg-select', 'registerElement'], function (layoutManager, browser, actionsheet) {
     'use strict';
 
     var EmbySelectPrototype = Object.create(HTMLSelectElement.prototype);
@@ -116,10 +116,10 @@ define(['layoutManager', 'browser', 'actionsheet', 'css!./emby-select', 'registe
             inputId++;
         }
 
-        this.classList.add('emby-select-withcolor');
+        this.classList.add('otg-select-withcolor');
 
         if (layoutManager.tv) {
-            this.classList.add('emby-select-focusscale');
+            this.classList.add('otg-select-focusscale');
         }
 
         this.addEventListener('mousedown', onMouseDown);
@@ -131,11 +131,11 @@ define(['layoutManager', 'browser', 'actionsheet', 'css!./emby-select', 'registe
 
     EmbySelectPrototype.attachedCallback = function () {
 
-        if (this.classList.contains('emby-select')) {
+        if (this.classList.contains('otg-select')) {
             return;
         }
 
-        this.classList.add('emby-select');
+        this.classList.add('otg-select');
 
         var label = this.ownerDocument.createElement('label');
         label.innerHTML = this.getAttribute('label') || '';
@@ -143,7 +143,7 @@ define(['layoutManager', 'browser', 'actionsheet', 'css!./emby-select', 'registe
         label.htmlFor = this.id;
         this.parentNode.insertBefore(label, this);
 
-        if (this.classList.contains('emby-select-withcolor')) {
+        if (this.classList.contains('otg-select-withcolor')) {
             this.parentNode.insertAdjacentHTML('beforeend', '<div class="selectArrowContainer"><div style="visibility:hidden;">0</div><i class="selectArrow md-icon">keyboard_arrow_down</i></div>');
         }
     };
@@ -155,7 +155,7 @@ define(['layoutManager', 'browser', 'actionsheet', 'css!./emby-select', 'registe
         label.innerHTML = text;
     };
 
-    document.registerElement('emby-select', {
+    document.registerElement('otg-select', {
         prototype: EmbySelectPrototype,
         extends: 'select'
     });

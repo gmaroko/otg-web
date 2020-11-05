@@ -1,4 +1,4 @@
-define(['require', 'css!./emby-progressring', 'registerElement'], function (require) {
+define(['require', 'css!./otg-progressring', 'registerElement'], function (require) {
     'use strict';
 
     var EmbyProgressRing = Object.create(HTMLDivElement.prototype);
@@ -8,7 +8,7 @@ define(['require', 'css!./emby-progressring', 'registerElement'], function (requ
         this.classList.add('progressring');
         var instance = this;
 
-        require(['text!./emby-progressring.template.html'], function (template) {
+        require(['text!./otg-progressring.template.html'], function (template) {
             instance.innerHTML = template;
 
             //if (window.MutationObserver) {
@@ -92,7 +92,7 @@ define(['require', 'css!./emby-progressring', 'registerElement'], function (requ
         }
     };
 
-    document.registerElement('emby-progressring', {
+    document.registerElement('otg-progressring', {
         prototype: EmbyProgressRing,
         extends: 'div'
     });

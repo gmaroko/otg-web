@@ -1,4 +1,4 @@
-define(["dialogHelper", "dom", "layoutManager", "connectionManager", "globalize", "loading", "browser", "material-icons", "formDialogStyle", "emby-button", "emby-itemscontainer", "cardStyle"], function (dialogHelper, dom, layoutManager, connectionManager, globalize, loading, browser) {
+define(["dialogHelper", "dom", "layoutManager", "connectionManager", "globalize", "loading", "browser", "material-icons", "formDialogStyle", "otg-button", "otg-itemscontainer", "cardStyle"], function (dialogHelper, dom, layoutManager, connectionManager, globalize, loading, browser) {
     "use strict";
 
     var enableFocusTransform = !browser.slow && !browser.edge;
@@ -12,7 +12,7 @@ define(["dialogHelper", "dom", "layoutManager", "connectionManager", "globalize"
         html += "<p>" + globalize.translate("MessagePleaseWait") + "</p>";
         html += "</div>";
         html += '<h1 style="margin-bottom:.25em;" class="devicesHeader hide">' + globalize.translate("HeaderNewDevices") + "</h1>";
-        html += '<div is="emby-itemscontainer" class="results vertical-wrap">';
+        html += '<div is="otg-itemscontainer" class="results vertical-wrap">';
         html += "</div>";
         html += "</div>";
         return html += "</div>";

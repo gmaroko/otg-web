@@ -1,4 +1,4 @@
-define(["events", "layoutManager", "inputManager", "userSettings", "libraryMenu", "mainTabsManager", "cardBuilder", "dom", "imageLoader", "playbackManager", "emby-itemscontainer", "emby-tabs", "emby-button"], function (events, layoutManager, inputManager, userSettings, libraryMenu, mainTabsManager, cardBuilder, dom, imageLoader, playbackManager) {
+define(["events", "layoutManager", "inputManager", "userSettings", "libraryMenu", "mainTabsManager", "cardBuilder", "dom", "imageLoader", "playbackManager", "otg-itemscontainer", "otg-tabs", "otg-button"], function (events, layoutManager, inputManager, userSettings, libraryMenu, mainTabsManager, cardBuilder, dom, imageLoader, playbackManager) {
     "use strict";
 
     function enableScrollX() {
@@ -115,9 +115,9 @@ define(["events", "layoutManager", "inputManager", "userSettings", "libraryMenu"
 
         if (enableScrollX()) {
             allowBottomPadding = false;
-            html += '<div is="emby-itemscontainer" class="itemsContainer hiddenScrollX padded-left padded-right">';
+            html += '<div is="otg-itemscontainer" class="itemsContainer hiddenScrollX padded-left padded-right">';
         } else {
-            html += '<div is="emby-itemscontainer" class="itemsContainer vertical-wrap padded-left padded-right">';
+            html += '<div is="otg-itemscontainer" class="itemsContainer vertical-wrap padded-left padded-right">';
         }
 
         html += cardBuilder.getCardsHtml(recommendation.Items, {

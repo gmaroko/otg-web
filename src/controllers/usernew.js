@@ -1,4 +1,4 @@
-define(["jQuery", "loading", "fnchecked", "emby-checkbox"], function ($, loading) {
+define(["jQuery", "loading", "fnchecked", "otg-checkbox"], function ($, loading) {
     "use strict";
 
     function loadMediaFolders(page, mediaFolders) {
@@ -8,7 +8,7 @@ define(["jQuery", "loading", "fnchecked", "emby-checkbox"], function ($, loading
 
         for (var i = 0; i < mediaFolders.length; i++) {
             var folder = mediaFolders[i];
-            html += '<label><input type="checkbox" is="emby-checkbox" class="chkFolder" data-id="' + folder.Id + '" checked="checked"/><span>' + folder.Name + "</span></label>";
+            html += '<label><input type="checkbox" is="otg-checkbox" class="chkFolder" data-id="' + folder.Id + '" checked="checked"/><span>' + folder.Name + "</span></label>";
         }
 
         html += "</div>";
@@ -23,7 +23,7 @@ define(["jQuery", "loading", "fnchecked", "emby-checkbox"], function ($, loading
 
         for (var i = 0; i < channels.length; i++) {
             var folder = channels[i];
-            html += '<label><input type="checkbox" is="emby-checkbox" class="chkChannel" data-id="' + folder.Id + '" checked="checked"/><span>' + folder.Name + "</span></label>";
+            html += '<label><input type="checkbox" is="otg-checkbox" class="chkChannel" data-id="' + folder.Id + '" checked="checked"/><span>' + folder.Name + "</span></label>";
         }
 
         html += "</div>";

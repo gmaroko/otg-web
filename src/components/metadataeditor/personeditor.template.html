@@ -9,11 +9,11 @@
     <form class="popupEditPersonForm dialogContentInner dialog-content-centered">
 
         <div class="inputContainer">
-            <input type="text" is="emby-input" class="txtPersonName" required="required" label="${LabelName}" />
+            <input type="text" is="otg-input" class="txtPersonName" required="required" label="${LabelName}" />
         </div>
 
         <div class="selectContainer">
-            <select is="emby-select" id="selectPersonType" class="selectPersonType" label="${LabelType}">
+            <select is="otg-select" id="selectPersonType" class="selectPersonType" label="${LabelType}">
                 <option value=""></option>
                 <option value="Actor">${Actor}</option>
                 <option value="Composer">${Composer}</option>
@@ -24,12 +24,12 @@
             </select>
         </div>
         <div class="inputContainer fldRole hide">
-            <input is="emby-input" type="text" class="txtPersonRole" label="${LabelPersonRole}" />
+            <input is="otg-input" type="text" class="txtPersonRole" label="${LabelPersonRole}" />
             <div class="fieldDescription">${LabelPersonRoleHelp}</div>
         </div>
 
         <div class="formDialogFooter">
-            <button is="emby-button" type="submit" class="raised button-submit block formDialogFooterItem">
+            <button is="otg-button" type="submit" class="raised button-submit block formDialogFooterItem">
                 <span>${Save}</span>
             </button>
         </div>

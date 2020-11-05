@@ -1,4 +1,4 @@
-define(['itemHelper', 'dom', 'layoutManager', 'dialogHelper', 'datetime', 'loading', 'focusManager', 'connectionManager', 'globalize', 'require', 'shell', 'emby-checkbox', 'emby-input', 'emby-select', 'listViewStyle', 'emby-textarea', 'emby-button', 'paper-icon-button-light', 'css!./../formdialog', 'clearButtonStyle', 'flexStyles'], function (itemHelper, dom, layoutManager, dialogHelper, datetime, loading, focusManager, connectionManager, globalize, require, shell) {
+define(['itemHelper', 'dom', 'layoutManager', 'dialogHelper', 'datetime', 'loading', 'focusManager', 'connectionManager', 'globalize', 'require', 'shell', 'otg-checkbox', 'otg-input', 'otg-select', 'listViewStyle', 'otg-textarea', 'otg-button', 'paper-icon-button-light', 'css!./../formdialog', 'clearButtonStyle', 'flexStyles'], function (itemHelper, dom, layoutManager, dialogHelper, datetime, loading, focusManager, connectionManager, globalize, require, shell) {
     'use strict';
 
     var currentContext;
@@ -473,7 +473,7 @@ define(['itemHelper', 'dom', 'layoutManager', 'dialogHelper', 'datetime', 'loadi
             var value = providerIds[idInfo.Key] || '';
 
             html += '<div class="flex-grow">';
-            html += '<input is="emby-input" class="txtExternalId" value="' + value + '" data-providerkey="' + idInfo.Key + '" data-formatstring="' + formatString + '" id="' + id + '" label="' + labelText + '"/>';
+            html += '<input is="otg-input" class="txtExternalId" value="' + value + '" data-providerkey="' + idInfo.Key + '" data-formatstring="' + formatString + '" id="' + id + '" label="' + labelText + '"/>';
             html += '</div>';
 
             if (formatString) {
@@ -982,7 +982,7 @@ define(['itemHelper', 'dom', 'layoutManager', 'dialogHelper', 'datetime', 'loadi
             var value = field.value || field.name;
             var checkedHtml = currentFields.indexOf(value) === -1 ? ' checked' : '';
             html += '<label>';
-            html += '<input type="checkbox" is="emby-checkbox" class="selectLockedField" data-value="' + value + '"' + checkedHtml + '/>';
+            html += '<input type="checkbox" is="otg-checkbox" class="selectLockedField" data-value="' + value + '"' + checkedHtml + '/>';
             html += '<span>' + name + '</span>';
             html += '</label>';
         }

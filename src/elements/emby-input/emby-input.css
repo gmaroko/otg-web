@@ -1,4 +1,4 @@
-.emby-input {
+.otg-input {
     display: block;
     margin: 0;
     margin-bottom: 0 !important;
@@ -15,7 +15,7 @@
     width: 100%;
 }
 
-    .emby-input::-moz-focus-inner {
+    .otg-input::-moz-focus-inner {
         border: 0;
     }
 
@@ -28,10 +28,10 @@
     margin-bottom: .25em;
 }
 
-.emby-input + .fieldDescription {
+.otg-input + .fieldDescription {
     margin-top: .25em;
 }
 
-.emby-input-iconbutton {
+.otg-input-iconbutton {
     align-self: flex-end;
 }

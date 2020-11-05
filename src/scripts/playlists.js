@@ -1,4 +1,4 @@
-define(["loading", "listView", "cardBuilder", "libraryMenu", "libraryBrowser", "apphost", "imageLoader", "emby-itemscontainer"], function (loading, listView, cardBuilder, libraryMenu, libraryBrowser, appHost, imageLoader) {
+define(["loading", "listView", "cardBuilder", "libraryMenu", "libraryBrowser", "apphost", "imageLoader", "otg-itemscontainer"], function (loading, listView, cardBuilder, libraryMenu, libraryBrowser, appHost, imageLoader) {
     "use strict";
 
     return function (view, params) {

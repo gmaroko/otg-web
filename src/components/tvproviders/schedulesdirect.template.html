@@ -1,7 +1,7 @@
 <div class="verticalSection">
     <div class="sectionTitleContainer flex align-items-center">
         <h1 class="sectionTitle">Schedules Direct</h1>
-        <a is="emby-linkbutton" class="raised button-alt headerHelpButton" target="_blank" href="https://otg.com/docs">${Help}</a>
+        <a is="otg-linkbutton" class="raised button-alt headerHelpButton" target="_blank" href="https://otg.com/docs">${Help}</a>
     </div>
     <p class="createAccountHelp"></p>
 </div>
@@ -21,13 +21,13 @@
     <div>
         <br />
         <div class="inputContainer">
-            <input is="emby-input" class="txtUser" label="${LabelUsername}" required="required" autocomplete="off" />
+            <input is="otg-input" class="txtUser" label="${LabelUsername}" required="required" autocomplete="off" />
         </div>
         <div class="inputContainer">
-            <input is="emby-input" class="txtPass" label="${LabelPassword}" required="required" autocomplete="off" type="password" />
+            <input is="otg-input" class="txtPass" label="${LabelPassword}" required="required" autocomplete="off" type="password" />
         </div>
         <div>
-            <button is="emby-button" type="submit" class="raised button-submit block"><span>${ButtonSave}</span></button>
+            <button is="otg-button" type="submit" class="raised button-submit block"><span>${ButtonSave}</span></button>
         </div>
     </div>
 </form>
@@ -44,17 +44,17 @@
     <form class="formListings">
         <div>
             <div class="selectContainer">
-                <select is="emby-select" id="selectCountry" data-mini="true" required="required" label="${LabelCountry}"></select>
+                <select is="otg-select" id="selectCountry" data-mini="true" required="required" label="${LabelCountry}"></select>
             </div>
             <div class="inputContainer">
-                <input is="emby-input" class="txtZipCode" label="${LabelZipCode}" required="required" />
+                <input is="otg-input" class="txtZipCode" label="${LabelZipCode}" required="required" />
             </div>
             <div class="selectContainer">
-                <select is="emby-select" id="selectListing" data-mini="true" required="required" label="${LabelLineup}"></select>
+                <select is="otg-select" id="selectListing" data-mini="true" required="required" label="${LabelLineup}"></select>
             </div>
             <div>
                 <label class="checkboxContainer">
-                    <input type="checkbox" is="emby-checkbox" class="chkAllTuners" />
+                    <input type="checkbox" is="otg-checkbox" class="chkAllTuners" />
                     <span>${OptionEnableForAllTuners}</span>
                 </label>
                 <div class="selectTunersSection hide">
@@ -65,8 +65,8 @@
             </div>
             <br />
             <div>
-                <button is="emby-button" type="submit" class="raised button-submit block btnSubmitListingsContainer btnSubmitListings hide"><span>${ButtonSave}</span></button>
-                <button is="emby-button" type="button" class="raised button-cancel block btnCancel hide" onclick="history.back();"><span>${ButtonCancel}</span></button>
+                <button is="otg-button" type="submit" class="raised button-submit block btnSubmitListingsContainer btnSubmitListings hide"><span>${ButtonSave}</span></button>
+                <button is="otg-button" type="button" class="raised button-cancel block btnCancel hide" onclick="history.back();"><span>${ButtonCancel}</span></button>
             </div>
         </div>
     </form>

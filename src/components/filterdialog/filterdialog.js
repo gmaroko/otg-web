@@ -1,4 +1,4 @@
-define(["dialogHelper", "globalize", "connectionManager", "events", "browser", "require", "emby-checkbox", "emby-collapse", "css!./style"], function (dialogHelper, globalize, connectionManager, events, browser, require) {
+define(["dialogHelper", "globalize", "connectionManager", "events", "browser", "require", "otg-checkbox", "otg-collapse", "css!./style"], function (dialogHelper, globalize, connectionManager, events, browser, require) {
     "use strict";
 
     function renderOptions(context, selector, cssClass, items, isCheckedFn) {
@@ -14,7 +14,7 @@ define(["dialogHelper", "globalize", "connectionManager", "events", "browser", "
             var itemHtml = "";
             var checkedHtml = isCheckedFn(filter) ? " checked" : "";
             itemHtml += "<label>";
-            itemHtml += '<input is="emby-checkbox" type="checkbox"' + checkedHtml + ' data-filter="' + filter + '" class="' + cssClass + '"/>';
+            itemHtml += '<input is="otg-checkbox" type="checkbox"' + checkedHtml + ' data-filter="' + filter + '" class="' + cssClass + '"/>';
             itemHtml += "<span>" + filter + "</span>";
             itemHtml += "</label>";
             return itemHtml;

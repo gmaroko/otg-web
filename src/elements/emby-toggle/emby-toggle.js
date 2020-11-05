@@ -1,4 +1,4 @@
-define(['css!./emby-toggle', 'registerElement'], function () {
+define(['css!./otg-toggle', 'registerElement'], function () {
     'use strict';
 
     var EmbyTogglePrototype = Object.create(HTMLInputElement.prototype);
@@ -43,7 +43,7 @@ define(['css!./emby-toggle', 'registerElement'], function () {
         this.addEventListener('keydown', onKeyDown);
     };
 
-    document.registerElement('emby-toggle', {
+    document.registerElement('otg-toggle', {
         prototype: EmbyTogglePrototype,
         extends: 'input'
     });

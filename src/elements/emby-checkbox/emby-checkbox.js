@@ -1,4 +1,4 @@
-define(['browser', 'dom', 'css!./emby-checkbox', 'registerElement'], function (browser, dom) {
+define(['browser', 'dom', 'css!./otg-checkbox', 'registerElement'], function (browser, dom) {
     'use strict';
 
     var EmbyCheckboxPrototype = Object.create(HTMLInputElement.prototype);
@@ -40,10 +40,10 @@ define(['browser', 'dom', 'css!./emby-checkbox', 'registerElement'], function (b
 
         this.setAttribute('data-embycheckbox', 'true');
 
-        this.classList.add('emby-checkbox');
+        this.classList.add('otg-checkbox');
 
         var labelElement = this.parentNode;
-        labelElement.classList.add('emby-checkbox-label');
+        labelElement.classList.add('otg-checkbox-label');
 
         var labelTextElement = labelElement.querySelector('span');
 
@@ -98,7 +98,7 @@ define(['browser', 'dom', 'css!./emby-checkbox', 'registerElement'], function (b
         });
     };
 
-    document.registerElement('emby-checkbox', {
+    document.registerElement('otg-checkbox', {
         prototype: EmbyCheckboxPrototype,
         extends: 'input'
     });

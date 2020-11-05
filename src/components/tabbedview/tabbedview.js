@@ -1,4 +1,4 @@
-define(['backdrop', 'mainTabsManager', 'layoutManager', 'emby-tabs'], function (backdrop, mainTabsManager, layoutManager) {
+define(['backdrop', 'mainTabsManager', 'layoutManager', 'otg-tabs'], function (backdrop, mainTabsManager, layoutManager) {
     'use strict';
 
     function onViewDestroy(e) {

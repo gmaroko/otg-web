@@ -1,4 +1,4 @@
-define(["globalize", "dom", "emby-checkbox", "emby-select", "emby-input"], function(globalize, dom) {
+define(["globalize", "dom", "otg-checkbox", "otg-select", "otg-input"], function(globalize, dom) {
     "use strict";
 
     function populateLanguages(parent) {
@@ -22,7 +22,7 @@ define(["globalize", "dom", "emby-checkbox", "emby-select", "emby-input"], funct
         var html = "";
         for (var i = 0; i < languages.length; i++) {
             var culture = languages[i];
-            html += '<label><input type="checkbox" is="emby-checkbox" class="chkSubtitleLanguage" data-lang="' + culture.ThreeLetterISOLanguageName.toLowerCase() + '" /><span>' + culture.DisplayName + "</span></label>";
+            html += '<label><input type="checkbox" is="otg-checkbox" class="chkSubtitleLanguage" data-lang="' + culture.ThreeLetterISOLanguageName.toLowerCase() + '" /><span>' + culture.DisplayName + "</span></label>";
         }
         element.innerHTML = html;
     }
@@ -90,7 +90,7 @@ define(["globalize", "dom", "emby-checkbox", "emby-select", "emby-input"], funct
         html += '<div class="checkboxList paperList checkboxList-paperList">';
         for (var i = 0; i < metadataSavers.length; i++) {
             var plugin = metadataSavers[i];
-            html += '<label><input type="checkbox" data-defaultenabled="' + plugin.DefaultEnabled + '" is="emby-checkbox" class="chkMetadataSaver" data-pluginname="' + plugin.Name + '" ' + false + "><span>" + plugin.Name + "</span></label>";
+            html += '<label><input type="checkbox" data-defaultenabled="' + plugin.DefaultEnabled + '" is="otg-checkbox" class="chkMetadataSaver" data-pluginname="' + plugin.Name + '" ' + false + "><span>" + plugin.Name + "</span></label>";
         }
         html += "</div>";
         html += '<div class="fieldDescription" style="margin-top:.25em;">' + globalize.translate("LabelMetadataSaversHelp") + "</div>";
@@ -114,7 +114,7 @@ define(["globalize", "dom", "emby-checkbox", "emby-select", "emby-input"], funct
             html += '<div class="listItem metadataFetcherItem sortableOption" data-pluginname="' + plugin.Name + '">';
             var isChecked = libraryOptionsForType.MetadataFetchers ? -1 !== libraryOptionsForType.MetadataFetchers.indexOf(plugin.Name) : plugin.DefaultEnabled;
             var checkedHtml = isChecked ? ' checked="checked"' : "";
-            html += '<label class="listItemCheckboxContainer"><input type="checkbox" is="emby-checkbox" class="chkMetadataFetcher" data-pluginname="' + plugin.Name + '" ' + checkedHtml + "><span></span></label>";
+            html += '<label class="listItemCheckboxContainer"><input type="checkbox" is="otg-checkbox" class="chkMetadataFetcher" data-pluginname="' + plugin.Name + '" ' + checkedHtml + "><span></span></label>";
             html += '<div class="listItemBody">';
             html += '<h3 class="listItemBodyText">';
             html += plugin.Name;
@@ -174,7 +174,7 @@ define(["globalize", "dom", "emby-checkbox", "emby-select", "emby-input"], funct
             html += '<div class="listItem subtitleFetcherItem sortableOption" data-pluginname="' + plugin.Name + '">';
             var isChecked = libraryOptions.DisabledSubtitleFetchers ? -1 === libraryOptions.DisabledSubtitleFetchers.indexOf(plugin.Name) : plugin.DefaultEnabled;
             var checkedHtml = isChecked ? ' checked="checked"' : "";
-            html += '<label class="listItemCheckboxContainer"><input type="checkbox" is="emby-checkbox" class="chkSubtitleFetcher" data-pluginname="' + plugin.Name + '" ' + checkedHtml + "><span></span></label>";
+            html += '<label class="listItemCheckboxContainer"><input type="checkbox" is="otg-checkbox" class="chkSubtitleFetcher" data-pluginname="' + plugin.Name + '" ' + checkedHtml + "><span></span></label>";
             html += '<div class="listItemBody">';
             html += '<h3 class="listItemBodyText">';
             html += plugin.Name;
@@ -204,7 +204,7 @@ define(["globalize", "dom", "emby-checkbox", "emby-select", "emby-input"], funct
         html += '<h3 class="checkboxListLabel" style="margin:0;">' + globalize.translate("HeaderTypeImageFetchers", availableTypeOptions.Type) + "</h3>";
         var supportedImageTypes = availableTypeOptions.SupportedImageTypes || [];
         if (supportedImageTypes.length > 1 || 1 === supportedImageTypes.length && "Primary" !== supportedImageTypes[0]) {
-            html += '<button is="emby-button" class="raised btnImageOptionsForType" type="button" style="margin-left:1.5em;font-size:90%;"><span>' + globalize.translate("HeaderFetcherSettings") + "</span></button>";
+            html += '<button is="otg-button" class="raised btnImageOptionsForType" type="button" style="margin-left:1.5em;font-size:90%;"><span>' + globalize.translate("HeaderFetcherSettings") + "</span></button>";
         }
         html += "</div>";
         html += '<div class="checkboxList paperList checkboxList-paperList">';
@@ -213,7 +213,7 @@ define(["globalize", "dom", "emby-checkbox", "emby-select", "emby-input"], funct
             html += '<div class="listItem imageFetcherItem sortableOption" data-pluginname="' + plugin.Name + '">';
             var isChecked = libraryOptionsForType.ImageFetchers ? -1 !== libraryOptionsForType.ImageFetchers.indexOf(plugin.Name) : plugin.DefaultEnabled;
             var checkedHtml = isChecked ? ' checked="checked"' : "";
-            html += '<label class="listItemCheckboxContainer"><input type="checkbox" is="emby-checkbox" class="chkImageFetcher" data-pluginname="' + plugin.Name + '" ' + checkedHtml + "><span></span></label>";
+            html += '<label class="listItemCheckboxContainer"><input type="checkbox" is="otg-checkbox" class="chkImageFetcher" data-pluginname="' + plugin.Name + '" ' + checkedHtml + "><span></span></label>";
             html += '<div class="listItemBody">';
             html += '<h3 class="listItemBodyText">';
             html += plugin.Name;

@@ -1,4 +1,4 @@
-define(['browser', 'css!./emby-collapse', 'registerElement', 'emby-button'], function (browser) {
+define(['browser', 'css!./otg-collapse', 'registerElement', 'otg-button'], function (browser) {
     'use strict';
 
     var EmbyButtonPrototype = Object.create(HTMLDivElement.prototype);
@@ -26,7 +26,7 @@ define(['browser', 'css!./emby-collapse', 'registerElement', 'emby-button'], fun
 
         var icon = button.querySelector('i');
         //icon.innerHTML = 'expand_less';
-        icon.classList.add('emby-collapse-expandIconExpanded');
+        icon.classList.add('otg-collapse-expandIconExpanded');
     }
 
     function slideUpToHide(button, elem) {
@@ -48,7 +48,7 @@ define(['browser', 'css!./emby-collapse', 'registerElement', 'emby-button'], fun
 
         var icon = button.querySelector('i');
         //icon.innerHTML = 'expand_more';
-        icon.classList.remove('emby-collapse-expandIconExpanded');
+        icon.classList.remove('otg-collapse-expandIconExpanded');
     }
 
     function onButtonClick(e) {
@@ -67,11 +67,11 @@ define(['browser', 'css!./emby-collapse', 'registerElement', 'emby-button'], fun
 
     EmbyButtonPrototype.attachedCallback = function () {
 
-        if (this.classList.contains('emby-collapse')) {
+        if (this.classList.contains('otg-collapse')) {
             return;
         }
 
-        this.classList.add('emby-collapse');
+        this.classList.add('otg-collapse');
 
         var collapseContent = this.querySelector('.collapseContent');
         if (collapseContent) {
@@ -80,11 +80,11 @@ define(['browser', 'css!./emby-collapse', 'registerElement', 'emby-button'], fun
 
         var title = this.getAttribute('title');
 
-        var html = '<button is="emby-button" type="button" on-click="toggleExpand" id="expandButton" class="emby-collapsible-button iconRight"><h3 class="emby-collapsible-title" title="' + title + '">' + title + '</h3><i class="md-icon emby-collapse-expandIcon">expand_more</i></button>';
+        var html = '<button is="otg-button" type="button" on-click="toggleExpand" id="expandButton" class="otg-collapsible-button iconRight"><h3 class="otg-collapsible-title" title="' + title + '">' + title + '</h3><i class="md-icon otg-collapse-expandIcon">expand_more</i></button>';
 
         this.insertAdjacentHTML('afterbegin', html);
 
-        var button = this.querySelector('.emby-collapsible-button');
+        var button = this.querySelector('.otg-collapsible-button');
 
         button.addEventListener('click', onButtonClick);
 
@@ -93,7 +93,7 @@ define(['browser', 'css!./emby-collapse', 'registerElement', 'emby-button'], fun
         }
     };
 
-    document.registerElement('emby-collapse', {
+    document.registerElement('otg-collapse', {
         prototype: EmbyButtonPrototype,
         extends: 'div'
     });

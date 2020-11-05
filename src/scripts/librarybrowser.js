@@ -113,7 +113,7 @@ define(["userSettings"], function (userSettings) {
             return html += "</div>";
         },
         showSortMenu: function (options) {
-            require(["dialogHelper", "emby-radio"], function (dialogHelper) {
+            require(["dialogHelper", "otg-radio"], function (dialogHelper) {
                 function onSortByChange() {
                     var newValue = this.value;
 
@@ -164,7 +164,7 @@ define(["userSettings"], function (userSettings) {
                     var option = options.items[i];
                     var radioValue = option.id.replace(",", "_");
                     isChecked = (options.query.SortBy || "").replace(",", "_") == radioValue ? " checked" : "";
-                    html += '<label class="radio-label-block"><input type="radio" is="emby-radio" name="SortBy" data-id="' + option.id + '" value="' + radioValue + '" class="menuSortBy" ' + isChecked + " /><span>" + option.name + "</span></label>";
+                    html += '<label class="radio-label-block"><input type="radio" is="otg-radio" name="SortBy" data-id="' + option.id + '" value="' + radioValue + '" class="menuSortBy" ' + isChecked + " /><span>" + option.name + "</span></label>";
                 }
 
                 html += "</div>";
@@ -173,9 +173,9 @@ define(["userSettings"], function (userSettings) {
                 html += "</h2>";
                 html += "<div>";
                 isChecked = "Ascending" == options.query.SortOrder ? " checked" : "";
-                html += '<label class="radio-label-block"><input type="radio" is="emby-radio" name="SortOrder" value="Ascending" class="menuSortOrder" ' + isChecked + " /><span>" + Globalize.translate("OptionAscending") + "</span></label>";
+                html += '<label class="radio-label-block"><input type="radio" is="otg-radio" name="SortOrder" value="Ascending" class="menuSortOrder" ' + isChecked + " /><span>" + Globalize.translate("OptionAscending") + "</span></label>";
                 isChecked = "Descending" == options.query.SortOrder ? " checked" : "";
-                html += '<label class="radio-label-block"><input type="radio" is="emby-radio" name="SortOrder" value="Descending" class="menuSortOrder" ' + isChecked + " /><span>" + Globalize.translate("OptionDescending") + "</span></label>";
+                html += '<label class="radio-label-block"><input type="radio" is="otg-radio" name="SortOrder" value="Descending" class="menuSortOrder" ' + isChecked + " /><span>" + Globalize.translate("OptionDescending") + "</span></label>";
                 html += "</div>";
                 html += "</div>";
                 dlg.innerHTML = html;

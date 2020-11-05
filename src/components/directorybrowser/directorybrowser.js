@@ -1,4 +1,4 @@
-define(['loading', 'dialogHelper', 'dom', 'listViewStyle', 'emby-input', 'paper-icon-button-light', 'css!./directorybrowser', 'formDialogStyle', 'emby-button'], function(loading, dialogHelper, dom) {
+define(['loading', 'dialogHelper', 'dom', 'listViewStyle', 'otg-input', 'paper-icon-button-light', 'css!./directorybrowser', 'formDialogStyle', 'otg-button'], function(loading, dialogHelper, dom) {
     'use strict';
 
     function getSystemInfo() {
@@ -113,10 +113,10 @@ define(['loading', 'dialogHelper', 'dom', 'listViewStyle', 'emby-input', 'paper-
             labelKey = "LabelPath";
         }
         var readOnlyAttribute = options.pathReadOnly ? " readonly" : "";
-        html += '<input is="emby-input" id="txtDirectoryPickerPath" type="text" required="required" ' + readOnlyAttribute + ' label="' + Globalize.translate(labelKey) + '"/>';
+        html += '<input is="otg-input" id="txtDirectoryPickerPath" type="text" required="required" ' + readOnlyAttribute + ' label="' + Globalize.translate(labelKey) + '"/>';
         html += "</div>";
         if (!readOnlyAttribute) {
-            html += '<button type="button" is="paper-icon-button-light" class="btnRefreshDirectories emby-input-iconbutton" title="' + Globalize.translate("ButtonRefresh") + '"><i class="md-icon">search</i></button>';
+            html += '<button type="button" is="paper-icon-button-light" class="btnRefreshDirectories otg-input-iconbutton" title="' + Globalize.translate("ButtonRefresh") + '"><i class="md-icon">search</i></button>';
         }
         html += "</div>";
         if (!readOnlyAttribute) {
@@ -124,14 +124,14 @@ define(['loading', 'dialogHelper', 'dom', 'listViewStyle', 'emby-input', 'paper-
         }
         if (options.enableNetworkSharePath) {
             html += '<div class="inputContainer" style="margin-top:2em;">';
-            html += '<input is="emby-input" id="txtNetworkPath" type="text" label="' + Globalize.translate("LabelOptionalNetworkPath") + '"/>';
+            html += '<input is="otg-input" id="txtNetworkPath" type="text" label="' + Globalize.translate("LabelOptionalNetworkPath") + '"/>';
             html += '<div class="fieldDescription">';
             html += Globalize.translate("LabelOptionalNetworkPathHelp");
             html += "</div>";
             html += "</div>";
         }
         html += '<div class="formDialogFooter">';
-        html += '<button is="emby-button" type="submit" class="raised button-submit block formDialogFooterItem">' + Globalize.translate("ButtonOk") + "</button>";
+        html += '<button is="otg-button" type="submit" class="raised button-submit block formDialogFooterItem">' + Globalize.translate("ButtonOk") + "</button>";
         html += "</div>";
         html += "</form>";
         html += "</div>";

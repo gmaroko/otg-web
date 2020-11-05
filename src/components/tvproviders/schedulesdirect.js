@@ -1,4 +1,4 @@
-define(["jQuery", "loading", "emby-checkbox", "listViewStyle", "emby-input", "emby-select", "emby-button", "flexStyles"], function ($, loading) {
+define(["jQuery", "loading", "otg-checkbox", "listViewStyle", "otg-input", "otg-select", "otg-button", "flexStyles"], function ($, loading) {
     "use strict";
 
     return function (page, providerId, options) {
@@ -239,7 +239,7 @@ define(["jQuery", "loading", "emby-checkbox", "listViewStyle", "emby-input", "em
                 var enabledTuners = providerInfo.EnabledTuners || [];
                 var isChecked = providerInfo.EnableAllTuners || -1 !== enabledTuners.indexOf(device.Id);
                 var checkedAttribute = isChecked ? " checked" : "";
-                html += '<label class="checkboxContainer listItemCheckboxContainer"><input type="checkbox" is="emby-checkbox" data-id="' + device.Id + '" class="chkTuner" ' + checkedAttribute + "/><span></span></label>";
+                html += '<label class="checkboxContainer listItemCheckboxContainer"><input type="checkbox" is="otg-checkbox" data-id="' + device.Id + '" class="chkTuner" ' + checkedAttribute + "/><span></span></label>";
                 html += '<div class="listItemBody two-line">';
                 html += '<div class="listItemBodyText">';
                 html += device.FriendlyName || getTunerName(device.Type);
@@ -294,7 +294,7 @@ define(["jQuery", "loading", "emby-checkbox", "listViewStyle", "emby-input", "em
                     page.querySelector(".selectTunersSection").classList.remove("hide");
                 }
             });
-            $(".createAccountHelp", page).html(Globalize.translate("MessageCreateAccountAt", '<a is="emby-linkbutton" class="button-link" href="http://www.schedulesdirect.org" target="_blank">http://www.schedulesdirect.org</a>'));
+            $(".createAccountHelp", page).html(Globalize.translate("MessageCreateAccountAt", '<a is="otg-linkbutton" class="button-link" href="http://www.schedulesdirect.org" target="_blank">http://www.schedulesdirect.org</a>'));
             reload();
         };
     };

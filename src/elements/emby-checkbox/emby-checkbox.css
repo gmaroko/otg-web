@@ -1,4 +1,4 @@
-.emby-checkbox-label {
+.otg-checkbox-label {
     position: relative;
     z-index: 1;
     vertical-align: middle;
@@ -30,7 +30,7 @@
     flex-direction: column;
 }
 
-.emby-checkbox {
+.otg-checkbox {
     position: absolute;
     /* This is for focusing purposes, so the focusManager doesn't skip over it */
     width: 1px;
@@ -69,17 +69,17 @@
     display: none;
 }
 
-.emby-checkbox:checked + span + .checkboxOutline > .checkboxIcon-checked {
+.otg-checkbox:checked + span + .checkboxOutline > .checkboxIcon-checked {
     /* background color set by theme */
     display: flex !important;
 }
 
-.emby-checkbox:checked + span + .checkboxOutline > .checkboxIcon-unchecked {
+.otg-checkbox:checked + span + .checkboxOutline > .checkboxIcon-unchecked {
     /* background color set by theme */
     display: none !important;
 }
 
-.emby-checkbox:checked[disabled] + span + .checkboxOutline > .checkboxIcon {
+.otg-checkbox:checked[disabled] + span + .checkboxOutline > .checkboxIcon {
     background-color: rgba(0, 0, 0, 0.26);
 }
 
@@ -88,7 +88,7 @@
     margin: 0;
 }
 
-.checkboxList > .emby-checkbox-label {
+.checkboxList > .otg-checkbox-label {
     display: flex;
     margin: 0.5em 0;
 }
@@ -98,7 +98,7 @@
     flex-wrap: wrap;
 }
 
-    .checkboxList-verticalwrap > .emby-checkbox-label {
+    .checkboxList-verticalwrap > .otg-checkbox-label {
         display: inline-flex;
         margin: .3em 0 .3em 0;
         width: 12em;

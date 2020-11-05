@@ -1,4 +1,4 @@
-define(["cardBuilder", "imageLoader", "libraryBrowser", "loading", "events", "emby-itemscontainer"], function (cardBuilder, imageLoader, libraryBrowser, loading, events) {
+define(["cardBuilder", "imageLoader", "libraryBrowser", "loading", "events", "otg-itemscontainer"], function (cardBuilder, imageLoader, libraryBrowser, loading, events) {
     "use strict";
 
     return function (view, params, tabContent) {

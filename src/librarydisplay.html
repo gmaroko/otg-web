@@ -3,7 +3,7 @@
         <div class="content-primary">
             <form>
                 <div class="selectContainer">
-                    <select is="emby-select" id="selectDateAdded" data-mini="true" label="${LabelDateAddedBehavior}">
+                    <select is="otg-select" id="selectDateAdded" data-mini="true" label="${LabelDateAddedBehavior}">
                         <option value="0">${OptionDateAddedImportTime}</option>
                         <option value="1">${OptionDateAddedFileTime}</option>
                     </select>
@@ -12,20 +12,20 @@
 
                 <div class="checkboxContainer checkboxContainer-withDescription">
                     <label>
-                        <input type="checkbox" is="emby-checkbox" class="chkFolderView" />
+                        <input type="checkbox" is="otg-checkbox" class="chkFolderView" />
                         <span>${OptionDisplayFolderView}</span>
                     </label>
                     <div class="fieldDescription checkboxFieldDescription">${OptionDisplayFolderViewHelp}</div>
                 </div>
 
                 <label class="checkboxContainer">
-                    <input type="checkbox" is="emby-checkbox" class="chkDisplaySpecialsWithinSeasons"/>
+                    <input type="checkbox" is="otg-checkbox" class="chkDisplaySpecialsWithinSeasons"/>
                     <span>${LabelDisplaySpecialsWithinSeasons}</span>
                 </label>
 
                 <div class="checkboxContainer checkboxContainer-withDescription">
                     <label>
-                        <input type="checkbox" is="emby-checkbox" class="chkGroupMoviesIntoCollections" />
+                        <input type="checkbox" is="otg-checkbox" class="chkGroupMoviesIntoCollections" />
                         <span>${LabelGroupMoviesIntoCollections}</span>
                     </label>
                     <div class="fieldDescription checkboxFieldDescription">${LabelGroupMoviesIntoCollectionsHelp}</div>
@@ -33,7 +33,7 @@
 
                 <div class="checkboxContainer checkboxContainer-withDescription">
                     <label>
-                        <input class="chkExternalContentInSuggestions" type="checkbox" is="emby-checkbox" />
+                        <input class="chkExternalContentInSuggestions" type="checkbox" is="otg-checkbox" />
                         <span>${OptionEnableExternalContentInSuggestions}</span>
                     </label>
                     <div class="fieldDescription checkboxFieldDescription">${OptionEnableExternalContentInSuggestionsHelp}</div>
@@ -41,14 +41,14 @@
 
                 <div class="checkboxContainer checkboxContainer-withDescription fldSaveMetadataHidden hide">
                     <label>
-                        <input type="checkbox" is="emby-checkbox" class="chkAirDays" id="chkSaveMetadataHidden" data-filter="Sunday" />
+                        <input type="checkbox" is="otg-checkbox" class="chkAirDays" id="chkSaveMetadataHidden" data-filter="Sunday" />
                         <span>${OptionSaveMetadataAsHidden}</span>
                     </label>
                     <div class="fieldDescription checkboxFieldDescription">${OptionSaveMetadataAsHiddenHelp}</div>
                 </div>
 
                 <br />
-                <button is="emby-button" type="submit" class="raised button-submit block">
+                <button is="otg-button" type="submit" class="raised button-submit block">
                     <span>${ButtonSave}</span>
                 </button>
             </form>

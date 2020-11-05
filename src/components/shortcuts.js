@@ -90,7 +90,7 @@ define(['playbackManager', 'inputManager', 'connectionManager', 'appRouter', 'gl
 
     function notifyRefreshNeeded(childElement, itemsContainer) {
 
-        itemsContainer = itemsContainer || dom.parentWithAttribute(childElement, 'is', 'emby-itemscontainer');
+        itemsContainer = itemsContainer || dom.parentWithAttribute(childElement, 'is', 'otg-itemscontainer');
 
         if (itemsContainer) {
             itemsContainer.notifyRefreshNeeded(true);

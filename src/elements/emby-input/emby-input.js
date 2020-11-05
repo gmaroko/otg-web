@@ -1,4 +1,4 @@
-define(['layoutManager', 'browser', 'dom', 'css!./emby-input', 'registerElement'], function (layoutManager, browser, dom) {
+define(['layoutManager', 'browser', 'dom', 'css!./otg-input', 'registerElement'], function (layoutManager, browser, dom) {
     'use strict';
 
     var EmbyInputPrototype = Object.create(HTMLInputElement.prototype);
@@ -33,11 +33,11 @@ define(['layoutManager', 'browser', 'dom', 'css!./emby-input', 'registerElement'
             inputId++;
         }
 
-        if (this.classList.contains('emby-input')) {
+        if (this.classList.contains('otg-input')) {
             return;
         }
 
-        this.classList.add('emby-input');
+        this.classList.add('otg-input');
 
         var parentNode = this.parentNode;
         var document = this.ownerDocument;
@@ -119,7 +119,7 @@ define(['layoutManager', 'browser', 'dom', 'css!./emby-input', 'registerElement'
         this.labelElement.innerHTML = text;
     };
 
-    document.registerElement('emby-input', {
+    document.registerElement('otg-input', {
         prototype: EmbyInputPrototype,
         extends: 'input'
     });

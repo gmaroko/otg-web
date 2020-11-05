@@ -1,4 +1,4 @@
-define(["jQuery", "globalize", "loading", "libraryMenu", "listViewStyle", "emby-button"], function ($, globalize, loading, libraryMenu) {
+define(["jQuery", "globalize", "loading", "libraryMenu", "listViewStyle", "otg-button"], function ($, globalize, loading, libraryMenu) {
     "use strict";
 
     function loadProfiles(page) {
@@ -34,7 +34,7 @@ define(["jQuery", "globalize", "loading", "libraryMenu", "listViewStyle", "emby-
             html += '<div class="listItem listItem-border">';
             html += '<i class="listItemIcon md-icon">live_tv</i>';
             html += '<div class="listItemBody two-line">';
-            html += "<a is='emby-linkbutton' style='padding:0;margin:0;' data-ripple='false' class='clearLink' href='dlnaprofile.html?id=" + profile.Id + "'>";
+            html += "<a is='otg-linkbutton' style='padding:0;margin:0;' data-ripple='false' class='clearLink' href='dlnaprofile.html?id=" + profile.Id + "'>";
             html += "<div>" + profile.Name + "</div>";
             html += "</a>";
             html += "</div>";

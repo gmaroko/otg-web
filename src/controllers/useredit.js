@@ -16,14 +16,14 @@ define(["jQuery", "loading", "libraryMenu", "fnchecked"], function ($, loading, 
                 folder = mediaFolders[i];
                 isChecked = user.Policy.EnableContentDeletion || -1 != user.Policy.EnableContentDeletionFromFolders.indexOf(folder.Id);
                 checkedAttribute = isChecked ? ' checked="checked"' : "";
-                html += '<label><input type="checkbox" is="emby-checkbox" class="chkFolder" data-id="' + folder.Id + '" ' + checkedAttribute + "><span>" + folder.Name + "</span></label>";
+                html += '<label><input type="checkbox" is="otg-checkbox" class="chkFolder" data-id="' + folder.Id + '" ' + checkedAttribute + "><span>" + folder.Name + "</span></label>";
             }
 
             for (i = 0, length = channelsResult.Items.length; i < length; i++) {
                 folder = channelsResult.Items[i];
                 isChecked = user.Policy.EnableContentDeletion || -1 != user.Policy.EnableContentDeletionFromFolders.indexOf(folder.Id);
                 checkedAttribute = isChecked ? ' checked="checked"' : "";
-                html += '<label><input type="checkbox" is="emby-checkbox" class="chkFolder" data-id="' + folder.Id + '" ' + checkedAttribute + "><span>" + folder.Name + "</span></label>";
+                html += '<label><input type="checkbox" is="otg-checkbox" class="chkFolder" data-id="' + folder.Id + '" ' + checkedAttribute + "><span>" + folder.Name + "</span></label>";
             }
 
             $(".deleteAccess", page).html(html).trigger("create");

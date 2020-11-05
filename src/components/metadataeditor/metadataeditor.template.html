@@ -4,7 +4,7 @@
         ${Edit}
     </h3>
     <div style="margin-left: auto;" class="flex align-items-center justify-content-center">
-        <button is="emby-button" type="button" class="btnHeaderSave button-accent-flat button-flat hide" tabindex="-1">
+        <button is="otg-button" type="button" class="btnHeaderSave button-accent-flat button-flat hide" tabindex="-1">
             <i class="md-icon">check</i>
             <span>${Save}</span>
         </button>
@@ -21,102 +21,102 @@
 
             <div style="padding: 0 0 10px;">
                 <div id="fldContentType" class="selectContainer hide">
-                    <select is="emby-select" id="selectContentType" label="${LabelContentType}"></select>
+                    <select is="otg-select" id="selectContentType" label="${LabelContentType}"></select>
                 </div>
                 <div id="fldPath" class="inputContainer">
                     <div class="align-items-center flex">
                         <div class="flex-grow">
-                            <input is="emby-input" id="txtPath" type="text" label="${LabelPath}" class="flex-grow" readonly />
+                            <input is="otg-input" id="txtPath" type="text" label="${LabelPath}" class="flex-grow" readonly />
                         </div>
                     </div>
                 </div>
                 <div class="inputContainer">
-                    <input is="emby-input" id="txtName" type="text" label="${LabelTitle}" required="required" />
+                    <input is="otg-input" id="txtName" type="text" label="${LabelTitle}" required="required" />
                 </div>
                 <div id="fldOriginalName" class="inputContainer">
-                    <input is="emby-input" id="txtOriginalName" type="text" label="${LabelOriginalTitle}" />
+                    <input is="otg-input" id="txtOriginalName" type="text" label="${LabelOriginalTitle}" />
                 </div>
                 <div class="inputContainer">
-                    <input is="emby-input" id="txtSortName" type="text" label="${LabelSortTitle}" />
+                    <input is="otg-input" id="txtSortName" type="text" label="${LabelSortTitle}" />
                 </div>
                 <div id="fldDateAdded" class="hide inputContainer">
-                    <input is="emby-input" id="txtDateAdded" type="date" label="${LabelDateAdded}" />
+                    <input is="otg-input" id="txtDateAdded" type="date" label="${LabelDateAdded}" />
                     <div class="fieldDescription">${ConfigureDateAdded}</div>
                 </div>
                 <div id="fldStatus" class="hide selectContainer">
-                    <select is="emby-select" id="selectStatus" label="${LabelStatus}"></select>
+                    <select is="otg-select" id="selectStatus" label="${LabelStatus}"></select>
                 </div>
                 <div id="fldArtist" class="hide inputContainer">
-                    <input is="emby-input" id="txtArtist" type="text" label="${LabelArtists}" />
+                    <input is="otg-input" id="txtArtist" type="text" label="${LabelArtists}" />
                     <div class="fieldDescription">${LabelArtistsHelp}</div>
                 </div>
                 <div id="fldAlbumArtist" class="hide inputContainer">
-                    <input is="emby-input" id="txtAlbumArtist" type="text" label="${LabelAlbumArtists}" />
+                    <input is="otg-input" id="txtAlbumArtist" type="text" label="${LabelAlbumArtists}" />
                     <div class="fieldDescription">${LabelArtistsHelp}</div>
                 </div>
                 <div id="fldAlbum" class="hide inputContainer">
-                    <input is="emby-input" id="txtAlbum" type="text" label="${LabelAlbum}" />
+                    <input is="otg-input" id="txtAlbum" type="text" label="${LabelAlbum}" />
                 </div>
                 <div id="fldParentIndexNumber" class="hide inputContainer">
-                    <input is="emby-input" id="txtParentIndexNumber" type="number" />
+                    <input is="otg-input" id="txtParentIndexNumber" type="number" />
                 </div>
                 <div id="fldIndexNumber" class="hide inputContainer">
-                    <input is="emby-input" id="txtIndexNumber" type="number" pattern="[0-9]*" />
+                    <input is="otg-input" id="txtIndexNumber" type="number" pattern="[0-9]*" />
                 </div>
                 <div id="fldCommunityRating" class="hide inputContainer">
-                    <input is="emby-input" id="txtCommunityRating" type="number" step=".1" min="0" max="10" label="${LabelCommunityRating}" />
+                    <input is="otg-input" id="txtCommunityRating" type="number" step=".1" min="0" max="10" label="${LabelCommunityRating}" />
                 </div>
                 <div id="fldCriticRating" class="hide inputContainer">
-                    <input is="emby-input" id="txtCriticRating" type="number" step=".1" label="${LabelCriticRating}" />
+                    <input is="otg-input" id="txtCriticRating" type="number" step=".1" label="${LabelCriticRating}" />
                 </div>
                 <div id="fldTagline" class="hide inputContainer">
-                    <input is="emby-input" id="txtTagline" type="text" label="${LabelTagline}" />
+                    <input is="otg-input" id="txtTagline" type="text" label="${LabelTagline}" />
                 </div>
                 <div class="inputContainer overviewContainer hide">
-                    <textarea is="emby-textarea" id="txtOverview" label="${LabelOverview}"></textarea>
+                    <textarea is="otg-textarea" id="txtOverview" label="${LabelOverview}"></textarea>
                 </div>
                 <div id="fldPremiereDate" class="inputContainer">
-                    <input is="emby-input" id="txtPremiereDate" label="${LabelReleaseDate}" type="date" />
+                    <input is="otg-input" id="txtPremiereDate" label="${LabelReleaseDate}" type="date" />
                 </div>
                 <div id="fldYear" class="hide inputContainer">
-                    <input is="emby-input" id="txtProductionYear" type="number" label="${LabelYear}" />
+                    <input is="otg-input" id="txtProductionYear" type="number" label="${LabelYear}" />
                 </div>
                 <div id="fldPlaceOfBirth" class="hide inputContainer">
-                    <input is="emby-input" id="txtPlaceOfBirth" type="text" label="${LabelPlaceOfBirth}" />
+                    <input is="otg-input" id="txtPlaceOfBirth" type="text" label="${LabelPlaceOfBirth}" />
                 </div>
                 <div id="fldEndDate" class="inputContainer">
-                    <input is="emby-input" id="txtEndDate" label="${LabelEndDate}" type="date" />
+                    <input is="otg-input" id="txtEndDate" label="${LabelEndDate}" type="date" />
                 </div>
                 <div id="fldAirDays" class="hide">
                     <p>${LabelAirDays}</p>
 
                     <div class="checkboxList">
                         <label>
-                            <input type="checkbox" is="emby-checkbox" class="chkAirDay" data-day="Sunday" />
+                            <input type="checkbox" is="otg-checkbox" class="chkAirDay" data-day="Sunday" />
                             <span>${Sunday}</span>
                         </label>
                         <label>
-                            <input type="checkbox" is="emby-checkbox" class="chkAirDay" data-day="Monday" />
+                            <input type="checkbox" is="otg-checkbox" class="chkAirDay" data-day="Monday" />
                             <span>${Monday}</span>
                         </label>
                         <label>
-                            <input type="checkbox" is="emby-checkbox" class="chkAirDay" data-day="Tuesday" />
+                            <input type="checkbox" is="otg-checkbox" class="chkAirDay" data-day="Tuesday" />
                             <span>${Tuesday}</span>
                         </label>
                         <label>
-                            <input type="checkbox" is="emby-checkbox" class="chkAirDay" data-day="Wednesday" />
+                            <input type="checkbox" is="otg-checkbox" class="chkAirDay" data-day="Wednesday" />
                             <span>${Wednesday}</span>
                         </label>
                         <label>
-                            <input type="checkbox" is="emby-checkbox" class="chkAirDay" data-day="Thursday" />
+                            <input type="checkbox" is="otg-checkbox" class="chkAirDay" data-day="Thursday" />
                             <span>${Thursday}</span>
                         </label>
                         <label>
-                            <input type="checkbox" is="emby-checkbox" class="chkAirDay" data-day="Friday" />
+                            <input type="checkbox" is="otg-checkbox" class="chkAirDay" data-day="Friday" />
                             <span>${Friday}</span>
                         </label>
                         <label>
-                            <input type="checkbox" is="emby-checkbox" class="chkAirDay" data-day="Saturday" />
+                            <input type="checkbox" is="otg-checkbox" class="chkAirDay" data-day="Saturday" />
                             <span>${Saturday}</span>
                         </label>
                     </div>
@@ -124,22 +124,22 @@
 
                 </div>
                 <div id="fldAirTime" class="inputContainer hide">
-                    <input is="emby-input" id="txtAirTime" type="text" label="${LabelAirTime}" />
+                    <input is="otg-input" id="txtAirTime" type="text" label="${LabelAirTime}" />
                 </div>
                 <div id="fldSeriesRuntime" class="inputContainer hide">
-                    <input is="emby-input" id="txtSeriesRuntime" type="number" label="${LabelRuntimeMinutes}" />
+                    <input is="otg-input" id="txtSeriesRuntime" type="number" label="${LabelRuntimeMinutes}" />
                 </div>
                 <div id="fldOfficialRating" class="selectContainer hide">
-                    <select is="emby-select" id="selectOfficialRating" label="${LabelParentalRating}"></select>
+                    <select is="otg-select" id="selectOfficialRating" label="${LabelParentalRating}"></select>
                 </div>
                 <div id="fldCustomRating" class="selectContainer hide">
-                    <select is="emby-select" id="selectCustomRating" label="${LabelCustomRating}"></select>
+                    <select is="otg-select" id="selectCustomRating" label="${LabelCustomRating}"></select>
                 </div>
                 <div id="fldOriginalAspectRatio" class="inputContainer hide">
-                    <input is="emby-input" id="txtOriginalAspectRatio" type="text" label="${LabelOriginalAspectRatio}" />
+                    <input is="otg-input" id="txtOriginalAspectRatio" type="text" label="${LabelOriginalAspectRatio}" />
                 </div>
                 <div id="fld3dFormat" class="selectContainer hide">
-                    <select is="emby-select" id="select3dFormat" label="${Label3DFormat}">
+                    <select is="otg-select" id="select3dFormat" label="${Label3DFormat}">
                         <option value=""></option>
                         <option value="HalfSideBySide">HSBS</option>
                         <option value="HalfTopAndBottom">HTAB</option>
@@ -150,7 +150,7 @@
                 </div>
 
                 <div id="fldDisplayOrder" class="fldDisplaySetting selectContainer hide">
-                    <select is="emby-select" id="selectDisplayOrder" label="${LabelDisplayOrder}"></select>
+                    <select is="otg-select" id="selectDisplayOrder" label="${LabelDisplayOrder}"></select>
                     <div class="fieldDescription seriesDisplayOrderDescription">${SeriesDisplayOrderHelp}</div>
                 </div>
 
@@ -161,13 +161,13 @@
                     ${HeaderSpecialEpisodeInfo}
                 </h2>
                 <div class="inputContainer">
-                    <input is="emby-input" id="txtAirsBeforeSeason" type="number" pattern="[0-9]*" label="${LabelAirsBeforeSeason}" />
+                    <input is="otg-input" id="txtAirsBeforeSeason" type="number" pattern="[0-9]*" label="${LabelAirsBeforeSeason}" />
                 </div>
                 <div class="inputContainer">
-                    <input is="emby-input" id="txtAirsAfterSeason" type="number" pattern="[0-9]*" label="${LabelAirsAfterSeason}" />
+                    <input is="otg-input" id="txtAirsAfterSeason" type="number" pattern="[0-9]*" label="${LabelAirsAfterSeason}" />
                 </div>
                 <div class="inputContainer">
-                    <input is="emby-input" id="txtAirsBeforeEpisode" type="number" pattern="[0-9]*" label="${LabelAirsBeforeEpisode}" />
+                    <input is="otg-input" id="txtAirsBeforeEpisode" type="number" pattern="[0-9]*" label="${LabelAirsBeforeEpisode}" />
                 </div>
             </div>
 
@@ -183,7 +183,7 @@
                 <h2 style="margin:.6em 0;vertical-align:middle;display:inline-block;">
                     ${Genres}
                 </h2>
-                <button is="emby-button" type="button" class="fab btnAddTextItem submit" style="margin-left:1em;" title="${Add}">
+                <button is="otg-button" type="button" class="fab btnAddTextItem submit" style="margin-left:1em;" title="${Add}">
                     <i class="md-icon">add</i>
                 </button>
                 <div class="paperList" id="listGenres"></div>
@@ -192,7 +192,7 @@
                 <h2 style="margin:.6em 0;vertical-align:middle;display:inline-block;">
                     ${People}
                 </h2>
-                <button is="emby-button" type="button" id="btnAddPerson" class="fab btnAddPerson" style="margin-left:1em;" title="${Add}">
+                <button is="otg-button" type="button" id="btnAddPerson" class="fab btnAddPerson" style="margin-left:1em;" title="${Add}">
                     <i class="md-icon">add</i>
                 </button>
                 <div id="peopleList" class="paperList">
@@ -202,7 +202,7 @@
                 <h2 style="margin:.6em 0;vertical-align:middle;display:inline-block;">
                     ${Studios}
                 </h2>
-                <button is="emby-button" type="button" class="fab btnAddTextItem submit" style="margin-left:1em;" title="${Add}">
+                <button is="otg-button" type="button" class="fab btnAddTextItem submit" style="margin-left:1em;" title="${Add}">
                     <i class="md-icon">add</i>
                 </button>
                 <div class="paperList" id="listStudios"></div>
@@ -211,7 +211,7 @@
                 <h2 style="margin:.6em 0;vertical-align:middle;display:inline-block;">
                     ${Tags}
                 </h2>
-                <button is="emby-button" type="button" class="fab btnAddTextItem submit" style="margin-left:1em;" title="${Add}">
+                <button is="otg-button" type="button" class="fab btnAddTextItem submit" style="margin-left:1em;" title="${Add}">
                     <i class="md-icon">add</i>
                 </button>
                 <div class="paperList" id="listTags"></div>
@@ -220,17 +220,17 @@
                 <h2>${HeaderMetadataSettings}</h2>
                 <div>
                     <div class="selectContainer">
-                        <select is="emby-select" id="selectLanguage" label="${LabelMetadataDownloadLanguage}"></select>
+                        <select is="otg-select" id="selectLanguage" label="${LabelMetadataDownloadLanguage}"></select>
                         <div class="fieldDescription editorfieldDescription">${MessageLeaveEmptyToInherit}</div>
                     </div>
                     <div class="selectContainer">
-                        <select is="emby-select" id="selectCountry" label="${LabelCountry}"></select>
+                        <select is="otg-select" id="selectCountry" label="${LabelCountry}"></select>
                     </div>
                     <div class="fieldDescription editorfieldDescription">${MessageLeaveEmptyToInherit}</div>
 
                     <br /><br />
                     <label class="checkboxContainer">
-                        <input type="checkbox" is="emby-checkbox" id="chkLockData" />
+                        <input type="checkbox" is="otg-checkbox" id="chkLockData" />
                         <span>${LabelLockItemToPreventChanges}</span>
                     </label>
 
@@ -240,7 +240,7 @@
             </div>
             <br />
             <div class="formDialogFooter">
-                <button is="emby-button" type="submit" class="raised button-submit block btnSave formDialogFooterItem">
+                <button is="otg-button" type="submit" class="raised button-submit block btnSave formDialogFooterItem">
                     <span>${Save}</span>
                 </button>
             </div>

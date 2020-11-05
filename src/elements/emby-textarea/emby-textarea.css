@@ -1,4 +1,4 @@
-.emby-textarea {
+.otg-textarea {
     display: block;
     margin: 0;
     margin-bottom: 0 !important;
@@ -16,7 +16,7 @@
     width: 100%;
 }
 
-    .emby-textarea::-moz-focus-inner {
+    .otg-textarea::-moz-focus-inner {
         border: 0;
     }
 
@@ -26,6 +26,6 @@
     margin-bottom: .25em;
 }
 
-.emby-textarea + .fieldDescription {
+.otg-textarea + .fieldDescription {
     margin-top: .25em;
 }

@@ -1,4 +1,4 @@
-define(["connectionManager", "listView", "cardBuilder", "imageLoader", "libraryBrowser", "emby-itemscontainer", "emby-button"], function (connectionManager, listView, cardBuilder, imageLoader, libraryBrowser) {
+define(["connectionManager", "listView", "cardBuilder", "imageLoader", "libraryBrowser", "otg-itemscontainer", "otg-button"], function (connectionManager, listView, cardBuilder, imageLoader, libraryBrowser) {
     "use strict";
 
     function renderItems(page, item) {
@@ -74,9 +74,9 @@ define(["connectionManager", "listView", "cardBuilder", "imageLoader", "libraryB
             html += '<h2 class="sectionTitle sectionTitle-cards padded-left">';
             html += section.name;
             html += "</h2>";
-            html += '<a is="emby-linkbutton" href="#" class="clearLink hide" style="margin-left:1em;vertical-align:middle;"><button is="emby-button" type="button" class="raised more raised-mini noIcon">' + Globalize.translate("ButtonMore") + "</button></a>";
+            html += '<a is="otg-linkbutton" href="#" class="clearLink hide" style="margin-left:1em;vertical-align:middle;"><button is="otg-button" type="button" class="raised more raised-mini noIcon">' + Globalize.translate("ButtonMore") + "</button></a>";
             html += "</div>";
-            html += '<div is="emby-itemscontainer" class="itemsContainer padded-left padded-right">';
+            html += '<div is="otg-itemscontainer" class="itemsContainer padded-left padded-right">';
             html += "</div>";
             return html += "</div>";
         }).join("");

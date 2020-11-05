@@ -1,4 +1,4 @@
-define(["loading", "libraryMenu", "globalize", "listViewStyle", "emby-button"], function(loading, libraryMenu, globalize) {
+define(["loading", "libraryMenu", "globalize", "listViewStyle", "otg-button"], function(loading, libraryMenu, globalize) {
     "use strict";
 
     function reload(page) {
@@ -22,14 +22,14 @@ define(["loading", "libraryMenu", "globalize", "listViewStyle", "emby-button"], 
                     itemHtml += "</h2>";
                     if (showHelp) {
                         showHelp = false;
-                        itemHtml += '<a is="emby-linkbutton" class="raised button-alt headerHelpButton" target="_blank" href="https://otg.com/docs">';
+                        itemHtml += '<a is="otg-linkbutton" class="raised button-alt headerHelpButton" target="_blank" href="https://otg.com/docs">';
                         itemHtml += globalize.translate("Help");
                         itemHtml += "</a>";
                     }
                     itemHtml += "</div>";
                     itemHtml += '<div class="paperList">';
                 }
-                itemHtml += '<a class="listItem listItem-border" is="emby-linkbutton" data-ripple="false" href="notificationsetting.html?type=' + notification.Type + '">';
+                itemHtml += '<a class="listItem listItem-border" is="otg-linkbutton" data-ripple="false" href="notificationsetting.html?type=' + notification.Type + '">';
                 if (notification.Enabled) {
                     itemHtml += '<i class="listItemIcon md-icon">notifications_active</i>';
                 } else {

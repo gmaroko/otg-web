@@ -16,7 +16,7 @@ define(["jQuery", "loading", "libraryMenu", "fnchecked"], function ($, loading, 
             var folder = mediaFolders[i];
             var isChecked = user.Policy.EnableAllFolders || -1 != user.Policy.EnabledFolders.indexOf(folder.Id);
             var checkedAttribute = isChecked ? ' checked="checked"' : "";
-            html += '<label><input type="checkbox" is="emby-checkbox" class="chkFolder" data-id="' + folder.Id + '" ' + checkedAttribute + "><span>" + folder.Name + "</span></label>";
+            html += '<label><input type="checkbox" is="otg-checkbox" class="chkFolder" data-id="' + folder.Id + '" ' + checkedAttribute + "><span>" + folder.Name + "</span></label>";
         }
 
         html += "</div>";
@@ -35,7 +35,7 @@ define(["jQuery", "loading", "libraryMenu", "fnchecked"], function ($, loading, 
             var folder = channels[i];
             var isChecked = user.Policy.EnableAllChannels || -1 != user.Policy.EnabledChannels.indexOf(folder.Id);
             var checkedAttribute = isChecked ? ' checked="checked"' : "";
-            html += '<label><input type="checkbox" is="emby-checkbox" class="chkChannel" data-id="' + folder.Id + '" ' + checkedAttribute + "><span>" + folder.Name + "</span></label>";
+            html += '<label><input type="checkbox" is="otg-checkbox" class="chkChannel" data-id="' + folder.Id + '" ' + checkedAttribute + "><span>" + folder.Name + "</span></label>";
         }
 
         html += "</div>";
@@ -58,7 +58,7 @@ define(["jQuery", "loading", "libraryMenu", "fnchecked"], function ($, loading, 
         for (var i = 0, length = devices.length; i < length; i++) {
             var device = devices[i];
             var checkedAttribute = user.Policy.EnableAllDevices || -1 != user.Policy.EnabledDevices.indexOf(device.Id) ? ' checked="checked"' : "";
-            html += '<label><input type="checkbox" is="emby-checkbox" class="chkDevice" data-id="' + device.Id + '" ' + checkedAttribute + "><span>" + device.Name + " - " + device.AppName + "</span></label>";
+            html += '<label><input type="checkbox" is="otg-checkbox" class="chkDevice" data-id="' + device.Id + '" ' + checkedAttribute + "><span>" + device.Name + " - " + device.AppName + "</span></label>";
         }
 
         html += "</div>";

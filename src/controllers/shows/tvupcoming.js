@@ -1,4 +1,4 @@
-define(["layoutManager", "loading", "datetime", "libraryBrowser", "cardBuilder", "apphost", "imageLoader", "scrollStyles", "emby-itemscontainer"], function (layoutManager, loading, datetime, libraryBrowser, cardBuilder, appHost, imageLoader) {
+define(["layoutManager", "loading", "datetime", "libraryBrowser", "cardBuilder", "apphost", "imageLoader", "scrollStyles", "otg-itemscontainer"], function (layoutManager, loading, datetime, libraryBrowser, cardBuilder, appHost, imageLoader) {
     "use strict";
 
     function getUpcomingPromise(context, params) {
@@ -93,9 +93,9 @@ define(["layoutManager", "loading", "datetime", "libraryBrowser", "cardBuilder",
                     scrollXClass += " smoothScrollX";
                 }
 
-                html += '<div is="emby-itemscontainer" class="itemsContainer ' + scrollXClass + ' padded-left padded-right">';
+                html += '<div is="otg-itemscontainer" class="itemsContainer ' + scrollXClass + ' padded-left padded-right">';
             } else {
-                html += '<div is="emby-itemscontainer" class="itemsContainer vertical-wrap padded-left padded-right">';
+                html += '<div is="otg-itemscontainer" class="itemsContainer vertical-wrap padded-left padded-right">';
             }
 
             var supportsImageAnalysis = appHost.supports("imageanalysis");

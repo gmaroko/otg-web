@@ -1,4 +1,4 @@
-define(["loading", "libraryMenu", "globalize", "cardStyle", "emby-button", "emby-checkbox", "emby-select"], function (loading, libraryMenu, globalize) {
+define(["loading", "libraryMenu", "globalize", "cardStyle", "otg-button", "otg-checkbox", "otg-select"], function (loading, libraryMenu, globalize) {
     "use strict";
 
     function reloadList(page) {
@@ -97,7 +97,7 @@ define(["loading", "libraryMenu", "globalize", "cardStyle", "emby-button", "emby
         html += '<div class="cardBox visualCardBox">';
         html += '<div class="cardScalable visualCardBox-cardScalable">';
         html += '<div class="cardPadder cardPadder-backdrop"></div>';
-        html += '<a class="cardContent cardImageContainer" is="emby-linkbutton" href="' + href + '"' + target + ">";
+        html += '<a class="cardContent cardImageContainer" is="otg-linkbutton" href="' + href + '"' + target + ">";
 
         if (plugin.thumbImage) {
             html += '<div class="cardImage coveredImage" style="background-image:url(\'' + plugin.thumbImage + "');\">";

@@ -1,4 +1,4 @@
-define(["loading", "dom", "globalize", "humanedate", "paper-icon-button-light", "cardStyle", "emby-button", "indicators", "flexStyles"], function (loading, dom, globalize) {
+define(["loading", "dom", "globalize", "humanedate", "paper-icon-button-light", "cardStyle", "otg-button", "indicators", "flexStyles"], function (loading, dom, globalize) {
     "use strict";
 
     function deleteUser(page, id) {
@@ -83,7 +83,7 @@ define(["loading", "dom", "globalize", "humanedate", "paper-icon-button-light", 
         html += '<div class="cardBox visualCardBox">';
         html += '<div class="cardScalable visualCardBox-cardScalable">';
         html += '<div class="cardPadder cardPadder-square"></div>';
-        html += '<a is="emby-linkbutton" class="cardContent" href="useredit.html?userId=' + user.Id + '">';
+        html += '<a is="otg-linkbutton" class="cardContent" href="useredit.html?userId=' + user.Id + '">';
         var imgUrl;
 
         if (user.PrimaryImageTag) {
@@ -175,7 +175,7 @@ define(["loading", "dom", "globalize", "humanedate", "paper-icon-button-light", 
         html += '<div class="cardBox cardBox-bottompadded visualCardBox">';
         html += '<div class="cardScalable visualCardBox-cardScalable">';
         html += '<div class="cardPadder cardPadder-square"></div>';
-        html += '<a class="cardContent cardImageContainer" is="emby-linkbutton" href="#">';
+        html += '<a class="cardContent cardImageContainer" is="otg-linkbutton" href="#">';
 
         if (user.ImageUrl) {
             html += '<div class="cardImage" style="background-image:url(\'' + user.ImageUrl + "');\">";

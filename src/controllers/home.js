@@ -1,4 +1,4 @@
-define(["tabbedView", "globalize", "require", "emby-tabs", "emby-button", "emby-scroller"], function (TabbedView, globalize, require) {
+define(["tabbedView", "globalize", "require", "otg-tabs", "otg-button", "otg-scroller"], function (TabbedView, globalize, require) {
     "use strict";
 
     function getTabs() {

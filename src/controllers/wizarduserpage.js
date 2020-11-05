@@ -1,4 +1,4 @@
-define(["loading", "globalize", "dashboardcss", "emby-input", "emby-button", "emby-button"], function (loading, globalize) {
+define(["loading", "globalize", "dashboardcss", "otg-input", "otg-button", "otg-button"], function (loading, globalize) {
     "use strict";
 
     function getApiClient() {

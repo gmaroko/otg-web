@@ -148,7 +148,7 @@ define(['appSettings', 'events', 'browser', 'loading', 'playbackManager', 'appRo
 
     function showActivePlayerMenu(playerInfo) {
 
-        require(['dialogHelper', 'dialog', 'emby-checkbox', 'emby-button'], function (dialogHelper) {
+        require(['dialogHelper', 'dialog', 'otg-checkbox', 'otg-button'], function (dialogHelper) {
             showActivePlayerMenuInternal(dialogHelper, playerInfo);
         });
     }
@@ -228,7 +228,7 @@ define(['appSettings', 'events', 'browser', 'loading', 'playbackManager', 'appRo
 
             html += '<label class="checkboxContainer">';
             var checkedHtml = playbackManager.enableDisplayMirroring() ? ' checked' : '';
-            html += '<input type="checkbox" is="emby-checkbox" class="chkMirror"' + checkedHtml + '/>';
+            html += '<input type="checkbox" is="otg-checkbox" class="chkMirror"' + checkedHtml + '/>';
             html += '<span>' + globalize.translate('EnableDisplayMirroring') + '</span>';
             html += '</label>';
         }
@@ -237,9 +237,9 @@ define(['appSettings', 'events', 'browser', 'loading', 'playbackManager', 'appRo
 
         html += '<div style="margin-top:1em;display:flex;justify-content: flex-end;">';
 
-        html += '<button is="emby-button" type="button" class="button-flat btnRemoteControl promptDialogButton">' + globalize.translate('HeaderRemoteControl') + '</button>';
-        html += '<button is="emby-button" type="button" class="button-flat btnDisconnect promptDialogButton ">' + globalize.translate('Disconnect') + '</button>';
-        html += '<button is="emby-button" type="button" class="button-flat btnCancel promptDialogButton">' + globalize.translate('ButtonCancel') + '</button>';
+        html += '<button is="otg-button" type="button" class="button-flat btnRemoteControl promptDialogButton">' + globalize.translate('HeaderRemoteControl') + '</button>';
+        html += '<button is="otg-button" type="button" class="button-flat btnDisconnect promptDialogButton ">' + globalize.translate('Disconnect') + '</button>';
+        html += '<button is="otg-button" type="button" class="button-flat btnCancel promptDialogButton">' + globalize.translate('ButtonCancel') + '</button>';
         html += '</div>';
 
         html += '</div>';

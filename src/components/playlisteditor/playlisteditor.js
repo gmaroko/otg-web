@@ -1,4 +1,4 @@
-define(['shell', 'dialogHelper', 'loading', 'layoutManager', 'playbackManager', 'connectionManager', 'userSettings', 'appRouter', 'globalize', 'emby-input', 'paper-icon-button-light', 'emby-select', 'material-icons', 'css!./../formdialog', 'emby-button'], function (shell, dialogHelper, loading, layoutManager, playbackManager, connectionManager, userSettings, appRouter, globalize) {
+define(['shell', 'dialogHelper', 'loading', 'layoutManager', 'playbackManager', 'connectionManager', 'userSettings', 'appRouter', 'globalize', 'otg-input', 'paper-icon-button-light', 'otg-select', 'material-icons', 'css!./../formdialog', 'otg-button'], function (shell, dialogHelper, loading, layoutManager, playbackManager, connectionManager, userSettings, appRouter, globalize) {
     'use strict';
 
     var currentServerId;
@@ -168,21 +168,21 @@ define(['shell', 'dialogHelper', 'loading', 'layoutManager', 'playbackManager', 
 
         html += '<div class="fldSelectPlaylist selectContainer">';
         var autoFocus = items.length ? ' autofocus' : '';
-        html += '<select is="emby-select" id="selectPlaylistToAddTo" label="' + globalize.translate('LabelPlaylist') + '"' + autoFocus + '></select>';
+        html += '<select is="otg-select" id="selectPlaylistToAddTo" label="' + globalize.translate('LabelPlaylist') + '"' + autoFocus + '></select>';
         html += '</div>';
 
         html += '<div class="newPlaylistInfo">';
 
         html += '<div class="inputContainer">';
         autoFocus = items.length ? '' : ' autofocus';
-        html += '<input is="emby-input" type="text" id="txtNewPlaylistName" required="required" label="' + globalize.translate('LabelName') + '"' + autoFocus + ' />';
+        html += '<input is="otg-input" type="text" id="txtNewPlaylistName" required="required" label="' + globalize.translate('LabelName') + '"' + autoFocus + ' />';
         html += '</div>';
 
         // newPlaylistInfo
         html += '</div>';
 
         html += '<div class="formDialogFooter">';
-        html += '<button is="emby-button" type="submit" class="raised btnSubmit block formDialogFooterItem button-submit">' + globalize.translate('Add') + '</button>';
+        html += '<button is="otg-button" type="submit" class="raised btnSubmit block formDialogFooterItem button-submit">' + globalize.translate('Add') + '</button>';
         html += '</div>';
 
         html += '<input type="hidden" class="fldSelectedItemIds" />';

@@ -1,4 +1,4 @@
-define(['dom', 'browser', 'events', 'emby-tabs', 'emby-button'], function (dom, browser, events) {
+define(['dom', 'browser', 'events', 'otg-tabs', 'otg-button'], function (dom, browser, events) {
     'use strict';
 
     var tabOwnerView;
@@ -140,9 +140,9 @@ define(['dom', 'browser', 'events', 'emby-tabs', 'emby-button'], function (dom, 
             var index = 0;
 
             var indexAttribute = selectedIndex == null ? '' : (' data-index="' + selectedIndex + '"');
-            var tabsHtml = '<div is="emby-tabs"' + indexAttribute + ' class="tabs-viewmenubar"><div class="emby-tabs-slider" style="white-space:nowrap;">' + getTabsFn().map(function (t) {
+            var tabsHtml = '<div is="otg-tabs"' + indexAttribute + ' class="tabs-viewmenubar"><div class="otg-tabs-slider" style="white-space:nowrap;">' + getTabsFn().map(function (t) {
 
-                var tabClass = 'emby-tab-button';
+                var tabClass = 'otg-tab-button';
 
                 if (t.enabled === false) {
                     tabClass += ' hide';
@@ -155,9 +155,9 @@ define(['dom', 'browser', 'events', 'emby-tabs', 'emby-button'], function (dom, 
                 }
 
                 if (t.href) {
-                    tabHtml = '<a href="' + t.href + '" is="emby-linkbutton" class="' + tabClass + '" data-index="' + index + '"><div class="emby-button-foreground">' + t.name + '</div></a>';
+                    tabHtml = '<a href="' + t.href + '" is="otg-linkbutton" class="' + tabClass + '" data-index="' + index + '"><div class="otg-button-foreground">' + t.name + '</div></a>';
                 } else {
-                    tabHtml = '<button type="button" is="emby-button" class="' + tabClass + '" data-index="' + index + '"><div class="emby-button-foreground">' + t.name + '</div></button>';
+                    tabHtml = '<button type="button" is="otg-button" class="' + tabClass + '" data-index="' + index + '"><div class="otg-button-foreground">' + t.name + '</div></button>';
                 }
 
                 index++;
@@ -170,7 +170,7 @@ define(['dom', 'browser', 'events', 'emby-tabs', 'emby-button'], function (dom, 
             document.body.classList.add('withSectionTabs');
             tabOwnerView = view;
 
-            tabsElem = tabsContainerElem.querySelector('[is="emby-tabs"]');
+            tabsElem = tabsContainerElem.querySelector('[is="otg-tabs"]');
 
             configureSwipeTabs(view, tabsElem, getTabContainersFn);
 
@@ -221,13 +221,13 @@ define(['dom', 'browser', 'events', 'emby-tabs', 'emby-button'], function (dom, 
 
             return {
                 tabsContainer: tabsContainerElem,
-                tabs: tabsContainerElem.querySelector('[is="emby-tabs"]'),
+                tabs: tabsContainerElem.querySelector('[is="otg-tabs"]'),
                 replaced: true
             };
         }
 
         if (!tabsElem) {
-            tabsElem = tabsContainerElem.querySelector('[is="emby-tabs"]');
+            tabsElem = tabsContainerElem.querySelector('[is="otg-tabs"]');
         }
 
         tabsElem.selectedIndex(selectedIndex);
@@ -245,7 +245,7 @@ define(['dom', 'browser', 'events', 'emby-tabs', 'emby-button'], function (dom, 
         var tabsContainerElem = headerTabsContainer;
 
         if (!tabsElem) {
-            tabsElem = tabsContainerElem.querySelector('[is="emby-tabs"]');
+            tabsElem = tabsContainerElem.querySelector('[is="otg-tabs"]');
         }
 
         if (index != null) {
